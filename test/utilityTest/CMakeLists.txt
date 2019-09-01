@@ -1,0 +1,5 @@
+add_subdirectory(compGeometryTest)
+add_subdirectory(optimizerTest)
+add_subdirectory(parserTest)
+add_subdirectory(solverTest)
+add_subdirectory(viewerTest)

@@ -1,0 +1,57 @@
+HYBRID_AUTOMATON
+{
+    NAME Spiking Neuron Model
+
+    VARIABLES
+    {
+        u v
+    }
+
+    LOCATIONS
+    {
+        MODEL
+        {
+            NAME l
+            FLOWS
+            {
+                u'=0.02*(0.2*v-u)
+                v'=0.04*v^2+5*v+140-u+40
+            }
+            INVARIANT_CONDITIONS
+            {
+                CONDITION
+                {
+                    INTERVAL_HULL
+                    {
+                        [-INF,+INF],
+                        [-INF,30]
+                    }
+                }
+            }
+        }
+    }
+
+    TRANSITIONS
+    {
+        JUMP
+        {
+            DIRECTION l -> l
+            GUARD_CONDITIONS
+            {
+                CONDITION
+                {
+                    INTERVAL_HULL
+                    {
+                        [-INF,+INF],
+                        [30,+INF]
+                    }
+                }
+            }
+            RESET_MAP
+            {
+                u := u+8
+                v := -65
+            }
+        }
+    }
+}

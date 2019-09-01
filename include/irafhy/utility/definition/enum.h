@@ -1,0 +1,101 @@
+#ifndef UTILITY_DEFINITION_ENUM_H
+#define UTILITY_DEFINITION_ENUM_H
+
+namespace irafhy
+{
+	enum VIEW_TYPE
+	{
+		POINT,
+		LINE,
+		PLANE
+	};
+
+	enum UNARY
+	{
+		OPPOSITE,
+		SIN,
+		ASIN,
+		COS,
+		ACOS,
+		TAN,
+		ATAN,
+		COT,
+		ACOT,
+		LN,
+		LOG,
+		NEXP,
+		SINH,
+		ASINH,
+		COSH,
+		ACOSH,
+		TANH,
+		ATANH,
+		COTH,
+		ACOTH,
+		SQR,
+		SQRT
+	};
+
+	enum BINARY
+	{
+		PLUS,
+		MINUS,
+		MULTIPLY,
+		DIVIDE,
+		POWER
+	};
+
+	enum ITEM_T
+	{
+		CONSTANT_T,
+		VARIABLE_T,
+		UNARY_T,
+		BINARY_T
+	};
+
+	enum ANALYSIS
+	{
+		FORWARD,
+		BACKWARD
+	};
+
+	enum GEOMETRY
+	{
+		INTERVAL_HULL,
+		POLYTOPE
+	};
+
+	enum LINEPROG_DIRECTION
+	{
+		MAX,
+		MIN
+	};
+
+	enum LINEPROG_SOLUTION
+	{
+		UNDEFINED,
+		FEASIBLE,
+		INFEASIBLE,
+		NO_FEASIBLE,
+		OPTIMAL,
+		UNBOUNDED
+	};
+
+	enum RELATION
+	{
+		LESS_THAN,
+		LESS_THAN_OR_EQUAL_TO,
+		EQUAL_TO,
+		UNEQUAL_TO,
+		GREATER_THAN_OR_EQUAL_TO,
+		GREATER_THAN
+	};
+
+	enum CONSTRAINTS_SOLUTION
+	{
+		ALL_SATISFIED,
+		PARTIAL_SATISFIED,
+		ALL_UNSATISFIED
+	};
+} // namespace irafhy
+#endif //UTILITY_DEFINITION_ENUM_H
