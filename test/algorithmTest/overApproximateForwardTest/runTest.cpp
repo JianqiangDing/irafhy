@@ -19,7 +19,7 @@ protected:
 		std::size_t startPos = rootPath.find("IRafhy");
 		if (startPos == std::string::npos)
 			startPos = rootPath.find("irafhy");
-		rootPath						  = rootPath.substr(0, startPos + 5);
+		rootPath						  = rootPath.substr(0, startPos + 6);
 		SpikingNeuronModelPath			  = rootPath + SpikingNeuronModelPath;
 		SpikingNeuronModelSettingsPath	= rootPath + SpikingNeuronModelSettingsPath;
 		HelicopterControllerModelPath	 = rootPath + HelicopterControllerModelPath;
@@ -85,7 +85,6 @@ TEST_F(runOAFAnalyserTest, runOAFAnalyserTest_SpikingNeuronModel_Test)
 	//view the conditions
 	std::vector<irafhy::IntervalHull> resultIntervalHulls;
 	resultIntervalHulls.reserve(results.size());
-	int index = 0;
 	for (const auto& condition : results)
 		resultIntervalHulls.emplace_back(boost::get<irafhy::IntervalHull>(condition.entity()));
 	irafhy::viewer::show(resultIntervalHulls, {}, timeSequence, {0, 1}, irafhy::VIEW_TYPE::PLANE);
@@ -121,7 +120,6 @@ TEST_F(runOAFAnalyserTest, runOAFAnalyserTest_helicopterController_Test)
 	//view the conditions
 	std::vector<irafhy::IntervalHull> resultIntervalHulls;
 	resultIntervalHulls.reserve(results.size());
-	int index = 0;
 	for (const auto& condition : results)
 	{
 		std::vector<capd::interval> thisConstraints;

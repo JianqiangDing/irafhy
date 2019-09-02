@@ -1,0 +1,3 @@
+add_subdirectory(basicTest)
+add_subdirectory(intervalHullTest)
+add_subdirectory(polytopeTest)

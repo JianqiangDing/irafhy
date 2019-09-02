@@ -2,7 +2,7 @@
 
 namespace irafhy
 {
-	Variable::Variable(long int index)
+	Variable::Variable(long index)
 	{
 		assert(index > -2);
 		index_ = index;
