@@ -88,7 +88,7 @@ TEST_F(runOAFAnalyserTest, runOAFAnalyserTest_SpikingNeuronModel_Test)
 	for (const auto& condition : results)
 		resultIntervalHulls.emplace_back(boost::get<irafhy::IntervalHull>(condition.entity()));
 	irafhy::viewer::show(resultIntervalHulls, {}, timeSequence, {0, 1}, irafhy::VIEW_TYPE::PLANE);
-	// irath::viewer::show(resultIntervalHulls, {}, {}, {0, 1}, irath::VIEW_TYPE::PLANE);
+	// irafhy::viewer::show(resultIntervalHulls, {}, {}, {0, 1}, irafhy::VIEW_TYPE::PLANE);
 }
 
 TEST_F(runOAFAnalyserTest, runOAFAnalyserTest_helicopterController_Test)
@@ -129,7 +129,7 @@ TEST_F(runOAFAnalyserTest, runOAFAnalyserTest_helicopterController_Test)
 		resultIntervalHulls.emplace_back(irafhy::IntervalHull(thisConstraints));
 	}
 	irafhy::viewer::show(resultIntervalHulls, {}, timeSequence, {0, 3}, irafhy::VIEW_TYPE::PLANE);
-	// irath::viewer::show(resultIntervalHulls, {}, {}, {0, 1}, irath::VIEW_TYPE::PLANE);
+	// irafhy::viewer::show(resultIntervalHulls, {}, {}, {0, 1}, irafhy::VIEW_TYPE::PLANE);
 }
 
 TEST_F(runOAFAnalyserTest, runOAFAnalyserTest_fitzHugNagNeuronModel_Test)

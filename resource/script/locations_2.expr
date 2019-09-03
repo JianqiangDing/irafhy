@@ -1,0 +1,23 @@
+LOCATIONS
+{
+    MODEL
+    {
+        NAME l
+        FLOWS
+        {
+            u'=0.02*(0.2*v-u)
+            v'=0.04*v^2+5*v+140-u+40
+        }
+        INVARIANT_CONDITIONS
+        {
+            CONDITION
+            {
+                INTERVAL_HULL
+                {
+                    [-INF,+INF],
+                    [-INF,30]
+                }
+            }
+        }
+    }
+}

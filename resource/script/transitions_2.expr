@@ -1,0 +1,23 @@
+TRANSITIONS
+{
+    JUMP
+    {
+        DIRECTION l -> l
+        GUARD_CONDITIONS
+        {
+            CONDITION
+            {
+                INTERVAL_HULL
+                {
+                    [-INF,+INF],
+                    [30,+INF]
+                }
+            }
+        }
+        RESET_MAP
+        {
+            u := u+8
+            v := -65
+        }
+    }
+}

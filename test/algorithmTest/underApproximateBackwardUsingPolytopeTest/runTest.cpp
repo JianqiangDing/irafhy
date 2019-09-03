@@ -116,5 +116,5 @@ TEST_F(runUABPAnalyserTest, runUABPAnalyserTest_example_3_Test)
 		std::cout << resultIntervalHulls.back() << std::endl;
 	}
 	irafhy::viewer::show(resultIntervalHulls, {}, timeSequence, {0, 1}, irafhy::VIEW_TYPE::PLANE);
-	// irath::viewer::show(resultIntervalHulls, {}, {}, {0, 1}, irath::VIEW_TYPE::PLANE);
+	// irafhy::viewer::show(resultIntervalHulls, {}, {}, {0, 1}, irafhy::VIEW_TYPE::PLANE);
 }
