@@ -1,0 +1,29 @@
+HYBRID_AUTOMATON
+{
+    NAME Helicopter Controller
+
+    VARIABLES
+    {
+        x1, x2
+    }
+
+    LOCATIONS
+    {
+        MODEL
+        {
+            NAME controller
+            FLOWS
+            {
+                x1' = x2
+                x2' = 0.2-0.7*sin(x1)-0.05*x2
+            }
+            INVARIANT_CONDITIONS
+            {
+            }
+        }
+    }
+
+    TRANSITIONS
+    {
+    }
+}
