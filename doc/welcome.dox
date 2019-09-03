@@ -11,7 +11,7 @@
 
 @mainpage Documentation
 
-This document contains a technical introduction to irath. It is designed to perform reachability analysis of the given hybrid system.
+This document contains a technical introduction to irafhy. It is designed to perform reachability analysis of the given hybrid system.
 The document has three sections:
 
 - @subpage User_Guide
