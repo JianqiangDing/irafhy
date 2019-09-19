@@ -48,6 +48,8 @@ TEST_F(runCSPSolverTest, case_0)
 	std::vector<irafhy::IntervalHull> boundaryIntervalHulls
 		= irafhy::CSPSolver::solve(this->_2dIntervalHull, curEpsilon);
 	boundaryIntervalHulls.emplace_back(this->_2dIntervalHull);
+	for (const auto& intervalHull : boundaryIntervalHulls)
+		std::cout << intervalHull << std::endl;
 	irafhy::viewer::show(boundaryIntervalHulls, {}, {}, {0, 1}, irafhy::VIEW_TYPE::LINE);
 }
 

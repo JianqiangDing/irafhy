@@ -96,9 +96,25 @@ namespace irafhy
 		out << "duration: " << rhs.duration_ << std::endl;
 		out << "step size: " << rhs.step_ << std::endl;
 		out << "max jumps: " << rhs.maxJump_ << std::endl;
-		out << "plot: " << rhs.plot_ << std::endl;
-		out << "print: " << rhs.print_ << std::endl;
-		out << "analysis: " << rhs.analysis_ << std::endl;
+		out << "plot: " << (rhs.plot_ ? "TRUE" : "FALSE") << std::endl;
+		out << "print: " << (rhs.print_ ? "TRUE" : "FALSE") << std::endl;
+		out << "analysis: ";
+		switch (rhs.analysis_)
+		{
+			case ANALYSIS::BACKWARD:
+			{
+				out << "BACKWARD";
+				break;
+			}
+			case ANALYSIS::FORWARD:
+			{
+				out << "FORWARD";
+				break;
+			}
+			default:
+				exit(EXIT_FAILURE);
+		}
+		out << std::endl;
 		out << "start model id: " << rhs.startModelID_ << std::endl;
 		out << "initial condition: " << rhs.initCondition_ << std::endl;
 		return out;

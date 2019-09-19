@@ -2,8 +2,8 @@
 
 namespace irafhy
 {
-	IntervalHullStruct viewer::intervalHullMatrix(const IntervalHull&	 intervalHulls,
-												  const capd::interval&   time,
+	IntervalHullStruct viewer::intervalHullMatrix(const IntervalHull&	  intervalHulls,
+												  const capd::interval&	  time,
 												  const std::vector<int>& dimension)
 	{
 		Eigen::MatrixXd V(0, 3);
@@ -87,8 +87,8 @@ namespace irafhy
 	}
 
 	Eigen::MatrixXd viewer::pointMatrix(const std::vector<Point>& point,
-										const capd::interval&	 time,
-										const std::vector<int>&   dimension)
+										const capd::interval&	  time,
+										const std::vector<int>&	  dimension)
 	{
 		Eigen::MatrixXd V = Eigen::MatrixXd::Zero(point.size(), 3);
 		for (std::size_t index = 0; index < point.size(); ++index)
@@ -110,7 +110,7 @@ namespace irafhy
 
 	void viewer::drawAxes(igl::opengl::glfw::Viewer&		 viewer,
 						  const std::vector<capd::interval>& ranges,
-						  const std::vector<std::string>&	vars)
+						  const std::vector<std::string>&	 vars)
 	{
 		assert(!ranges.empty() && ranges.size() == 3 && !vars.empty());
 		std::vector<double> stepSize;
@@ -125,15 +125,15 @@ namespace irafhy
 		Eigen::Vector3d lowerBoundCoordinate = Eigen::Vector3d(ranges[0].leftBound() - stepSize[0],
 															   ranges[1].leftBound() - stepSize[1],
 															   ranges[2].leftBound() - stepSize[2]);
-		Eigen::MatrixXd axesCoordinatesFrom  = Eigen::MatrixXd::Zero(ranges.size(), 3);
-		Eigen::MatrixXd axesCoordinatesTo	= Eigen::MatrixXd::Zero(ranges.size(), 3);
+		Eigen::MatrixXd axesCoordinatesFrom	 = Eigen::MatrixXd::Zero(ranges.size(), 3);
+		Eigen::MatrixXd axesCoordinatesTo	 = Eigen::MatrixXd::Zero(ranges.size(), 3);
 		Eigen::MatrixXd axesColors			 = Eigen::MatrixXd::Zero(ranges.size(), 3);
 		for (std::size_t dimIdx = 0; dimIdx < vars.size(); ++dimIdx)
 		{
 			axesCoordinatesFrom.row(dimIdx)		= lowerBoundCoordinate;
 			axesCoordinatesTo.row(dimIdx)		= lowerBoundCoordinate;
 			axesCoordinatesFrom(dimIdx, dimIdx) = ranges[dimIdx].leftBound() - stepSize[dimIdx];
-			axesCoordinatesTo(dimIdx, dimIdx)   = ranges[dimIdx].rightBound() + stepSize[dimIdx];
+			axesCoordinatesTo(dimIdx, dimIdx)	= ranges[dimIdx].rightBound() + stepSize[dimIdx];
 			axesColors.row(dimIdx)				= Eigen::RowVector3d(0, 0, 0);
 		}
 		viewer.data().add_edges(axesCoordinatesFrom, axesCoordinatesTo, axesColors);
@@ -194,6 +194,12 @@ namespace irafhy
 		Eigen::MatrixXi F(intervalHulls.size() * 12, 3), E(intervalHulls.size() * 12, 2);
 		for (std::size_t index = 0; index < intervalHulls.size(); ++index)
 		{
+			if (intervalHulls[index].empty())
+			{
+				std::cout << intervalHulls[index] << std::endl;
+				std::cout << "is empty, we don't show it" << std::endl;
+				continue;
+			}
 			IntervalHullStruct curIntervalHullMatrix
 				= intervalHullMatrix(intervalHulls[index], validTime[index], validDimension);
 			V.block(index * 8, 0, 8, 3) = curIntervalHullMatrix._V;
