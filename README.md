@@ -1,4 +1,10 @@
-![](doc/pics/logo.png)
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/github_username/repo">
+    <img src="doc/pics/logo_big.png" alt="Logo" width="300" height="300">
+  </a>
+</p>
 
 The IraFhy is designed for perform reachability analysis of hybrid systems.
 
@@ -7,6 +13,8 @@ The IraFhy is designed for perform reachability analysis of hybrid systems.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
+
+<center>
 
 |   Library   |                             URL                             | Version  |
 | :---------: | :---------------------------------------------------------: | :------: |
@@ -23,6 +31,8 @@ These instructions will get you a copy of the project up and running on your loc
 |    Antlr    |                   https://www.antlr.org/                    |  4.7.2   |
 |   libigl    |            https://github.com/libigl/libigl.git             |  latest  |
 |   OpenMP    |                   https://www.openmp.org/                   |  latest  |
+
+</center>
 
 ### Build
 
