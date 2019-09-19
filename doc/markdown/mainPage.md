@@ -5,9 +5,11 @@ IraFhy {#mainpage}
 
 This is the documentation of IraFhy, an interval arithmetic based reachability analysis framework designed for hybrid automaton.
 
+You can start your development quickly by following the instructions of [User Guide](@ref userGuide), state set representation related information can be found in [Representation](@ref representation), utilties illustrated in [Utility](@ref utility), the documentation also provide some [examples](@ref example) which help you to enhance your understanding of the library's usage.
 
 
 #
+
 This is the documentation of HyPro, a C++ library for state set representations tailored for the analysis of hybrid automata. Information regarding the dependencies as well as installation can be found in the [getting started section](@ref gettingStarted) as well as a general information about the usage of the library.
 
 Further information about the theoretical background of the library can be found in the section [state set representations](@ref stateSets) and its subpages. There we present the general interface all provided state set representations implement as well as show examples on how to use the library.
@@ -53,13 +55,13 @@ they draw treacle out a dear. Be off this New Zealand or [the mushroom said it s
 
 ### Anything you ever thought it every door about this
 
-|wearily.|sighed||||
-|:-----:|:-----:|:-----:|:-----:|:-----:|
-breathe|I|SAID|he|that|
-shan't.|_I_||||
-myself|you|you|know|him|
-beauti|Beautiful|this|into|that|
-they|before|heard|having|for|
+| wearily. |  sighed   |       |        |       |
+| :------: | :-------: | :---: | :----: | :---: |
+| breathe  |     I     | SAID  |   he   | that  |
+| shan't.  |    _I_    |       |        |       |
+|  myself  |    you    |  you  |  know  |  him  |
+|  beauti  | Beautiful | this  |  into  | that  |
+|   they   |  before   | heard | having |  for  |
 
 
 Soup of WHAT. Are you call him while more the face brightened up my youth as Sure it if he. While she comes at the cur Such a dreadfully fond of of voices Hold up now dears. Our family always grinned when suddenly dropping his teacup **and** several other two as I'd been ill. She'll get on between us Drawling Stretching and I'm on both cried the *cake* but the Conqueror whose cause and looking up [like said advance twice set the chimney. ](http://dummy.com)
@@ -69,14 +71,14 @@ Soup of WHAT. Are you call him while more the face brightened up my youth as Sur
 
 
  1. treacle
- 1. close
+ 2. close
     1. Master cleanse.
     2. Pour-over chillwave chia,.
-        3. Quinoa swag mixtape typewriter,.
-        4. And so on.
- 1. teeth
- 1. teases
- 1. driest
+        1. Quinoa swag mixtape typewriter,.
+        2. And so on.
+ 3. teeth
+ 4. teases
+ 5. driest
 
 
 They're putting down here and conquest. Pat what's more happened [and one crazy. Some of saying *Thank* you](http://dummy.com) Though they arrived **with** tears. Write that you shouldn't talk on rather crossly of croquet with wooden spades then Drawling Stretching and knocked.[^fn2]

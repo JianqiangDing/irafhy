@@ -1,6 +1,6 @@
 # Utility {#utility}
 
-All utility functions and classes
+This section provides the brief introduction of all the third-party libraies used in the framework.
 
 * @subpage computingGeometry
 * @subpage parser
