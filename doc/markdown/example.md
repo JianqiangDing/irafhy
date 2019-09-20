@@ -1,6 +1,6 @@
 # Examples {#example}
 
-details about examples
+We provide some examples to help you to understand the usage of the framework
 
 ## examples of simple over-approximation
 

@@ -43,11 +43,11 @@ protected:
 	}
 	std::string   rootPath							= boost::filesystem::current_path().string();
 	std::string   SpikingNeuronModelPath			= "/resource/model/example_0/model.mdl";
-	std::string   SpikingNeuronModelSettingsPath	= "/resource/model/example_0/setting.cfg";
+	std::string   SpikingNeuronModelSettingsPath	= "/resource/model/example_0/setting_overApproximation.cfg";
 	std::string   HelicopterControllerModelPath		= "/resource/model/example_1/model.mdl";
 	std::string   HelicopterControllerSettingsPath  = "/resource/model/example_1/setting.cfg";
 	std::string   FitzHugNagNeuronModelPath			= "/resource/model/example_2/model.mdl";
-	std::string   FitzHugNagNeuronModelSettingsPath = "/resource/model/example_2/setting.cfg";
+	std::string   FitzHugNagNeuronModelSettingsPath = "/resource/model/example_2/setting_overApproximation.cfg";
 	std::ifstream SpikingNeuronModelIfstream;
 	std::ifstream SpikingNeuronModelSettingsIfstream;
 	std::ifstream HelicopterControllerModelIfstream;

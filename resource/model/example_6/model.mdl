@@ -1,6 +1,6 @@
 HYBRID_AUTOMATON
 {
-    NAME Helicopter Controller
+    NAME Example Model
 
     VARIABLES
     {

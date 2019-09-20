@@ -267,7 +267,7 @@ as you can see, you should provide the geometry objects, points, the time interv
 
 <br />
 <p align="center">
-    <img src="../../pics/viewerDemo.png" alt="viewerDemo" width="1000" height="1000">
+    <img src="viewerDemo.png" alt="viewerDemo" width="1000" height="1000">
 </p>
 
 ## References

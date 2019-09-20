@@ -8,7 +8,7 @@ An interval hull is represented by a group of intervals, one for each dimension 
 
 <br />
 <p align="center">
-    <img src="../../pics/intervalHull.png" alt="intervalHull" width="300" height="300">
+    <img src="intervalHull.png" alt="intervalHull" width="300" height="300">
 </p>
 
 
@@ -24,7 +24,7 @@ defined by a set of halfspaces, which given by a normal matrix **A** and related
 
 <br />
 <p align="center">
-    <img src="../../pics/hpolytope.png" alt="hpolytope" width="300" height="300">
+    <img src="hpolytope.png" alt="hpolytope" width="300" height="300">
 </p>
 
 ### VPolytope
@@ -33,5 +33,5 @@ defined by a set pf points which specify the convex hull of those points
 
 <br />
 <p align="center">
-    <img src="../../pics/vpolytope.png" alt="vpolytope" width="300" height="300">
+    <img src="vpolytope.png" alt="vpolytope" width="300" height="300">
 </p>
