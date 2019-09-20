@@ -11,11 +11,11 @@ is desigened as the general formal representation of the set of
 state. it is mainly used in declaring a geometric state set formally. e.g. you
 can define the polytope using formulations as following:
 
-<center>
+<div style="text-align: center;">
 
 ![constraint_equation](http://latex.codecogs.com/svg.latex?%5Cleft%5C%7B%20%5Cbegin%7Barray%7D%7Brcl%7D%20A_%7B0%7D%20%5Ccdot%20x%20%26&plus;%20%5C%20%5C%20b_%7B0%7D%20%26%5Cleq%200%5C%5C%20A_%7B1%7D%20%5Ccdot%20x%20%26&plus;%20%5C%20%5C%20b_%7B1%7D%20%26%5Cleq%200%5C%5C%20%5Cvdots%5C%5C%20A_%7Bn%7D%20%5Ccdot%20x%20%26&plus;%20%5C%20%5C%20b_%7Bn%7D%20%26%5Cleq%200%5C%5C%20%5Cend%7Barray%7D%20%5Cright.)
 
-</center>
+</div>
 
 which defines a convex hull as a polytope (halfspaces defined).
 
@@ -29,12 +29,11 @@ do is writing down all the functions into the congurating file like [examples](@
 
 is implemented as [deterministic finite automaton](https://en.wikipedia.org/w/index.php?title=Deterministic_finite_automaton&oldid=915398161) inside. A hybrid automaton is a tuple
 
-<center>
+<div style="text-align: center;">
 
 **_H_** **=(** **_Locations,Variables,Flow,Invariants,Transitions,Initialization_** **)**
 
-</center>
-
+</div>
 
 **Location** a finite set of discrete states which are also called control modes
 

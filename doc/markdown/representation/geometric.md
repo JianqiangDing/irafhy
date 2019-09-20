@@ -27,7 +27,6 @@ defined by a set of halfspaces, which given by a normal matrix **A** and related
     <img src="../../pics/hpolytope.png" alt="hpolytope" width="300" height="300">
 </p>
 
-
 ### VPolytope
 
 defined by a set pf points which specify the convex hull of those points
