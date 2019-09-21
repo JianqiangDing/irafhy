@@ -31,7 +31,7 @@ is implemented as [deterministic finite automaton](https://en.wikipedia.org/w/in
 
 <div style="text-align: center;">
 
-**_H_** **=** **(** **_Locations,Variables,Flow,Invariants,Transitions,Initialization_** **)**
+**H = (Locations,Variables,Flow,Invariants,Transitions,Initialization)**
 
 </div>
 

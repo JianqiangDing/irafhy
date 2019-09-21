@@ -1,1 +1,0 @@
-# Example 6 {#example_6}

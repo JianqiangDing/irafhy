@@ -8,7 +8,7 @@ target_sources(runExampleCase_0 PRIVATE
 
 target_include_directories(runExampleCase_0
                            PRIVATE
-                           ${CMAKE_CURRENT_LIST_DIR}/../../../algorithm
+                           ${CMAKE_CURRENT_LIST_DIR}/../../algorithm
                            ${GTEST_INCLUDE_DIR})
 
 target_link_libraries(runExampleCase_0

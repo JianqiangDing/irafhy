@@ -11,19 +11,66 @@ namespace irafhy
 	class Transitions
 	{
 	private:
+		/**
+		 * @brief jumps among modes
+		 */
 		std::vector<Jump<Analyser>> jumps_;
 
 	public:
-		Transitions()											  = default;
-		Transitions(const Transitions<Analyser>& transitions)	 = default;
+		/**
+		 * @brief default consructor
+		 */
+		Transitions() = default;
+		/**
+		 * @brief copy constructor
+		 * @param transitions given transition
+		 */
+		Transitions(const Transitions<Analyser>& transitions) = default;
+		/**
+		 * @brief move constructor
+		 * @param transitions given transitions
+		 */
 		Transitions(Transitions<Analyser>&& transitions) noexcept = default;
+		/**
+		 * @brief constructor with given jumps
+		 * @param jumps given jumps
+		 */
 		explicit Transitions(const std::vector<Jump<Analyser>>& jumps);
+		/**
+		 * @brief destructor
+		 */
 		~Transitions() = default;
+		/**
+		 * @brief get the jumps among modes
+		 * @return jumps among modes
+		 */
 		const std::vector<Jump<Analyser>>& jumps() const;
-		std::vector<Jump<Analyser>>&	   jumps();
-		Transitions<Analyser>&			   operator=(const Transitions<Analyser>& rhs) = default;
-		Transitions<Analyser>&			   operator=(Transitions<Analyser>&& rhs) noexcept = default;
+		/**
+		 * @brief get the jumps among modes
+		 * @return jumps among modes
+		 */
+		std::vector<Jump<Analyser>>& jumps();
+		/**
+		 * @brief assignment operator
+		 * @param rhs right hand side of the operator
+		 * @return resulting transition object
+		 */
+		Transitions<Analyser>& operator=(const Transitions<Analyser>& rhs) = default;
+		/**
+		 * @brief assignment operator
+		 * @param rhs right hand side of the operator
+		 * @return resulting transition object
+		 */
+		Transitions<Analyser>& operator=(Transitions<Analyser>&& rhs) noexcept = default;
 	};
+
+	/**
+	 * @brief out the right hand side transitions object to standard out stream
+	 * @tparam Analyser module which specify the analyser of the hybrid automaton
+	 * @param out given out stream
+	 * @param rhs right hand side transitions object
+	 * @return resulting out stream
+	 */
 	template <typename Analyser>
 	std::ostream& operator<<(std::ostream& out, const Transitions<Analyser>& rhs);
 } // namespace irafhy

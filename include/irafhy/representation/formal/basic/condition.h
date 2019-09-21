@@ -8,6 +8,9 @@
 
 namespace irafhy
 {
+	/**
+	 * @brief geometry entity which used for represent the interval hull or polytope and any other objects shall be supported in the future.
+	 */
 	using GeoEntity = boost::variant<IntervalHull, Polytope>;
 
 	struct geoEntityVisitor : public boost::static_visitor<GeoEntity>

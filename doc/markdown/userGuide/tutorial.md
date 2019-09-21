@@ -158,7 +158,7 @@ for more complex verifier example, you can check the source code of the reposito
 
 ### Settings
 
-It is inevitable to set some parameters related to the algorithm. For this part, we use \textbf{Settings} class to maintain all of them. you can customize your own \textbf{Settings} class to maintain the parameters you need and add some other methods you want. e.g.
+It is inevitable to set some parameters related to the algorithm. For this part, we use **Settings** class to maintain all of them. you can customize your own **Settings** class to maintain the parameters you need and add some other methods you want. e.g.
 
 ```cpp
 #pragma once
