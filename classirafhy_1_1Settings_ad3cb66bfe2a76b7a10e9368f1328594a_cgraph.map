@@ -1,0 +1,4 @@
+<map id="irafhy::Settings::setDuration" name="irafhy::Settings::setDuration">
+<area shape="rect" id="node2" href="$classirafhy_1_1Settings.html#a51f79933165e6d70f25f0474013c43cf" title="get the duration of the simulation " alt="" coords="239,5,403,32"/>
+<area shape="rect" id="node3" href="$structirafhy_1_1Time.html#a0e035046f8ac387c2511aa69176c54a4" title="get the range of the interval specified by duration " alt="" coords="451,31,581,57"/>
+</map>

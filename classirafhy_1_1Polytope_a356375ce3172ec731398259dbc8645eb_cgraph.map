@@ -1,0 +1,10 @@
+<map id="irafhy::Polytope::verticesEnumerationDualPly" name="irafhy::Polytope::verticesEnumerationDualPly">
+<area shape="rect" id="node2" href="$classirafhy_1_1ConvexHull.html#abacca1ad5fcfa64281806879fb8ffb46" title="constructor of convex hull with given points " alt="" coords="245,136,375,177"/>
+<area shape="rect" id="node8" href="$classirafhy_1_1Polytope.html#a577daeaab44335fa9be4a7675d8db365" title="get the dimension of the space which the polytope in " alt="" coords="220,202,400,229"/>
+<area shape="rect" id="node9" href="$structirafhy_1_1convexConstraints.html#a0dabf4e66882334dae4dcfb7382a1115" title="get the indexes of each facet " alt="" coords="225,253,395,295"/>
+<area shape="rect" id="node3" href="$structirafhy_1_1convexConstraints.html#aeee0b969276f6d868b33ad43140ebbf1" title="constructor " alt="" coords="448,5,619,47"/>
+<area shape="rect" id="node4" href="$structirafhy_1_1convexConstraints.html#adccd1a4ddff10888131401b816f0120b" title="get the dimension of the space which the convex hull in " alt="" coords="448,71,619,112"/>
+<area shape="rect" id="node5" href="$structirafhy_1_1convexConstraints.html#a2092734204b65642e50ddcfb331d7714" title="get the half space constraints which define the convex hull " alt="" coords="448,136,619,177"/>
+<area shape="rect" id="node6" href="$structirafhy_1_1convexConstraints.html#a23d0f5adbd97eb35ae7589464fdd8ca3" title="get the vector storing each facet&#39;s neighbor facets " alt="" coords="448,201,619,243"/>
+<area shape="rect" id="node7" href="$structirafhy_1_1convexConstraints.html#a6fa902531ad481af71c679195561d8b4" title="get the extreme vertices which define the convex hull " alt="" coords="448,267,619,308"/>
+</map>

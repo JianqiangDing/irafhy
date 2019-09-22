@@ -1,0 +1,8 @@
+<map id="irafhy::Polytope::Empty" name="irafhy::Polytope::Empty">
+<area shape="rect" id="node2" href="$classirafhy_1_1Polytope.html#a577daeaab44335fa9be4a7675d8db365" title="get the dimension of the space which the polytope in " alt="" coords="212,5,392,32"/>
+<area shape="rect" id="node3" href="$classirafhy_1_1HalfSpace.html#ac8bcc51471dd177bb18cff169408dd39" title="static constructor of Empty half space object " alt="" coords="237,57,367,98"/>
+<area shape="rect" id="node5" href="$classirafhy_1_1Polytope.html#aaa49b7e5cabcd057399934b933c58637" title="constructor " alt="" coords="216,123,388,149"/>
+<area shape="rect" id="node6" href="$classirafhy_1_1Point.html#a4d1eaccce74da043f62cad5e16aa204e" title="constructor of the origin of the given target space " alt="" coords="239,173,365,200"/>
+<area shape="rect" id="node4" href="$classirafhy_1_1HalfSpace.html#a858e37b276bb513a7b7ad453f3d2249d" title="default constructor " alt="" coords="440,57,571,98"/>
+<area shape="rect" id="node7" href="$classirafhy_1_1Point.html#a22cb30b6db19adeefa7972fe35c1885c" title="default constructor " alt="" coords="440,173,571,200"/>
+</map>

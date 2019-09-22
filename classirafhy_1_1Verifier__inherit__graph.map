@@ -1,0 +1,3 @@
+<map id="irafhy::Verifier" name="irafhy::Verifier">
+<area shape="rect" id="node2" href="$classirafhy_1_1HybridAutomaton.html" title="{irafhy::HybridAutomaton\l\&lt; Analyser, Verifier \&gt;\n|&#45; id_\l&#45; variables_\l&#45; transitions_\l&#45; locations_\l&#45; timeSequence_\l&#45; reachableConditions_\l&#45; curDuration_\l&#45; curModelPtr_\l|+ HybridAutomaton()\l+ HybridAutomaton()\l+ HybridAutomaton()\l+ HybridAutomaton()\l+ ~HybridAutomaton()\l+ setID()\l+ setVariables()\l+ setLocations()\l+ setTransitions()\l+ id()\land 9 more...\l&#45; startModelPtr()\l&#45; constructTransitions()\l&#45; durationSimulate()\l&#45; verify()\l}" alt="" coords="5,145,168,545"/>
+</map>

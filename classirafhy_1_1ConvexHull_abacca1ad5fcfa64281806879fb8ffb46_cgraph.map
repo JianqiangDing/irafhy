@@ -1,0 +1,7 @@
+<map id="irafhy::ConvexHull::constraints" name="irafhy::ConvexHull::constraints">
+<area shape="rect" id="node2" href="$structirafhy_1_1convexConstraints.html#aeee0b969276f6d868b33ad43140ebbf1" title="constructor " alt="" coords="184,5,355,47"/>
+<area shape="rect" id="node3" href="$structirafhy_1_1convexConstraints.html#adccd1a4ddff10888131401b816f0120b" title="get the dimension of the space which the convex hull in " alt="" coords="184,71,355,112"/>
+<area shape="rect" id="node4" href="$structirafhy_1_1convexConstraints.html#a2092734204b65642e50ddcfb331d7714" title="get the half space constraints which define the convex hull " alt="" coords="184,136,355,177"/>
+<area shape="rect" id="node5" href="$structirafhy_1_1convexConstraints.html#a23d0f5adbd97eb35ae7589464fdd8ca3" title="get the vector storing each facet&#39;s neighbor facets " alt="" coords="184,201,355,243"/>
+<area shape="rect" id="node6" href="$structirafhy_1_1convexConstraints.html#a6fa902531ad481af71c679195561d8b4" title="get the extreme vertices which define the convex hull " alt="" coords="184,267,355,308"/>
+</map>

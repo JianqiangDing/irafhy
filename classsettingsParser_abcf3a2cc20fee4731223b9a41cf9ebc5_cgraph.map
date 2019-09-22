@@ -1,0 +1,6 @@
+<map id="settingsParser::geometrysetting" name="settingsParser::geometrysetting">
+<area shape="rect" id="node2" href="$classsettingsParser_1_1GeometrysettingContext.html#a9d113a110edac1e8853dfcb427175bd0" title="settingsParser::Geometrysetting\lContext::enterRule" alt="" coords="260,5,471,47"/>
+<area shape="rect" id="node4" href="$classsettingsParser_1_1GeometrysettingContext.html#a2d06c19ba109cd0c8294a0e7f722879a" title="settingsParser::Geometrysetting\lContext::exitRule" alt="" coords="260,71,471,112"/>
+<area shape="rect" id="node3" href="$classsettingsListener.html#a17dbd6489dd731e211825005c359e953" title="settingsListener::enterGeometrysetting" alt="" coords="519,13,765,39"/>
+<area shape="rect" id="node5" href="$classsettingsListener.html#a07d492763247d61414f066628e0cd2ff" title="settingsListener::exitGeometrysetting" alt="" coords="523,78,761,105"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="settingsParser::vector" name="settingsParser::vector">
+<area shape="rect" id="node2" href="$classsettingsParser_1_1VectorContext.html#aff9e8a093b34c0142d595ed57ef85d38" title="settingsParser::VectorContext\l::enterRule" alt="" coords="204,5,403,47"/>
+<area shape="rect" id="node4" href="$classsettingsParser_1_1VectorContext.html#a356331e3720b4e58555402005d08e5e7" title="settingsParser::VectorContext\l::exitRule" alt="" coords="204,71,403,112"/>
+<area shape="rect" id="node3" href="$classsettingsListener.html#aced34c7c386f8defd945b9bc45f3b311" title="settingsListener::enterVector" alt="" coords="451,13,640,39"/>
+<area shape="rect" id="node5" href="$classsettingsListener.html#a982813444bd806fb19a687526dcd71fd" title="settingsListener::exitVector" alt="" coords="455,78,636,105"/>
+</map>

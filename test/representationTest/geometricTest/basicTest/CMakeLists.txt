@@ -1,2 +1,0 @@
-add_subdirectory(pointTest)
-add_subdirectory(halfSpaceTest)

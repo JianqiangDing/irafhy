@@ -1,2 +1,0 @@
-add_subdirectory(visitorTest)
-add_subdirectory(parserTest)

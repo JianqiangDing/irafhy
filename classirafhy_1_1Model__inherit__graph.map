@@ -1,0 +1,4 @@
+<map id="irafhy::Model&lt; Analyser &gt;" name="irafhy::Model&lt; Analyser &gt;">
+<area shape="rect" id="node4" href="$classirafhy_1_1Model.html" title="{irafhy::Model\&lt; irafhy\l::Analyser \&gt;\n|&#45; id_\l&#45; flows_\l&#45; invariantCondition_\l&#45; jumps_\l|+ Model()\l+ Model()\l+ ~Model()\l+ setJump()\l+ getModel()\l+ id()\l+ flows()\l+ invariantCondition()\l+ jumps()\l+ operator\&lt;()\l+ simulate()\l&#45; compute()\l}" alt="" coords="83,492,230,789"/>
+<area shape="rect" id="node2" href="$classirafhy_1_1Analyser.html" title="{irafhy::Analyser\n||+ ~Analyser()\l+ compute()\l}" alt="" coords="5,5,119,97"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="irafhy::Polytope::Polytope" name="irafhy::Polytope::Polytope">
+<area shape="rect" id="node2" href="$classirafhy_1_1Polytope.html#a577daeaab44335fa9be4a7675d8db365" title="get the dimension of the space which the polytope in " alt="" coords="243,5,423,32"/>
+<area shape="rect" id="node3" href="$classirafhy_1_1Polytope.html#a23c9170e0f25d3c6c5a401179b1a37c2" title="get the half space constraints of the polytope " alt="" coords="244,57,423,98"/>
+<area shape="rect" id="node4" href="$classirafhy_1_1Polytope.html#a0c1c72fc16829b859d1a78cef1a396af" title="get the extreme vertices of the polytope " alt="" coords="225,123,441,149"/>
+<area shape="rect" id="node5" href="$classirafhy_1_1Polytope.html#a4346d7d285add2c728062edf6c2133d8" title="get the volume of the polytope " alt="" coords="252,173,415,200"/>
+</map>

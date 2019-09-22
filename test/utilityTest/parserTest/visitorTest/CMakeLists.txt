@@ -1,7 +1,0 @@
-add_subdirectory(constraintsVisitorTest)
-add_subdirectory(definitionVisitorTest)
-add_subdirectory(hybridAutomatonVisitorTest)
-add_subdirectory(locationsVisitorTest)
-add_subdirectory(settingsVisitorTest)
-add_subdirectory(systemVisitorTest)
-add_subdirectory(transitionsVisitorTest)

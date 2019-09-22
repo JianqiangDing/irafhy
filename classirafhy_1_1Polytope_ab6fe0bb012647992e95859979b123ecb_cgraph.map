@@ -1,0 +1,6 @@
+<map id="irafhy::Polytope::init" name="irafhy::Polytope::init">
+<area shape="rect" id="node2" href="$structirafhy_1_1convexConstraints.html#adccd1a4ddff10888131401b816f0120b" title="get the dimension of the space which the convex hull in " alt="" coords="192,5,363,47"/>
+<area shape="rect" id="node3" href="$structirafhy_1_1convexConstraints.html#a2092734204b65642e50ddcfb331d7714" title="get the half space constraints which define the convex hull " alt="" coords="192,71,363,112"/>
+<area shape="rect" id="node4" href="$structirafhy_1_1convexConstraints.html#a6fa902531ad481af71c679195561d8b4" title="get the extreme vertices which define the convex hull " alt="" coords="192,136,363,177"/>
+<area shape="rect" id="node5" href="$structirafhy_1_1convexConstraints.html#a29e7d27532233111669f1aacc71b3de9" title="get the volume of the convex hull " alt="" coords="192,201,363,243"/>
+</map>

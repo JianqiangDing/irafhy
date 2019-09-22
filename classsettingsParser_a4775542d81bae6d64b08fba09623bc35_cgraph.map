@@ -1,0 +1,6 @@
+<map id="settingsParser::plotsetting" name="settingsParser::plotsetting">
+<area shape="rect" id="node2" href="$classsettingsParser_1_1PlotsettingContext.html#aebff1e1cbb5369b268b789edb2d6d3eb" title="settingsParser::Plotsetting\lContext::enterRule" alt="" coords="228,5,404,47"/>
+<area shape="rect" id="node4" href="$classsettingsParser_1_1PlotsettingContext.html#ac804b9488df45308ab67d3566294e13e" title="settingsParser::Plotsetting\lContext::exitRule" alt="" coords="228,71,404,112"/>
+<area shape="rect" id="node3" href="$classsettingsListener.html#aeda8253da3ba74e156b16a56b5264184" title="settingsListener::enterPlotsetting" alt="" coords="452,13,665,39"/>
+<area shape="rect" id="node5" href="$classsettingsListener.html#af14d385952a2189c607df2bf9fdc1f87" title="settingsListener::exitPlotsetting" alt="" coords="456,78,661,105"/>
+</map>

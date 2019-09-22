@@ -1,0 +1,6 @@
+<map id="settingsParser::maxjumpsetting" name="settingsParser::maxjumpsetting">
+<area shape="rect" id="node2" href="$classsettingsParser_1_1MaxjumpsettingContext.html#ac7f5d9c533db37b859f3fa78c8a43a0b" title="settingsParser::Maxjumpsetting\lContext::enterRule" alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node4" href="$classsettingsParser_1_1MaxjumpsettingContext.html#a8b9c04cb16252854b46f661473b005ff" title="settingsParser::Maxjumpsetting\lContext::exitRule" alt="" coords="260,71,467,112"/>
+<area shape="rect" id="node3" href="$classsettingsListener.html#a4a21fcd124fc83f9ea8bfc04440f3b47" title="settingsListener::enterMaxjumpsetting" alt="" coords="515,13,757,39"/>
+<area shape="rect" id="node5" href="$classsettingsListener.html#ae22183e64c374f33c605aca094718a10" title="settingsListener::exitMaxjumpsetting" alt="" coords="519,78,753,105"/>
+</map>

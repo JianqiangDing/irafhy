@@ -1,2 +1,0 @@
-add_subdirectory(formalTest)
-add_subdirectory(geometricTest)

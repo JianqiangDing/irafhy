@@ -1,2 +1,0 @@
-add_subdirectory(CSPSolverTest)
-add_subdirectory(ODESolverTest)

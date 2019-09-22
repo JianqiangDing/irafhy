@@ -1,0 +1,7 @@
+<map id="settingsParser::intervalhull" name="settingsParser::intervalhull">
+<area shape="rect" id="node2" href="$classsettingsParser_1_1IntervalhullContext.html#ae27d7e04cf78d03f0ea75678437bae93" title="settingsParser::Intervalhull\lContext::enterRule" alt="" coords="229,5,407,47"/>
+<area shape="rect" id="node4" href="$classsettingsParser_1_1IntervalhullContext.html#aae34cb278fff3a872d3e1b7b4eba18c4" title="settingsParser::Intervalhull\lContext::exitRule" alt="" coords="229,71,407,112"/>
+<area shape="rect" id="node6" href="$classsettingsParser_1_1IntervalhullContext.html#a85cc3297ec8ef4a296047c4b6d1af94b" title="settingsParser::Intervalhull\lContext::interval" alt="" coords="229,136,407,177"/>
+<area shape="rect" id="node3" href="$classsettingsListener.html#a68ec2fc3e5f8431499ff225b88c9819e" title="settingsListener::enterIntervalhull" alt="" coords="455,13,669,39"/>
+<area shape="rect" id="node5" href="$classsettingsListener.html#a7050f45c4895c4c67aa46add173b4309" title="settingsListener::exitIntervalhull" alt="" coords="459,78,665,105"/>
+</map>

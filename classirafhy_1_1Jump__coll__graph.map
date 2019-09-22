@@ -1,0 +1,7 @@
+<map id="irafhy::Jump&lt; Analyser &gt;" name="irafhy::Jump&lt; Analyser &gt;">
+<area shape="rect" id="node2" href="$classirafhy_1_1Model.html" title="{irafhy::Model\&lt; irafhy\l::Analyser \&gt;\n|&#45; id_\l&#45; jumps_\l|+ Model()\l+ Model()\l+ ~Model()\l+ setJump()\l+ getModel()\l+ id()\l+ flows()\l+ invariantCondition()\l+ jumps()\l+ operator\&lt;()\l+ simulate()\l&#45; compute()\l}" alt="" coords="367,623,514,891"/>
+<area shape="rect" id="node3" href="$classirafhy_1_1Analyser.html" title="{irafhy::Analyser\n||+ ~Analyser()\l+ compute()\l}" alt="" coords="379,79,492,171"/>
+<area shape="rect" id="node7" href="$classirafhy_1_1Model.html" title="{irafhy::Model\&lt; Analyser \&gt;\n|&#45; id_\l&#45; jumps_\l|+ Model()\l+ Model()\l+ ~Model()\l+ setJump()\l+ getModel()\l+ id()\l+ flows()\l+ invariantCondition()\l+ jumps()\l+ operator\&lt;()\l+ simulate()\l&#45; compute()\l}" alt="" coords="160,307,332,560"/>
+<area shape="rect" id="node5" href="$classirafhy_1_1System.html" title="{irafhy::System\n|&#45; formulas_\l|+ System()\l+ System()\l+ ~System()\l+ odeSystem()\l+ empty()\l+ reverse()\l&#45; assign()\l&#45; group()\l}" alt="" coords="5,35,113,215"/>
+<area shape="rect" id="node6" href="$classirafhy_1_1Condition.html" title="{irafhy::Condition\n|&#45; geoEntity_\l|+ Condition()\l+ Condition()\l+ Condition()\l+ Condition()\l+ Condition()\l+ Condition()\l+ ~Condition()\l+ constraints()\l+ entity()\l+ empty()\land 9 more...\l+ Empty()\l}" alt="" coords="581,5,698,244"/>
+</map>
