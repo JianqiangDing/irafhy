@@ -5,7 +5,7 @@ it will be illustrated what inspired us to start the project, and what the
 project designed for.
 
 ## Related Works
-Reach-ability analysis, which involves constructing reachable sets, is a central component of model checking, plays an important role in automatic verification and falsification of safety properties for continuous nonlinear and hybrid
+Reach-ability analysis, which involves constructing reachable sets, is a central component of model checking, plays an important role in automatic verification and falsification of safety properties for continuous nonlinear and hybrid
 systems. Over the past years, lots of tools like [CORA](https://tumcps.github.io/CORA/), [HyPro](https://github.com/hypro/hypro), [FLOW*](https://github.com/hypro/hypro) were developed as formal verification tools for hybrid systems. the main differences
 among these tools concentrated on the following aspects:
 
