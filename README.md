@@ -1,3 +1,4 @@
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -6,11 +7,29 @@
   </a>
 </p>
 
+
+<p align="center">
 The IraFhy is designed for perform reachability analysis of hybrid systems.
+</p>
+
+
+<p align="center">
+    <br />
+        <a href="https://jianqiangding.github.io/irafhy/index.html"><strong>Online Documents »</strong></a>
+    <br />    
+</p>
+
+<p align="center">
+    <br />
+        <a href="https://github.com/JianqiangDing/irafhy/raw/master/doc/manual.pdf"><strong>Manual »</strong></a>
+    <br />    
+</p>
+
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
 
 ### Prerequisites
 
@@ -61,32 +80,12 @@ make
 make test
 ```
 
-## Examples
-```
-insert some images and related introduction
-```
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_spikingNeuronModel.png)
-
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_helicopterController.png)
-
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_helicopterController_0.png)
-
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_helicopterController_1.png)
-
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_helicopterController_2.png)
-
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_helicopterController_3.png)
-
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_helicopterController_4.png)
-
-![](doc/pics/test/algorithmTest/overApproximateForwardTest/OAF_helicopterController_5.png)
-
 ## TODO List
 ```
-#0410 refine the constraints satisfaction problem solver
-#0411 refine the plotter
-#0412 extend the ODE solver to DDE solver
-#0413 extend the ODE solver with time variant ODEs
+refine the constraints satisfaction problem solver
+refine the plotter
+extend the ODE solver to DDE solver
+extend the ODE solver with time variant ODEs
 ```
 
 ## Authors
@@ -94,12 +93,10 @@ insert some images and related introduction
 * **Jianqiang Ding** - *Program Engineer* - <jq.ding.szu@gmail.com>
 * **Bai Xue** - *Corresponding Author* - [Homepage](http://lcs.ios.ac.cn/~xuebai/index.html)
 
-See also the list of [contributors](https://github.com/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/JianqiangDing/irafhy/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the [TODO] License - see the [LICENSE](LICENSE.md) file for details
+This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE.md) file for details
 
 ## Acknowledgments
-
-* TODO
