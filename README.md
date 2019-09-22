@@ -80,14 +80,6 @@ make
 make test
 ```
 
-## TODO List
-```
-refine the constraints satisfaction problem solver
-refine the plotter
-extend the ODE solver to DDE solver
-extend the ODE solver with time variant ODEs
-```
-
 ## Authors
 
 * **Jianqiang Ding** - *Program Engineer* - <jq.ding.szu@gmail.com>
