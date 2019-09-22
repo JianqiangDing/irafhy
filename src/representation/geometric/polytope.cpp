@@ -3,10 +3,10 @@
 
 namespace irafhy
 {
-	Polytope::Polytope(const std::vector<irafhy::Point>&	 pointConstraints,
-					   const std::vector<irafhy::HalfSpace>& halfSpaceConstraints,
-					   double								 volume,
-					   int									 dimension)
+	Polytope::Polytope(const std::vector<Point>&	 pointConstraints,
+					   const std::vector<HalfSpace>& halfSpaceConstraints,
+					   double						 volume,
+					   int							 dimension)
 	{
 		pointConstraints_	 = pointConstraints;
 		halfSpaceConstraints_ = halfSpaceConstraints;
@@ -275,28 +275,6 @@ namespace irafhy
 				if (pointConstraints_[index][dimIdx] < curLowerBound)
 					curLowerBound = pointConstraints_[index][dimIdx];
 				if (pointConstraints_[index][dimIdx] > curUpperBound)
-					curUpperBound = pointConstraints_[index][dimIdx];
-			}
-			retConstraints.emplace_back(capd::interval(curLowerBound, curUpperBound));
-		}
-		return retConstraints;
-	}
-
-	std::vector<capd::interval> Polytope::inscribedConstraints(const Point& centroid) const
-	{
-		assert(dimension_ > 0);
-		std::vector<capd::interval> retConstraints(0);
-		for (int dimIdx = 0; dimIdx < dimension_; ++dimIdx)
-		{
-			double curLowerBound = std::numeric_limits<double>::lowest();
-			double curUpperBound = std::numeric_limits<double>::max();
-			for (int index = 0; index < pointConstraints_.size(); ++index)
-			{
-				if (pointConstraints_[index][dimIdx] <= centroid[dimIdx]
-					&& pointConstraints_[index][dimIdx] > curLowerBound)
-					curLowerBound = pointConstraints_[index][dimIdx];
-				if (pointConstraints_[index][dimIdx] >= centroid[dimIdx]
-					&& pointConstraints_[index][dimIdx] < curUpperBound)
 					curUpperBound = pointConstraints_[index][dimIdx];
 			}
 			retConstraints.emplace_back(capd::interval(curLowerBound, curUpperBound));

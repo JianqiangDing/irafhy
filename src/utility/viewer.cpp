@@ -194,6 +194,12 @@ namespace irafhy
 		Eigen::MatrixXi F(intervalHulls.size() * 12, 3), E(intervalHulls.size() * 12, 2);
 		for (std::size_t index = 0; index < intervalHulls.size(); ++index)
 		{
+			if (intervalHulls[index].empty())
+			{
+				std::cout << intervalHulls[index] << std::endl;
+				std::cout << "is empty, we don't show it" << std::endl;
+				continue;
+			}
 			IntervalHullStruct curIntervalHullMatrix
 				= intervalHullMatrix(intervalHulls[index], validTime[index], validDimension);
 			V.block(index * 8, 0, 8, 3) = curIntervalHullMatrix._V;
@@ -308,11 +314,11 @@ namespace irafhy
 		viewer.launch();
 	}
 
-	void viewer::show(const std::vector<irafhy::Condition>&			 conditions,
-					  const std::vector<std::vector<irafhy::Point>>& points,
-					  const std::vector<capd::interval>&			 time,
-					  const std::vector<int>&						 dimension,
-					  irafhy::VIEW_TYPE								 viewType)
+	void viewer::show(const std::vector<Condition>&			 conditions,
+					  const std::vector<std::vector<Point>>& points,
+					  const std::vector<capd::interval>&	 time,
+					  const std::vector<int>&				 dimension,
+					  VIEW_TYPE								 viewType)
 	{
 		//TODO
 		exit(EXIT_FAILURE);

@@ -12,7 +12,6 @@ namespace irafhy
 	template <typename Analyser>
 	std::vector<Model<Analyser>> Locations<Analyser>::models() const
 	{
-		assert(!models_.empty());
 		return models_;
 	}
 

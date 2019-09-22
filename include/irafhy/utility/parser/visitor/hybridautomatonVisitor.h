@@ -13,12 +13,27 @@ namespace irafhy
 	class HybridAutomatonVisitor : public hybridautomatonBaseVisitor
 	{
 	public:
+		/**
+		 * @brief constructor
+		 */
 		HybridAutomatonVisitor() = default;
-
+		/**
+		 * @brief hybrid automaton id visitor
+		 * @param ctx context of hybrid automaton
+		 * @return hybrid automaton id instance in C++ standard string form
+		 */
 		antlrcpp::Any visitHybridautomatonid(hybridautomatonParser::HybridautomatonidContext* ctx) override;
-
+		/**
+		 * @brief variables visitor
+		 * @param ctx context of variables visitor
+		 * @return variables storing in a vector
+		 */
 		antlrcpp::Any visitVariables(hybridautomatonParser::VariablesContext* ctx) override;
-
+		/**
+		 * @brief hybrid automaton visitor
+		 * @param ctx context of hybrid automaton
+		 * @return hybrid automaton instance
+		 */
 		antlrcpp::Any visitHybridautomaton(hybridautomatonParser::HybridautomatonContext* ctx) override;
 	};
 } // namespace irafhy

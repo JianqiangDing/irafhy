@@ -3,13 +3,18 @@
 
 namespace irafhy
 {
+	/**
+	 * @brief style of viewing geometry objects
+	 */
 	enum VIEW_TYPE
 	{
 		POINT,
 		LINE,
 		PLANE
 	};
-
+	/**
+	 * @brief supported unary math functions
+	 */
 	enum UNARY
 	{
 		OPPOSITE,
@@ -35,7 +40,9 @@ namespace irafhy
 		SQR,
 		SQRT
 	};
-
+	/**
+	 * @brief supported binary math functions
+	 */
 	enum BINARY
 	{
 		PLUS,
@@ -44,7 +51,9 @@ namespace irafhy
 		DIVIDE,
 		POWER
 	};
-
+	/**
+	 * @brief type of the item assembling a formula
+	 */
 	enum ITEM_T
 	{
 		CONSTANT_T,
@@ -52,25 +61,33 @@ namespace irafhy
 		UNARY_T,
 		BINARY_T
 	};
-
+	/**
+	 * @brief direction of the integration respect to the direction of vector filed
+	 */
 	enum ANALYSIS
 	{
 		FORWARD,
 		BACKWARD
 	};
-
+	/**
+	 * @brief supported geometry object
+	 */
 	enum GEOMETRY
 	{
 		INTERVAL_HULL,
 		POLYTOPE
 	};
-
+	/**
+	 * @brief optimization direction of the linear programming
+	 */
 	enum LINEPROG_DIRECTION
 	{
 		MAX,
 		MIN
 	};
-
+	/**
+	 * @brief status of the solution return by glpk
+	 */
 	enum LINEPROG_SOLUTION
 	{
 		UNDEFINED,
@@ -80,7 +97,9 @@ namespace irafhy
 		OPTIMAL,
 		UNBOUNDED
 	};
-
+	/**
+	 * @brief relation between two expressions
+	 */
 	enum RELATION
 	{
 		LESS_THAN,
@@ -90,7 +109,9 @@ namespace irafhy
 		GREATER_THAN_OR_EQUAL_TO,
 		GREATER_THAN
 	};
-
+	/**
+	 * @brief flag which indicates the statue of the constraints system
+	 */
 	enum CONSTRAINTS_SOLUTION
 	{
 		ALL_SATISFIED,

@@ -38,6 +38,7 @@ namespace Eigen
 		}
 		return false;
 	}
+
 	bool operator>(const Eigen::VectorXd& lhs, const Eigen::VectorXd& rhs) { return rhs < lhs; }
 
 	bool operator>=(const Eigen::VectorXd& lhs, const Eigen::VectorXd& rhs) { return rhs <= lhs; }

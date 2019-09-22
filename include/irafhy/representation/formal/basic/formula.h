@@ -45,7 +45,7 @@ namespace irafhy
 							 const std::vector<capd::interval>& in,
 							 const std::vector<capd::interval>& params) const;
 		/**
-		 * @brief check whether the vector was reversed or not
+		 * @brief check if the vector was reversed or not
 		 * @return TRUE if the vector was reversed
 		 */
 		bool isReversed() const;

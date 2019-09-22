@@ -96,7 +96,7 @@ namespace irafhy
 
 	int IntervalHull::dimension() const { return constraints_.size(); }
 
-	std::vector<Point> IntervalHull::extremVertices() const
+	std::vector<Point> IntervalHull::extremeVertices() const
 	{
 		std::vector<Point> result;
 		std::size_t		   dimension = constraints_.size();

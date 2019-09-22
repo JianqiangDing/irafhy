@@ -20,8 +20,8 @@ namespace irafhy
 			levels[dimIdx]		= curRange / axisEpsilon[dimIdx];
 		}
 		for (std::size_t dimIdx = 0; dimIdx < dim; ++dimIdx)
-			constraints[dimIdx] = capd::interval(constraints[dimIdx].leftBound() - axisEpsilon[dimIdx] / 2,
-												 constraints[dimIdx].rightBound() + axisEpsilon[dimIdx] / 2);
+			constraints[dimIdx] = capd::interval(constraints[dimIdx].leftBound() /*- axisEpsilon[dimIdx] / 2*/,
+												 constraints[dimIdx].rightBound() /*+ axisEpsilon[dimIdx] / 2*/);
 		std::vector<IntervalHull> retIntervalHulls;
 		for (int dimIdx = 1; dimIdx <= dim; ++dimIdx)
 		{
@@ -46,8 +46,8 @@ namespace irafhy
 						}
 						else
 						{
-							double curLower = constraints[idx].leftBound() + axisEpsilon[idx];
-							double curUpper = constraints[idx].rightBound() - axisEpsilon[idx];
+							double curLower = constraints[idx].leftBound() + axisEpsilon[idx] / 2;
+							double curUpper = constraints[idx].rightBound() - axisEpsilon[idx] / 2;
 							for (int levelIdx = 0; levelIdx < levels[idx]; ++levelIdx)
 								possibleCoordinate[idx].emplace_back(curLower + levelIdx * axisEpsilon[idx]);
 						}
@@ -80,10 +80,10 @@ namespace irafhy
 					curConstraints.reserve(dim);
 					for (int iIdx = 0; iIdx < dim; ++iIdx)
 					{
-						if (std::isnan(axisEpsilon[iIdx]))
+						if (std::isnan(axisEpsilon[iIdx]) || indicator[iIdx])
 						{
-							curConstraints.emplace_back(capd::interval(possibleCoordinate[iIdx][curOffsets[iIdx]],
-																	   possibleCoordinate[iIdx][curOffsets[iIdx]]));
+						curConstraints.emplace_back(capd::interval(possibleCoordinate[iIdx][curOffsets[iIdx]],
+																   possibleCoordinate[iIdx][curOffsets[iIdx]]));
 						}
 						else
 						{
@@ -123,7 +123,7 @@ namespace irafhy
 		while (!Map.empty())
 		{
 			//get the current space
-			std::size_t  curNextDimension = Map.begin()->first;
+			std::size_t	 curNextDimension = Map.begin()->first;
 			IntervalHull curSpace		  = Map.begin()->second;
 			//check whether or not the current space contains solutions
 			//if FALSE, continue the procedure
@@ -161,7 +161,7 @@ namespace irafhy
 		while (!Map.empty())
 		{
 			//get the current space
-			std::size_t  curNextDimension = Map.begin()->first;
+			std::size_t	 curNextDimension = Map.begin()->first;
 			IntervalHull curSpace		  = Map.begin()->second;
 			//erase the beginning element
 			Map.erase(Map.begin());
@@ -170,7 +170,7 @@ namespace irafhy
 			//DEBUG
 			//check whether or not the current space contains solutions
 			//construct the values used for constraints checking
-			std::vector<capd::interval> curIn	= curSpace.constraints();
+			std::vector<capd::interval> curIn	 = curSpace.constraints();
 			CONSTRAINTS_SOLUTION		solution = constraints.isSatisfy(time, curIn, dummyParams);
 			//if partial satisfied
 			if (solution == CONSTRAINTS_SOLUTION::PARTIAL_SATISFIED)

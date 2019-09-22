@@ -8,6 +8,9 @@
 
 namespace irafhy
 {
+	/**
+	 * @brief geometry entity which used for represent the interval hull or polytope and any other objects shall be supported in the future.
+	 */
 	using GeoEntity = boost::variant<IntervalHull, Polytope>;
 
 	struct geoEntityVisitor : public boost::static_visitor<GeoEntity>
@@ -83,7 +86,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] GeoEntity entity() const;
 		/**
-		 * @brief check if the condition is empty
+		 * @brief check if the condition is empty or not
 		 * @return TRUE if the condition is in zero dimensional space or volume if equal to zero
 		 */
 		[[nodiscard]] bool empty() const;

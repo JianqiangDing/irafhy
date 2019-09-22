@@ -2,7 +2,7 @@
 
 namespace irafhy
 {
-	System::System(const std::vector<irafhy::Formula>& formulas) { formulas_ = formulas; }
+	System::System(const std::vector<Formula>& formulas) { formulas_ = formulas; }
 
 	std::function<void(
 		capd::autodiff::Node, capd::autodiff::Node[], int, capd::autodiff::Node[], int, capd::autodiff::Node[], int)>
