@@ -9,6 +9,11 @@ namespace irafhy
 	class HybridAutomatonParser
 	{
 	public:
+		/**
+		 * @brief parse the hybrid automaton defined in the given file
+		 * @param filePath path of the file
+		 * @return resulting hybrid automaton instance
+		 */
 		static HybridAutomaton<Analyser, Verifier> parse(const std::string& filePath);
 	};
 } // namespace irafhy

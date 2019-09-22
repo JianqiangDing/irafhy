@@ -121,7 +121,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] std::vector<UpdateFunction> resetMap() const;
 		/**
-		 * @brief check if the given condition trigger the jump, if TRUE, output the triggered condition
+		 * @brief check if the given condition trigger the jump, if TRUE, output the triggered condition or not
 		 * @param in given input condition
 		 * @param out resulting triggered condition if necessary
 		 * @param time current time in interval form

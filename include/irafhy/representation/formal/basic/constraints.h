@@ -45,7 +45,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] std::size_t dimension() const;
 		/**
-		 * @brief check if the given values inside the target domain defined by the given constraints
+		 * @brief check if the given values inside the target domain defined by the given constraints or not
 		 * @param t given time interval value
 		 * @param in input values
 		 * @param params parameters necessary

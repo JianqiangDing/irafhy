@@ -58,7 +58,7 @@ namespace irafhy
 		 * @brief get the initial condition of the state
 		 * @return the initial condition of the state
 		 */
-		capd::C0Rect2Set initCondition() const;
+		[[nodiscard]] capd::C0Rect2Set initCondition() const;
 	};
 } // namespace irafhy
 #ifndef USE_AS_STATIC

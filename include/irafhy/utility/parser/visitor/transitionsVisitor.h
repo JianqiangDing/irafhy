@@ -17,25 +17,60 @@ namespace irafhy
 	class TransitionsVisitor : public hybridautomatonBaseVisitor
 	{
 	private:
+		/**
+		 * @brief variables of hybrid automaton
+		 */
 		std::vector<std::string> vars_;
 
 	public:
+		/**
+		 * @brief constructor
+		 */
 		TransitionsVisitor() = default;
-
+		/**
+		 * @brief constructor with given variables
+		 * @param vars variables of hybrid automaton
+		 */
 		TransitionsVisitor(const std::vector<std::string>& vars);
-
+		/**
+		 * @brief destructor
+		 */
 		~TransitionsVisitor() override = default;
-
+		/**
+		 * @brief visitor of direction
+		 * @param ctx context of direction
+		 * @return direction instance
+		 */
 		antlrcpp::Any visitDirection(hybridautomatonParser::DirectionContext* ctx) override;
-
+		/**
+		 * @brief visitor of guard condition
+		 * @param ctx context of guard condition
+		 * @return guard condition instance
+		 */
 		antlrcpp::Any visitGuardcondition(hybridautomatonParser::GuardconditionContext* ctx) override;
-
+		/**
+		 * @brief visitor of update function
+		 * @param ctx context of update function
+		 * @return update function instance
+		 */
 		antlrcpp::Any visitUpdatefunction(hybridautomatonParser::UpdatefunctionContext* ctx) override;
-
+		/**
+		 * @brief visitor of reset map
+		 * @param ctx context of reset map
+		 * @return reset map instance
+		 */
 		antlrcpp::Any visitResetmap(hybridautomatonParser::ResetmapContext* ctx) override;
-
+		/**
+		 * @brief visitor of jump
+		 * @param ctx context of jump
+		 * @return jump instance
+		 */
 		antlrcpp::Any visitJump(hybridautomatonParser::JumpContext* ctx) override;
-
+		/**
+		 * @brief visitor of transitions
+		 * @param ctx context of transitions
+		 * @return transitions instance
+		 */
 		antlrcpp::Any visitTransitions(hybridautomatonParser::TransitionsContext* ctx) override;
 	};
 } // namespace irafhy

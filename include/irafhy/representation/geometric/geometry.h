@@ -21,12 +21,12 @@ namespace irafhy
 		 */
 		[[nodiscard]] virtual int dimension() const = 0;
 		/**
-		 * @brief check if the geometry object is empty
+		 * @brief check if the geometry object is empty or not
 		 * @return TRUE if the geometry object is empty
 		 */
 		[[nodiscard]] virtual bool empty() const = 0;
 		/**
-		 * @brief check if the current geometry object intersect with given geometry object
+		 * @brief check if the current geometry object intersect with given geometry object or not
 		 * @param result the intersection of two geometry objects if exist
 		 * @return TRUE if the intersection of two geometry objects isn't empty
 		 */
@@ -37,13 +37,13 @@ namespace irafhy
 		 */
 		virtual DerivedGeometry unite(const DerivedGeometry&) const = 0;
 		/**
-		 * @brief check if the given point is inside the domain defined by the geometry object
+		 * @brief check if the given point is inside the domain defined by the geometry object or not
 		 * @param point the given point
 		 * @return TRUE if the given point is inside the domain defined by the geometry object
 		 */
 		[[nodiscard]] virtual bool contains(const Point& point) const = 0;
 		/**
-		 * @brief check if the given coordinate is inside the domain defined by the geometry object
+		 * @brief check if the given coordinate is inside the domain defined by the geometry object or not
 		 * @param coordinate the given coordinate
 		 * @return TRUE if the given point is inside the domain defined by the geometry object
 		 */

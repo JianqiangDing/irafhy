@@ -39,7 +39,7 @@ namespace irafhy
 		 */
 		~Constraint() = default;
 		/**
-		 * @brief check the given values can hold the relation of the constraint
+		 * @brief check the given values can hold the relation of the constraint or not
 		 * @param t current time interval
 		 * @param in input values
 		 * @param params parameters necessary

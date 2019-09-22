@@ -86,7 +86,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] GeoEntity entity() const;
 		/**
-		 * @brief check if the condition is empty
+		 * @brief check if the condition is empty or not
 		 * @return TRUE if the condition is in zero dimensional space or volume if equal to zero
 		 */
 		[[nodiscard]] bool empty() const;

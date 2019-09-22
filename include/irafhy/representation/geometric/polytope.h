@@ -39,7 +39,7 @@ namespace irafhy
 		 * @param volume volume of the convex hull
 		 * @param dimension dimension of the space which the polytope in
 		 */
-		Polytope(const std::vector<Point>&	   pointConstraints,
+		Polytope(const std::vector<Point>&	 pointConstraints,
 				 const std::vector<HalfSpace>& halfSpaceConstraints,
 				 double						   volume,
 				 int						   dimension);
@@ -75,34 +75,144 @@ namespace irafhy
 		std::vector<Point> verticesEnumeration(const Eigen::VectorXd& center, double radius);
 
 	public:
+		/**
+		 * @brief static constructor of Empty polytope
+		 * @param dimension dimension of the space which the polytope in
+		 * @return resulting Empty polytope
+		 */
 		static Polytope Empty(std::size_t dimension = 0);
 
 	public:
+		/**
+		 * @brief constructor
+		 */
 		Polytope();
-		Polytope(const Polytope& polytope)	   = default;
+		/**
+		 * @brief copy constructor
+		 * @param polytope given polytope
+		 */
+		Polytope(const Polytope& polytope) = default;
+		/**
+		 * @brief move constructor
+		 * @param polytope given polytope
+		 */
 		Polytope(Polytope&& polytope) noexcept = default;
+		/**
+		 * @brief constructor with given points
+		 * @param points given points
+		 */
 		explicit Polytope(const std::vector<Point>& points);
+		/**
+		 * @brief constructor with given half spaces
+		 * @param halfSpaces given half spaces
+		 */
 		explicit Polytope(const std::vector<HalfSpace>& halfSpaces);
+		/**
+		 * @brief constructor with given interval constraints
+		 * @param constraints given interval constraints
+		 */
 		explicit Polytope(const std::vector<capd::interval>& constraints);
+		/**
+		 * @brief constructor with given state set
+		 * @param set given state set
+		 */
 		explicit Polytope(const capd::C0Rect2Set& set);
+		/**
+		 * @brief constructor with given center and related radius
+		 * @param center center of the polytope
+		 * @param radius radius which defines the variance of each dimension
+		 */
 		Polytope(const Point& center, double radius);
+		/**
+		 * @brief constructor with given coordinate of the center and related radius
+		 * @param center coordinate of the center of the polytope
+		 * @param radius radius which defines the variance of each dimension
+		 */
 		Polytope(const Eigen::VectorXd& center, double radius);
+		/**
+		 * @brief destructor
+		 */
 		~Polytope() override = default;
-		[[nodiscard]] std::vector<Point>		  pointConstraints() const;
-		[[nodiscard]] std::vector<HalfSpace>	  halfSpaceConstraints() const;
-		[[nodiscard]] Point						  centroid() const;
+		/**
+		 * @brief get the extreme vertices of the polytope
+		 * @return extreme vertices of the polytope
+		 */
+		[[nodiscard]] std::vector<Point> pointConstraints() const;
+		/**
+		 * @brief get the half space constraints of the polytope
+		 * @return half space constraints of the polytope
+		 */
+		[[nodiscard]] std::vector<HalfSpace> halfSpaceConstraints() const;
+		/**
+		 * @brief get the centroid of the polytope
+		 * @return the centroid of the polytope in Point form
+		 */
+		[[nodiscard]] Point centroid() const;
+		/**
+		 * @brief get the variance constraints of all dimensions
+		 * @return variance constraints in interval vector form
+		 */
 		[[nodiscard]] std::vector<capd::interval> constraints() const;
-		[[nodiscard]] std::vector<capd::interval> inscribedConstraints(const Point& centroid) const;
-		[[nodiscard]] bool						  empty() const override;
-		[[nodiscard]] int						  dimension() const override;
-		[[nodiscard]] double					  volume() const;
-		bool									  intersect(const Polytope& rhs, Polytope& result) const override;
-		[[nodiscard]] Polytope					  unite(const Polytope& rhs) const override;
-		[[nodiscard]] bool						  contains(const Point& point) const override;
-		[[nodiscard]] bool						  contains(const Eigen::VectorXd& coordinate) const override;
-		Polytope&								  operator=(const Polytope& rhs) = default;
-		Polytope&								  operator=(Polytope&& rhs) noexcept = default;
+		/**
+		 * @brief check if the polytope is empty or not
+		 * @return TRUE if the polytope has zero volume or empty convex hull constraints
+		 */
+		[[nodiscard]] bool empty() const override;
+		/**
+		 * @brief get the dimension of the space which the polytope in
+		 * @return the dimension of the space which the polytope in
+		 */
+		[[nodiscard]] int dimension() const override;
+		/**
+		 * @brief get the volume of the polytope
+		 * @return the volume of the polytope
+		 */
+		[[nodiscard]] double volume() const;
+		/**
+		 * @brief check if the current polytope intersect with the given right hand side one or not
+		 * @param rhs right hand side polytope
+		 * @param result intersection of two polytope if exist
+		 * @return TRUE if the intersection of two polytope isn't empty
+		 */
+		bool intersect(const Polytope& rhs, Polytope& result) const override;
+		/**
+		 * @brief get the union of the current polytope and the given right hand side one
+		 * @param rhs right hand side polytope
+		 * @return resulting union of two polytope
+		 */
+		[[nodiscard]] Polytope unite(const Polytope& rhs) const override;
+		/**
+		 * @brief check if the given point inside the domain which defined by the current polytope or not
+		 * @param point given point
+		 * @return TRUE if the given point inside the domain which defined by the current polytope
+		 */
+		[[nodiscard]] bool contains(const Point& point) const override;
+		/**
+		 * @brief check if the given coordinate inside the domain which defined by the current polytope or not
+		 * @param coordinate given coordinate
+		 * @return TRUE if the given coordinate inside the domain which defined by the current polytope
+		 */
+		[[nodiscard]] bool contains(const Eigen::VectorXd& coordinate) const override;
+		/**
+		 * @brief assignment operator
+		 * @param rhs right hand side polytope
+		 * @return resulting polytope
+		 */
+		Polytope& operator=(const Polytope& rhs) = default;
+		/**
+		 * @brief assignment operator
+		 * @param rhs right hand side polytope
+		 * @return resulting polytope
+		 */
+		Polytope& operator=(Polytope&& rhs) noexcept = default;
 	};
+
+	/**
+	 * @brief out the right hand side polytope to standard out stream
+	 * @param out given out stream
+	 * @param rhs right hand side polytope
+	 * @return resulting out stream
+	 */
 	std::ostream& operator<<(std::ostream& out, const Polytope& rhs);
 } // namespace irafhy
 #endif //REPRESENTATION_GEOMETRIC_POLYTOPE_H

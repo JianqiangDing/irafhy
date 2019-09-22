@@ -88,7 +88,7 @@ namespace irafhy
 										 int)>
 			odeSystem() const;
 		/**
-		 * @brief check if the system is empty
+		 * @brief check if the system is empty or not
 		 * @return TRUE if the vector of formulas is empty
 		 */
 		[[nodiscard]] bool empty() const;

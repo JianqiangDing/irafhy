@@ -72,19 +72,19 @@ namespace irafhy
 		 */
 		[[nodiscard]] double offset() const;
 		/**
-		 * @brief check if the given point inside the half space
+		 * @brief check if the given point inside the half space or not
 		 * @param point given point
 		 * @return TRUE if the given point inside the half space
 		 */
 		[[nodiscard]] bool contains(const Point& point) const;
 		/**
-		 * @brief check the given coordinate inside the half space
+		 * @brief check the given coordinate inside the half space or not
 		 * @param coordinate given coordinate
 		 * @return TRUE if the given coordinate inside the half space
 		 */
 		[[nodiscard]] bool contains(const Eigen::VectorXd& coordinate) const;
 		/**
-		 * @brief check if the given point on the boundary of the half space
+		 * @brief check if the given point on the boundary of the half space or not
 		 * @param point given point
 		 * @return TRUE if the given coordinate hold the constraint which defines the half space
 		 */
@@ -96,7 +96,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] bool holds(const Eigen::VectorXd& coordinate) const;
 		/**
-		 * @brief check if the line segment between two points intersect with the half space
+		 * @brief check if the line segment between two points intersect with the half space or not
 		 * @param lhsEndPoint left hand side point of the line segment
 		 * @param rhsEndPoint right hand side point of the line segment
 		 * @param intersection intersection of the line segment with the half space

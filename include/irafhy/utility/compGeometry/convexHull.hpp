@@ -21,18 +21,60 @@ namespace irafhy
 	struct convexConstraints
 	{
 	private:
-		std::vector<Point>					pointConstraints_;
-		std::vector<HalfSpace>				halfSpaceConstraints_;
+		/**
+		 * @brief extreme vertices which define the convex hull
+		 */
+		std::vector<Point> pointConstraints_;
+		/**
+		 * @brief boundary half spaces which define the convex hull
+		 */
+		std::vector<HalfSpace> halfSpaceConstraints_;
+		/**
+		 * @brief each half space's neighbor half spaces
+		 */
 		std::vector<std::vector<HalfSpace>> neighborHalfSpaces_;
-		std::vector<std::vector<Point>>		facetVertices_;
-		std::vector<std::vector<int>>		facetVerticesIdx_;
-		double								volume_{};
-		int									dimension_{};
+		/**
+		 * @brief each facet's extreme vertices
+		 */
+		std::vector<std::vector<Point>> facetVertices_;
+		/**
+		 * @brief indexes of each facet's extreme vertices in whole convex hull extreme vertices
+		 */
+		std::vector<std::vector<int>> facetVerticesIdx_;
+		/**
+		 * @brief volume of the convex hull
+		 */
+		double volume_{};
+		/**
+		 * @brief dimension of the space which the convex hull in
+		 */
+		int dimension_{};
 
 	public:
-		convexConstraints()											= default;
-		convexConstraints(const convexConstraints& constraints)		= default;
+		/**
+		 * @brief constructor
+		 */
+		convexConstraints() = default;
+		/**
+		 * @brief copy constructor
+		 * @param constraints given constraint which defines the convex hull
+		 */
+		convexConstraints(const convexConstraints& constraints) = default;
+		/**
+		 * @brief move constructor
+		 * @param constraints constraints which defines the convex hull
+		 */
 		convexConstraints(convexConstraints&& constraints) noexcept = default;
+		/**
+		 * @brief constructor with given information
+		 * @param pointConstraints extreme vertices which define the convex hull
+		 * @param halfSpaceConstraints half space constraints which define the convex hull
+		 * @param neighborHalfSpaces vector storing each facet's neighbor facets
+		 * @param facetVertices extreme vertices of each facet
+		 * @param facetVerticesIdx indexes of each facet's extreme vertices in whole convex hull extreme vertices
+		 * @param volume volume of the convex hull
+		 * @param dimension dimension which the convex hull in
+		 */
 		convexConstraints(std::vector<Point>&				  pointConstraints,
 						  std::vector<HalfSpace>&			  halfSpaceConstraints,
 						  std::vector<std::vector<HalfSpace>> neighborHalfSpaces,
@@ -48,18 +90,51 @@ namespace irafhy
 			, volume_(volume)
 			, dimension_(dimension)
 		{}
-		[[nodiscard]] std::vector<Point>				  pointConstraints() const { return pointConstraints_; }
-		[[nodiscard]] std::vector<HalfSpace>			  halfSpaceConstraints() const { return halfSpaceConstraints_; }
+		/**
+		 * @brief get the extreme vertices which define the convex hull
+		 * @return the extreme vertices of the convex hull
+		 */
+		[[nodiscard]] std::vector<Point> pointConstraints() const { return pointConstraints_; }
+		/**
+		 * @brief get the half space constraints which define the convex hull
+		 * @return the half space constraints of the convex hull
+		 */
+		[[nodiscard]] std::vector<HalfSpace> halfSpaceConstraints() const { return halfSpaceConstraints_; }
+		/**
+		 * @brief get the vector storing each facet's neighbor facets
+		 * @return the vector storing each facet's neighbor facets
+		 */
 		[[nodiscard]] std::vector<std::vector<HalfSpace>> neighborHalfSpaces() const { return neighborHalfSpaces_; }
-		[[nodiscard]] std::vector<std::vector<Point>>	 faceVertices() const { return facetVertices_; }
-		[[nodiscard]] std::vector<std::vector<int>>		  faceVerticesIdx() const { return facetVerticesIdx_; }
-		[[nodiscard]] double							  volume() const { return volume_; }
-		[[nodiscard]] int								  dimension() const { return dimension_; }
+		/**
+		 * @brief get the vertices of each facet
+		 * @return the vertices of each facet
+		 */
+		[[nodiscard]] std::vector<std::vector<Point>> faceVertices() const { return facetVertices_; }
+		/**
+		 * @brief get the indexes of each facet
+		 * @return indexes of each facet
+		 */
+		[[nodiscard]] std::vector<std::vector<int>> faceVerticesIdx() const { return facetVerticesIdx_; }
+		/**
+		 * @brief get the volume of the convex  hull
+		 * @return the volume of the convex hull
+		 */
+		[[nodiscard]] double volume() const { return volume_; }
+		/**
+		 * @brief get the dimension of the space which the convex hull in
+		 * @return the dimension of the space which the convex hull in
+		 */
+		[[nodiscard]] int dimension() const { return dimension_; }
 	};
 
 	class ConvexHull
 	{
 	public:
+		/**
+		 * @brief constructor of convex hull with given points
+		 * @param points given points
+		 * @return the resulting convex hull
+		 */
 		static convexConstraints constraints(const std::vector<Point>& points)
 		{
 			assert(!points.empty());

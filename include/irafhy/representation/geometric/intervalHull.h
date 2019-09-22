@@ -19,7 +19,7 @@ namespace irafhy
 
 	public:
 		/**
-		 * @brief static constructor of Empty interval hull specified dimensional space
+		 * @brief static constructor of Empty interval hull in specified space
 		 * @param dimension dimension of the space which the interval hull in
 		 * @return resulting Empty interval hull
 		 */
@@ -77,7 +77,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] std::vector<capd::interval> constraints() const;
 		/**
-		 * @brief check if the interval hull is empty
+		 * @brief check if the interval hull is empty or not
 		 * @return TRUE if the interval hull's volume is zero or has empty constraints
 		 */
 		[[nodiscard]] bool empty() const override;
@@ -102,7 +102,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] Point centroid() const;
 		/**
-		 * @brief check if the current interval hull intersects with the right hand side interval hull
+		 * @brief check if the current interval hull intersects with the right hand side interval hull or not
 		 * @param rhs right hand side interval hull
 		 * @param result intersection of two interval hulls if exists
 		 * @return TRUE if the intersection isn't empty
@@ -115,19 +115,19 @@ namespace irafhy
 		 */
 		[[nodiscard]] IntervalHull unite(const IntervalHull& rhs) const override;
 		/**
-		 * @brief check if the given point inside the domain defined by the interval hull
+		 * @brief check if the given point inside the domain defined by the interval hull or not
 		 * @param point the given point
 		 * @return TRUE if the given point inside the domain defined by the interval hull
 		 */
 		[[nodiscard]] bool contains(const Point& point) const override;
 		/**
-		 * @brief check if the given coordinate inside the domain defined by the interval hull
+		 * @brief check if the given coordinate inside the domain defined by the interval hull or not
 		 * @param coordinate the given coordinate
 		 * @return TRUE if the given coordinate inside the domain defined by the interval hull
 		 */
 		[[nodiscard]] bool contains(const Eigen::VectorXd& coordinate) const override;
 		/**
-		 * @brief check if the given interval hull inside the current interval hull
+		 * @brief check if the given interval hull inside the current interval hull or not
 		 * @param rhs right hand side interval hull
 		 * @return TRUE if the given interval hull inside the current interval hull
 		 */

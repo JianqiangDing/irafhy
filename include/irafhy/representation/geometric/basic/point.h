@@ -84,7 +84,7 @@ namespace irafhy
 		 */
 		[[nodiscard]] int dimension() const;
 		/**
-		 * @brief check if the point in valid space
+		 * @brief check if the point in valid space or not
 		 * @return TRUE if the dimension of the space greater than zero
 		 */
 		[[nodiscard]] bool empty() const;

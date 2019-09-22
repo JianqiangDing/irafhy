@@ -10,35 +10,79 @@ namespace irafhy
 	class Evaluation
 	{
 	private:
-		double			  supportValue_;
-		Eigen::VectorXd   optimalCoordinate_;
+		/**
+		 * @brief optimal value of the object function
+		 */
+		double supportValue_;
+		/**
+		 * @brief vector which can get the optimal solution of the object function
+		 */
+		Eigen::VectorXd optimalCoordinate_;
+		/**
+		 * @brief status of the linear programing
+		 */
 		LINEPROG_SOLUTION solution_;
 
 	public:
+		/**
+		 * @brief constructor
+		 */
 		Evaluation()
 			: supportValue_(0.0)
 			, optimalCoordinate_(Eigen::VectorXd::Zero(0))
 			, solution_(LINEPROG_SOLUTION::INFEASIBLE)
 		{}
+		/**
+		 * @brief constructor with given status of the solution
+		 * @param solution status of the solution
+		 */
 		explicit Evaluation(const LINEPROG_SOLUTION& solution)
 			: supportValue_(0.0)
 			, optimalCoordinate_(Eigen::VectorXd::Zero(0))
 			, solution_(solution)
 		{}
+		/**
+		 * @brief constructor with given information
+		 * @param optimalCoordinate vector which can let the object function get the optimal solution
+		 * @param solution status of the linear programing
+		 */
 		Evaluation(Eigen::VectorXd optimalCoordinate, const LINEPROG_SOLUTION& solution)
 			: supportValue_(0.0)
 			, optimalCoordinate_(std::move(optimalCoordinate))
 			, solution_(solution)
 		{}
+		/**
+		 * @brief constructor with given information
+		 * @param supportValue optimal value of the object function
+		 * @param optimalCoordinate vector which can let the object function get the optimal solution
+		 * @param solution status of the linear programing
+		 */
 		Evaluation(const double& supportValue, Eigen::VectorXd optimalCoordinate, const LINEPROG_SOLUTION& solution)
 			: supportValue_(supportValue)
 			, optimalCoordinate_(std::move(optimalCoordinate))
 			, solution_(solution)
 		{}
+		/**
+		 * @brief get the optimal value of the object function
+		 * @return the optimal value of the object function
+		 */
 		[[nodiscard]] double supportValue() const { return supportValue_; }
-		Eigen::VectorXd		 optimalCoordinate() const { return optimalCoordinate_; }
-		LINEPROG_SOLUTION	solution() const { return solution_; }
-
+		/**
+		 * @brief get the optimal solution of the linear programming
+		 * @return the optimal solution of the problem
+		 */
+		[[nodiscard]] Eigen::VectorXd optimalCoordinate() const { return optimalCoordinate_; }
+		/**
+		 * @brief get the status of the linear programming solution
+		 * @return the status of the solution
+		 */
+		[[nodiscard]] LINEPROG_SOLUTION solution() const { return solution_; }
+		/**
+		 * @brief out the given evaluation object to the standard out stream
+		 * @param out given out stream
+		 * @param rhs right hand side out stream
+		 * @return resulting out stream
+		 */
 		friend std::ostream& operator<<(std::ostream& out, const Evaluation& rhs)
 		{
 			out << "optimal value: " << rhs.supportValue_ << std::endl;

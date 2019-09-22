@@ -14,13 +14,28 @@ namespace irafhy
 	class ConstraintsVisitor : public hybridautomatonBaseVisitor
 	{
 	private:
+		/**
+		 * @brief variables of the hybrid automaton
+		 */
 		std::vector<std::string> vars_;
 
 	public:
+		/**
+		 * @brief constructor
+		 * @param vars variables of the hybrid automaton
+		 */
 		explicit ConstraintsVisitor(const std::vector<std::string>& vars);
-
+		/**
+		 * @brief constraints visitor
+		 * @param ctx context of constraints
+		 * @return resulting constraints instance
+		 */
 		antlrcpp::Any visitConstraints(hybridautomatonParser::ConstraintsContext* ctx) override;
-
+		/**
+		 * @brief constraint visitor
+		 * @param ctx context of constraint
+		 * @return resulting constraint instance
+		 */
 		antlrcpp::Any visitConstraint(hybridautomatonParser::ConstraintContext* ctx) override;
 	};
 } // namespace irafhy

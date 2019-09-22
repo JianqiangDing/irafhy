@@ -75,7 +75,7 @@ target_compile_options(${PROJECT_NAME} PUBLIC -Wno-attributes -fPIC)
 # @brief: Enable code coverage with -DENABLE_EXAMPLES=1
 if(ENABLE_EXAMPLES)
   message("Enable generating examples")
-  add_subdirectory(example)
+  add_subdirectory(examples)
 endif()
 
 # @brief: Enable unit test with -DENABLE_TESTING=1
