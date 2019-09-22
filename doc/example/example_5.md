@@ -64,17 +64,17 @@ SETTINGS
 here are some screenshots of the results
 
 <p align="center">
-    <img src="../pics/test/algorithmTest/underApproximateBackwardPolytopeTest/UABP_example5_3d.png" alt="3d" width="2504" height="1413">
+    <img src="UABP_example5_3d.png" alt="3d" width="1500">
 </p>
 
 <p align="center">
-    <img src="../pics/test/algorithmTest/underApproximateBackwardPolytopeTest/UABP_example5_0.png" alt="0" width="2504" height="1413">
+    <img src="UABP_example5_0.png" alt="0" width="1500">
 </p>
 
 <p align="center">
-    <img src="../pics/test/algorithmTest/underApproximateBackwardPolytopeTest/UABP_example5_1.png" alt="1" width="2504" height="1413">
+    <img src="UABP_example5_1.png" alt="1" width="1500">
 </p>
 
 <p align="center">
-    <img src="../pics/test/algorithmTest/underApproximateBackwardPolytopeTest/UABP_example5_2.png" alt="2" width="2504" height="1413">
+    <img src="UABP_example5_2.png" alt="2" width="1500">
 </p>
