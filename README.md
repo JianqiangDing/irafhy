@@ -9,7 +9,7 @@
 
 
 <p align="center">
-The IraFhy is designed for perform reachability analysis of hybrid systems.
+Interval arithmetic based reachability analysis Framework designed for hybrid automatons
 </p>
 
 
