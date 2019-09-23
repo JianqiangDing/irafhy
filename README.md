@@ -62,7 +62,7 @@ make
 make install (if needed)
 ```
 
-### Generate document
+### Generate documents
 
 ```
 mkdir build && cd build
@@ -71,7 +71,7 @@ make
 make doc
 ```
 
-### Running the tests
+### Run the tests
 
 ```
 mkdir build && cd build
