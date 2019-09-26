@@ -267,7 +267,7 @@ namespace irafhy
 		switch (GEOMETRY(geoEntity_.which()))
 		{
 			case GEOMETRY::INTERVAL_HULL:
-				return boost::get<IntervalHull>(geoEntity_).extremVertices();
+				return boost::get<IntervalHull>(geoEntity_).extremeVertices();
 			case GEOMETRY::POLYTOPE:
 				return boost::get<Polytope>(geoEntity_).pointConstraints();
 			default:

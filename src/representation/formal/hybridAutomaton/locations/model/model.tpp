@@ -78,7 +78,7 @@ namespace irafhy
 										State<Analyser>&		nextState) const
 	{
 		capd::C0Rect2Set curSet = compute(duration, this->flows(), initCondition, settings);
-		Condition		 curReachableCondition(curSet);
+		Condition		 curReachableCondition(curSet, settings.geometry());
 		Condition		 intersection = Condition::Empty(settings.geometry(), initCondition.dimension());
 		Condition		 retCondition = intersection;
 		bool			 isNull		  = false;

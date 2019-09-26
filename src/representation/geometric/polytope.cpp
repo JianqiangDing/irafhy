@@ -257,7 +257,7 @@ namespace irafhy
 	{
 		assert(!pointConstraints_.empty());
 		Eigen::VectorXd sum = pointConstraints_.front().coordinate();
-		for (int index = 1; index < pointConstraints_.size(); ++index)
+		for (std::size_t index = 1; index < pointConstraints_.size(); ++index)
 			sum += pointConstraints_[index].coordinate();
 		return Point(sum / pointConstraints_.size());
 	}
@@ -270,7 +270,7 @@ namespace irafhy
 		{
 			double curLowerBound = std::numeric_limits<double>::max();
 			double curUpperBound = std::numeric_limits<double>::lowest();
-			for (int index = 0; index < pointConstraints_.size(); ++index)
+			for (std::size_t index = 0; index < pointConstraints_.size(); ++index)
 			{
 				if (pointConstraints_[index][dimIdx] < curLowerBound)
 					curLowerBound = pointConstraints_[index][dimIdx];

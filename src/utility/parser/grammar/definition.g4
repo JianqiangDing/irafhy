@@ -38,7 +38,7 @@ constraint:
 		| LEQ
 		| LSS
 		| GTR
-	) expression;
+	) OP = (PLUS | MINUS)? (NUMBER | SCINUM);
 
 system: formula+;
 

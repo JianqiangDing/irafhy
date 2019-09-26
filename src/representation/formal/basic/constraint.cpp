@@ -17,9 +17,6 @@ namespace irafhy
 	{
 		capd::interval lhsValue = lhsExpression_.value(t, in, params);
 		capd::interval rhsValue = rhsExpression_.value(t, in, params);
-		//DEBUG
-		std::cout << lhsValue << " " << rhsValue << std::endl;
-		//DBEUG
 		switch (relation_)
 		{
 			case RELATION::LESS_THAN:
@@ -38,6 +35,8 @@ namespace irafhy
 				exit(EXIT_FAILURE);
 		}
 	}
+
+	RELATION Constraint::relation() const { return relation_; }
 
 	std::ostream& operator<<(std::ostream& out, const Constraint& rhs)
 	{
@@ -79,5 +78,19 @@ namespace irafhy
 		}
 		out << rhs.rhsExpression_;
 		return out;
+	}
+
+	capd::interval Constraint::lhsValue(const capd::interval&			   t,
+										const std::vector<capd::interval>& in,
+										const std::vector<capd::interval>& params) const
+	{
+		return lhsExpression_.value(t, in, params);
+	}
+
+	capd::interval Constraint::rhsValue(const capd::interval&			   t,
+										const std::vector<capd::interval>& in,
+										const std::vector<capd::interval>& params) const
+	{
+		return rhsExpression_.value(t, in, params);
 	}
 } // namespace irafhy

@@ -3,16 +3,22 @@
 
 #include <vector>
 #include <queue>
-#include <map>
 #include <irafhy/representation/formal/basic/constraints.h>
 #include <irafhy/representation/geometric/intervalHull.h>
+#include <irafhy/representation/geometric/polytope.h>
 
 namespace irafhy
 {
 	class CSPSolver
 	{
 	private:
-		//TODO
+		/**
+		 * @brief enumerate the extreme vertices of the convex hull which defined by the given linear system Ax<=b
+		 * @param A coefficient matrix of the given linear system
+		 * @param b offset vector of the given linear system
+		 * @return extreme vertices of the given convex hull
+		 */
+		static Eigen::MatrixXd extremeVerticesEnumeration(const Eigen::MatrixXd& A, const Eigen::VectorXd& b);
 
 	public:
 		/**
@@ -21,7 +27,7 @@ namespace irafhy
 		 * @param epsilon specified precision
 		 * @return resulting boundary interval hulls
 		 */
-		static std::vector<IntervalHull> solve(const IntervalHull& intervalHull, double epsilon);
+		static std::vector<IntervalHull> exactBoundarySolve(const IntervalHull& intervalHull, double epsilon);
 		/**
 		 * @brief get the boundary interval hulls of the given interval hull in specified precision using branch and prune method
 		 * @param intervalHull given interval hull
@@ -36,6 +42,13 @@ namespace irafhy
 		 * @return resulting boundary interval hulls
 		 */
 		static std::vector<IntervalHull> branchPruneSolve(const Constraints& constraints, double epsilon);
+		/**
+		 * @brief get the boundary interval hulls of the domain which defined by the given constraints in specified precision using branch and prune method
+		 * @param polytope convex polytope which define the target domain
+		 * @param epsilon specified precision
+		 * @return resulting boundary interval hulls
+		 */
+		static std::vector<IntervalHull> branchPruneSolve(const Polytope& polytope, double epsilon);
 	};
 } // namespace irafhy
 #endif //UTILITY_SOLVER_CSP_SOLVER_H

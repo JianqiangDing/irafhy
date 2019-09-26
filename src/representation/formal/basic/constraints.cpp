@@ -24,10 +24,6 @@ namespace irafhy
 			return CONSTRAINTS_SOLUTION::ALL_UNSATISFIED;
 		if (numOfSatisfied == inequalities_.size())
 			return CONSTRAINTS_SOLUTION::ALL_SATISFIED;
-		//DEBUG
-		for (const auto& interval : in)
-			std::cout << interval << std::endl;
-		//DEBUG
 		return CONSTRAINTS_SOLUTION::PARTIAL_SATISFIED;
 	}
 
@@ -36,5 +32,17 @@ namespace irafhy
 		for (const auto& inequality : rhs.inequalities_)
 			out << inequality << std::endl;
 		return out;
+	}
+
+	Constraint Constraints::operator[](std::size_t index)
+	{
+		assert(index >= 0 && index < dimension_);
+		return inequalities_[index];
+	}
+
+	const Constraint& Constraints::operator[](std::size_t index) const
+	{
+		assert(index >= 0 && index < inequalities_.size());
+		return inequalities_[index];
 	}
 } // namespace irafhy

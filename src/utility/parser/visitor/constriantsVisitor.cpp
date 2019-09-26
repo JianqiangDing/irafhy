@@ -1,9 +1,25 @@
 #include <irafhy/representation/formal/basic/constraints.h>
 #include <irafhy/utility/parser/visitor/constriantsVisitor.h>
 #include <irafhy/utility/parser/visitor/itemVisitor.h>
+#include <boost/lexical_cast.hpp>
 
 namespace irafhy
 {
+	double ConstraintsVisitor::strToNum(const std::string& numStr) const
+	{
+		double retNum;
+		try
+		{
+			retNum = boost::lexical_cast<double>(numStr);
+		}
+		catch (const boost::bad_lexical_cast& e)
+		{
+			std::cout << e.what() << std::endl;
+			exit(EXIT_FAILURE);
+		}
+		return retNum;
+	}
+
 	ConstraintsVisitor::ConstraintsVisitor(const std::vector<std::string>& vars)
 	{
 		assert(!vars.empty());
@@ -13,8 +29,34 @@ namespace irafhy
 	antlrcpp::Any ConstraintsVisitor::visitConstraint(hybridautomatonParser::ConstraintContext* ctx)
 	{
 		ItemVisitor itemVisitor(vars_);
-		Item		lhsExpression = itemVisitor.visit(ctx->expression(0));
-		Item		rhsExpression = itemVisitor.visit(ctx->expression(1));
+		Item		lhsExpression = itemVisitor.visit(ctx->expression());
+		double		rhsConstant   = 0.0;
+		if (ctx->NUMBER() != nullptr)
+		{
+			std::string numStr = ctx->NUMBER()->getText();
+			rhsConstant		   = strToNum(numStr);
+		}
+		else
+		{
+			std::string numStr = ctx->SCINUM()->getText();
+			rhsConstant		   = strToNum(numStr);
+		}
+		if (ctx->OP != nullptr)
+		{
+			switch (ctx->OP->getType())
+			{
+				case hybridautomatonParser::PLUS:
+					break;
+				case hybridautomatonParser::MINUS:
+				{
+					rhsConstant *= -1.0;
+					break;
+				}
+				default:
+					exit(EXIT_FAILURE);
+			}
+		}
+		Item rhsExpression = Item(Constant(rhsConstant));
 		switch (ctx->RELATION->getType())
 		{
 			case hybridautomatonParser::UNEQUAL:
@@ -42,4 +84,5 @@ namespace irafhy
 			inequalities.emplace_back(visit(constraintCtx));
 		return Constraints(inequalities, vars_.size());
 	}
+
 } // namespace irafhy

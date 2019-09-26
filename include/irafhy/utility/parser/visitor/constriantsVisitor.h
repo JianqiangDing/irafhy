@@ -18,6 +18,12 @@ namespace irafhy
 		 * @brief variables of the hybrid automaton
 		 */
 		std::vector<std::string> vars_;
+		/**
+		 * @brief convert given string to number
+		 * @param numStr given string
+		 * @return resulting number
+		 */
+		[[nodiscard]] double strToNum(const std::string& numStr) const;
 
 	public:
 		/**

@@ -11,7 +11,7 @@ namespace irafhy
 		if (GEOMETRY(condition.entity().which()) == GEOMETRY::INTERVAL_HULL)
 		{
 			IntervalHull			  intervalHull = boost::get<IntervalHull>(condition.entity());
-			std::vector<IntervalHull> result	   = CSPSolver::solve(intervalHull, epsilon);
+			std::vector<IntervalHull> result	   = CSPSolver::exactBoundarySolve(intervalHull, epsilon);
 			return result;
 		}
 		else
@@ -59,10 +59,10 @@ namespace irafhy
 		std::vector<Point> allBoundaryVertices;
 		for (const auto& condition : boundary)
 		{
-			std::vector<Point> thisVertices = condition.extremVertices();
+			std::vector<Point> thisVertices = condition.extremeVertices();
 			allBoundaryVertices.insert(allBoundaryVertices.end(), thisVertices.begin(), thisVertices.end());
 		}
-		return Polytope(IntervalHull(allBoundaryVertices).extremVertices());
+		return Polytope(IntervalHull(allBoundaryVertices).extremeVertices());
 	}
 
 	Polytope UABPAnalyser::contraction(const irafhy::Polytope&					polytope,

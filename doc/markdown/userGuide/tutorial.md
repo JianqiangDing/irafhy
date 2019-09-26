@@ -77,7 +77,7 @@ source code of ./algorithm/overApproximateForward/analyser/analyser.cpp
 
 As you can see, there is nothing special within the analyser but an ODE
 solver calling. all you need to do is to define your own class which inherited from the pre-defined **Analyser** and overwrite the pure virtual method
-compute. you can also define a relatively complex analyser class like this which implement the algorithm in **Xuebai**'s paper
+compute. you can also define a relatively complex analyser class like this which implement the algorithm in **Bai Xue**'s paper
 
 ```cpp
 #pragma once
@@ -185,7 +185,7 @@ source code of ./algorithm/overApproximateForward/settings/settings.h
 
 ## configure the test case
 
-All the configurations related to the test case should be defined into two files, one for **_Hybrid System_**, the other for **_Settings_**. e.g.
+All the configurations related to the test case should be defined in two files, one for **_Hybrid System_**, the other for **_Settings_**. e.g.
 
 ```html
 HYBRID_AUTOMATON

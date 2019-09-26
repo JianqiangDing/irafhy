@@ -444,16 +444,20 @@ public:
   class  ConstraintContext : public antlr4::ParserRuleContext {
   public:
     antlr4::Token *RELATION = nullptr;;
+    antlr4::Token *OP = nullptr;;
     ConstraintContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    std::vector<ExpressionContext *> expression();
-    ExpressionContext* expression(size_t i);
+    ExpressionContext *expression();
+    antlr4::tree::TerminalNode *NUMBER();
+    antlr4::tree::TerminalNode *SCINUM();
     antlr4::tree::TerminalNode *EQUAL();
     antlr4::tree::TerminalNode *UNEQUAL();
     antlr4::tree::TerminalNode *GEQ();
     antlr4::tree::TerminalNode *LEQ();
     antlr4::tree::TerminalNode *LSS();
     antlr4::tree::TerminalNode *GTR();
+    antlr4::tree::TerminalNode *PLUS();
+    antlr4::tree::TerminalNode *MINUS();
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -504,14 +508,14 @@ public:
     antlr4::Token *plusToken = nullptr;;
     std::vector<antlr4::Token *> OP;;
     antlr4::Token *minusToken = nullptr;;
-    antlr4::Token *_tset251 = nullptr;;
+    antlr4::Token *_tset270 = nullptr;;
     antlr4::Token *numberToken = nullptr;;
     std::vector<antlr4::Token *> VAL;;
     antlr4::Token *scinumToken = nullptr;;
     antlr4::Token *key_infinityToken = nullptr;;
-    antlr4::Token *_tset264 = nullptr;;
-    antlr4::Token *_tset284 = nullptr;;
-    antlr4::Token *_tset297 = nullptr;;
+    antlr4::Token *_tset283 = nullptr;;
+    antlr4::Token *_tset303 = nullptr;;
+    antlr4::Token *_tset316 = nullptr;;
     IntervalContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *LEFTSQUAREBRACKET();

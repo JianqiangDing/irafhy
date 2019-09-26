@@ -251,7 +251,7 @@ TEST_F(runODESolverTest, case_4)
 		for (int dimIdx = 0; dimIdx < thisV.dimension(); ++dimIdx)
 			thisConstraints.emplace_back(thisV[dimIdx]);
 		retIntervalHulls.emplace_back(irafhy::IntervalHull(thisConstraints));
-		retPoints.emplace_back(irafhy::IntervalHull(thisConstraints).extremVertices());
+		retPoints.emplace_back(irafhy::IntervalHull(thisConstraints).extremeVertices());
 		set = thisResult;
 	}
 	irafhy::viewer::show(retIntervalHulls, retPoints, {}, {0, 1, 2}, irafhy::VIEW_TYPE::PLANE);
