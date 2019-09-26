@@ -28,7 +28,7 @@ namespace irafhy
 				if (indicator[index])
 				{
 					constraintMatrix.row(pos) = A.row(index);
-					constraintVector(pos)	 = b(index);
+					constraintVector(pos)	  = b(index);
 					++pos;
 				}
 			}
@@ -44,7 +44,7 @@ namespace irafhy
 		for (auto& intersection : intersections)
 		{
 			bool			isAllSatisfy = true;
-			Eigen::VectorXd curValues	= A * intersection;
+			Eigen::VectorXd curValues	 = A * intersection;
 			for (std::size_t cstIdx = 0; cstIdx < curValues.rows(); ++cstIdx)
 			{
 				if (curValues(cstIdx) > b(cstIdx))
@@ -190,7 +190,7 @@ namespace irafhy
 		while (!constraintsVec.empty())
 		{
 			//get the current space
-			std::vector<capd::interval> curConstraints   = constraintsVec.back();
+			std::vector<capd::interval> curConstraints	 = constraintsVec.back();
 			std::size_t					curNextDimension = nextDimensionVec.back();
 			constraintsVec.pop_back();
 			nextDimensionVec.pop_back();
@@ -235,7 +235,7 @@ namespace irafhy
 						isNeedSplit = true;
 				}
 			}
-			//if FALSE, store the current space as a solution
+			//if TRUE, split the current space and push into the checking queue
 			if (isNeedSplit)
 			{
 				std::vector<capd::interval> lhsConstraints = curConstraints;
@@ -252,7 +252,7 @@ namespace irafhy
 				nextDimensionVec.emplace_back(curNextDimension);
 				nextDimensionVec.emplace_back(curNextDimension);
 			}
-			//if TRUE, split the current space and push into the checking queue
+			//if FALSE, store the current space as a solution
 			else
 			{
 				retIntervalHulls.emplace_back(IntervalHull(curConstraints));
@@ -322,7 +322,7 @@ namespace irafhy
 				defaultConstraints[dimIdx] = capd::interval(lowerBound, upperBound);
 			}
 		}
-		//construct the multimap using for storing the sub spaces
+		//construct the vector storing the sub spaces
 		std::vector<std::vector<capd::interval>> constraintsVec;
 		std::vector<std::size_t>				 nextDimensionVec;
 		constraintsVec.emplace_back(defaultConstraints);
@@ -332,7 +332,7 @@ namespace irafhy
 		while (!constraintsVec.empty())
 		{
 			//get the current space
-			std::vector<capd::interval> curConstraints   = constraintsVec.back();
+			std::vector<capd::interval> curConstraints	 = constraintsVec.back();
 			std::size_t					curNextDimension = nextDimensionVec.back();
 			constraintsVec.pop_back();
 			nextDimensionVec.pop_back();
@@ -379,7 +379,7 @@ namespace irafhy
 						isNeedSplit = true;
 				}
 			}
-			//if FALSE, store the current space as a solution
+			//if TRUE, split the current space and push into the checking queue
 			if (isNeedSplit)
 			{
 				std::vector<capd::interval> lhsConstraints = curConstraints;
@@ -396,7 +396,7 @@ namespace irafhy
 				nextDimensionVec.emplace_back(curNextDimension);
 				nextDimensionVec.emplace_back(curNextDimension);
 			}
-			//if TRUE, split the current space and push into the checking queue
+			//if FALSE, store the current space as a solution
 			else
 			{
 				retIntervalHulls.emplace_back(IntervalHull(curConstraints));
@@ -423,8 +423,31 @@ namespace irafhy
 		//use point constraints to specify the domain containing solutions
 		std::vector<capd::interval> spaceConstraints = polytope.constraints();
 		//extend the space a little
-
-		//TODO
-		return std::vector<IntervalHull>(0);
+		for (auto& spaceConstraint : spaceConstraints)
+		{
+			spaceConstraint = capd::interval(spaceConstraint.leftBound() - std::sqrt(2) * epsilon,
+											 spaceConstraint.rightBound() + std::sqrt(2) * epsilon);
+		}
+		//construct dummy values
+		capd::interval				time(0.0, 0.0);
+		std::vector<capd::interval> dummyParams(0);
+		//construct the vector storing the sub spaces
+		std::vector<std::vector<capd::interval>> constraintsVec;
+		std::vector<std::size_t>				 nextDimensionVec;
+		constraintsVec.emplace_back(spaceConstraints);
+		nextDimensionVec.emplace_back(0);
+		//construct the vetor to store the resulting solutions
+		std::vector<IntervalHull> retIntervalHulls(0);
+		while (!constraintsVec.empty())
+		{
+			//get the current space
+			std::vector<capd::interval> curConstraints	 = constraintsVec.back();
+			std::size_t					curNextDimension = nextDimensionVec.back();
+			constraintsVec.pop_back();
+			nextDimensionVec.pop_back();
+			//check if the current space contains solutions
+			//TODO
+		}
+		return retIntervalHulls;
 	}
 } // namespace irafhy
