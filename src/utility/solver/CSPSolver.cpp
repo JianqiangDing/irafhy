@@ -28,7 +28,7 @@ namespace irafhy
 				if (indicator[index])
 				{
 					constraintMatrix.row(pos) = A.row(index);
-					constraintVector(pos)	  = b(index);
+					constraintVector(pos)	 = b(index);
 					++pos;
 				}
 			}
@@ -44,7 +44,7 @@ namespace irafhy
 		for (auto& intersection : intersections)
 		{
 			bool			isAllSatisfy = true;
-			Eigen::VectorXd curValues	 = A * intersection;
+			Eigen::VectorXd curValues	= A * intersection;
 			for (std::size_t cstIdx = 0; cstIdx < curValues.rows(); ++cstIdx)
 			{
 				if (curValues(cstIdx) > b(cstIdx))
@@ -190,7 +190,7 @@ namespace irafhy
 		while (!constraintsVec.empty())
 		{
 			//get the current space
-			std::vector<capd::interval> curConstraints	 = constraintsVec.back();
+			std::vector<capd::interval> curConstraints   = constraintsVec.back();
 			std::size_t					curNextDimension = nextDimensionVec.back();
 			constraintsVec.pop_back();
 			nextDimensionVec.pop_back();
@@ -332,7 +332,7 @@ namespace irafhy
 		while (!constraintsVec.empty())
 		{
 			//get the current space
-			std::vector<capd::interval> curConstraints	 = constraintsVec.back();
+			std::vector<capd::interval> curConstraints   = constraintsVec.back();
 			std::size_t					curNextDimension = nextDimensionVec.back();
 			constraintsVec.pop_back();
 			nextDimensionVec.pop_back();
@@ -436,17 +436,95 @@ namespace irafhy
 		std::vector<std::size_t>				 nextDimensionVec;
 		constraintsVec.emplace_back(spaceConstraints);
 		nextDimensionVec.emplace_back(0);
-		//construct the vetor to store the resulting solutions
+		//construct the vector to store the resulting solutions
 		std::vector<IntervalHull> retIntervalHulls(0);
 		while (!constraintsVec.empty())
 		{
 			//get the current space
-			std::vector<capd::interval> curConstraints	 = constraintsVec.back();
+			std::vector<capd::interval> curConstraints   = constraintsVec.back();
 			std::size_t					curNextDimension = nextDimensionVec.back();
 			constraintsVec.pop_back();
 			nextDimensionVec.pop_back();
 			//check if the current space contains solutions
-			//TODO
+			bool isContainsSolution = false;
+			{
+				bool isPossible = true;
+				for (auto& constraint : constraints)
+				{
+					capd::interval lhsValue(0.0, 0.0);
+					for (std::size_t dimIdx = 0; dimIdx < polytope.dimension(); ++dimIdx)
+					{
+						lhsValue += constraint.normal()(dimIdx) * curConstraints[dimIdx];
+					}
+					capd::interval rhsValue(-1.0 * constraint.offset(), -1.0 * constraint.offset());
+					if (lhsValue.leftBound() > rhsValue.rightBound())
+					{
+						isPossible = false;
+						break;
+					}
+				}
+				if (!isPossible)
+					continue;
+				for (auto& constraint : constraints)
+				{
+					capd::interval lhsValue(0.0, 0.0);
+					for (std::size_t dimIdx = 0; dimIdx < polytope.dimension(); ++dimIdx)
+					{
+						lhsValue += constraint.normal()(dimIdx) * curConstraints[dimIdx];
+					}
+					capd::interval rhsValue(constraint.offset(), constraint.offset());
+					if (lhsValue.leftBound() <= rhsValue.leftBound() && lhsValue.rightBound() >= rhsValue.rightBound())
+					{
+						isContainsSolution = true;
+						break;
+					}
+				}
+			}
+			//if FALSE, continue the procedure
+			if (!isContainsSolution)
+				continue;
+			//if TRUE, check if the current space need to be split further or not
+			bool isNeedSplit = false;
+			{
+				if (curNextDimension < polytope.dimension())
+				{
+					double range
+						= curConstraints[curNextDimension].rightBound() - curConstraints[curNextDimension].leftBound();
+					if (range <= epsilon)
+						curNextDimension++;
+					if (curNextDimension < polytope.dimension())
+						isNeedSplit = true;
+				}
+			}
+			//if TRUE, split the current space and push it into the check queue
+			if (isNeedSplit)
+			{
+				std::vector<capd::interval> lhsConstraints = curConstraints;
+				std::vector<capd::interval> rhsConstraints = curConstraints;
+				double						midValue
+					= (curConstraints[curNextDimension].leftBound() + curConstraints[curNextDimension].rightBound())
+					  / 2.0;
+				lhsConstraints[curNextDimension]
+					= capd::interval(curConstraints[curNextDimension].leftBound(), midValue);
+				rhsConstraints[curNextDimension]
+					= capd::interval(midValue, curConstraints[curNextDimension].rightBound());
+				constraintsVec.push_back(lhsConstraints);
+				constraintsVec.push_back(rhsConstraints);
+				nextDimensionVec.emplace_back(curNextDimension);
+				nextDimensionVec.emplace_back(curNextDimension);
+			}
+			//if FALSE, store the current space as a solution
+			else
+			{
+				retIntervalHulls.emplace_back(IntervalHull(curConstraints));
+				//max allowed interval hulls
+				if (retIntervalHulls.size() >= 1e6)
+				{
+					std::cout << "resulting more than " << 1e6 << " interval hulls, please solve with lower precision"
+							  << std::endl;
+					return retIntervalHulls;
+				}
+			}
 		}
 		return retIntervalHulls;
 	}

@@ -70,6 +70,90 @@ public:
   virtual void enterInterval(transitionsParser::IntervalContext * /*ctx*/) override { }
   virtual void exitInterval(transitionsParser::IntervalContext * /*ctx*/) override { }
 
+  virtual void enterSqrtConstExp(transitionsParser::SqrtConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrtConstExp(transitionsParser::SqrtConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcothConstExp(transitionsParser::AcothConstExpContext * /*ctx*/) override { }
+  virtual void exitAcothConstExp(transitionsParser::AcothConstExpContext * /*ctx*/) override { }
+
+  virtual void enterLogConstExp(transitionsParser::LogConstExpContext * /*ctx*/) override { }
+  virtual void exitLogConstExp(transitionsParser::LogConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanhConstExp(transitionsParser::TanhConstExpContext * /*ctx*/) override { }
+  virtual void exitTanhConstExp(transitionsParser::TanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPowConstExp(transitionsParser::PowConstExpContext * /*ctx*/) override { }
+  virtual void exitPowConstExp(transitionsParser::PowConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPosConstExp(transitionsParser::PosConstExpContext * /*ctx*/) override { }
+  virtual void exitPosConstExp(transitionsParser::PosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanhConstExp(transitionsParser::AtanhConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanhConstExp(transitionsParser::AtanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSqrConstExp(transitionsParser::SqrConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrConstExp(transitionsParser::SqrConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpBra(transitionsParser::ConstExpBraContext * /*ctx*/) override { }
+  virtual void exitConstExpBra(transitionsParser::ConstExpBraContext * /*ctx*/) override { }
+
+  virtual void enterSinhConstExp(transitionsParser::SinhConstExpContext * /*ctx*/) override { }
+  virtual void exitSinhConstExp(transitionsParser::SinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanConstExp(transitionsParser::AtanConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanConstExp(transitionsParser::AtanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinhConstExp(transitionsParser::AsinhConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinhConstExp(transitionsParser::AsinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExp(transitionsParser::ConstExpContext * /*ctx*/) override { }
+  virtual void exitConstExp(transitionsParser::ConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNegConstExp(transitionsParser::NegConstExpContext * /*ctx*/) override { }
+  virtual void exitNegConstExp(transitionsParser::NegConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinConstExp(transitionsParser::AsinConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinConstExp(transitionsParser::AsinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanConstExp(transitionsParser::TanConstExpContext * /*ctx*/) override { }
+  virtual void exitTanConstExp(transitionsParser::TanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNexpConstExp(transitionsParser::NexpConstExpContext * /*ctx*/) override { }
+  virtual void exitNexpConstExp(transitionsParser::NexpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCosConstExp(transitionsParser::CosConstExpContext * /*ctx*/) override { }
+  virtual void exitCosConstExp(transitionsParser::CosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpMulDiv(transitionsParser::ConstExpMulDivContext * /*ctx*/) override { }
+  virtual void exitConstExpMulDiv(transitionsParser::ConstExpMulDivContext * /*ctx*/) override { }
+
+  virtual void enterExpConstExp(transitionsParser::ExpConstExpContext * /*ctx*/) override { }
+  virtual void exitExpConstExp(transitionsParser::ExpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCotConstExp(transitionsParser::CotConstExpContext * /*ctx*/) override { }
+  virtual void exitCotConstExp(transitionsParser::CotConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCoshConstExp(transitionsParser::CoshConstExpContext * /*ctx*/) override { }
+  virtual void exitCoshConstExp(transitionsParser::CoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcoshConstExp(transitionsParser::AcoshConstExpContext * /*ctx*/) override { }
+  virtual void exitAcoshConstExp(transitionsParser::AcoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSinConstExp(transitionsParser::SinConstExpContext * /*ctx*/) override { }
+  virtual void exitSinConstExp(transitionsParser::SinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcosConstExp(transitionsParser::AcosConstExpContext * /*ctx*/) override { }
+  virtual void exitAcosConstExp(transitionsParser::AcosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpAddSub(transitionsParser::ConstExpAddSubContext * /*ctx*/) override { }
+  virtual void exitConstExpAddSub(transitionsParser::ConstExpAddSubContext * /*ctx*/) override { }
+
+  virtual void enterLnConstExp(transitionsParser::LnConstExpContext * /*ctx*/) override { }
+  virtual void exitLnConstExp(transitionsParser::LnConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcotConstExp(transitionsParser::AcotConstExpContext * /*ctx*/) override { }
+  virtual void exitAcotConstExp(transitionsParser::AcotConstExpContext * /*ctx*/) override { }
+
   virtual void enterTanExp(transitionsParser::TanExpContext * /*ctx*/) override { }
   virtual void exitTanExp(transitionsParser::TanExpContext * /*ctx*/) override { }
 

@@ -10,7 +10,7 @@ namespace irafhy
 	{
 	private:
 		/**
-		 * @brief value of the current constrant
+		 * @brief value of the current constant
 		 */
 		double value_;
 

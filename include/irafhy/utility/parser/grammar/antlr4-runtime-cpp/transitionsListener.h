@@ -68,6 +68,90 @@ public:
   virtual void enterInterval(transitionsParser::IntervalContext *ctx) = 0;
   virtual void exitInterval(transitionsParser::IntervalContext *ctx) = 0;
 
+  virtual void enterSqrtConstExp(transitionsParser::SqrtConstExpContext *ctx) = 0;
+  virtual void exitSqrtConstExp(transitionsParser::SqrtConstExpContext *ctx) = 0;
+
+  virtual void enterAcothConstExp(transitionsParser::AcothConstExpContext *ctx) = 0;
+  virtual void exitAcothConstExp(transitionsParser::AcothConstExpContext *ctx) = 0;
+
+  virtual void enterLogConstExp(transitionsParser::LogConstExpContext *ctx) = 0;
+  virtual void exitLogConstExp(transitionsParser::LogConstExpContext *ctx) = 0;
+
+  virtual void enterTanhConstExp(transitionsParser::TanhConstExpContext *ctx) = 0;
+  virtual void exitTanhConstExp(transitionsParser::TanhConstExpContext *ctx) = 0;
+
+  virtual void enterPowConstExp(transitionsParser::PowConstExpContext *ctx) = 0;
+  virtual void exitPowConstExp(transitionsParser::PowConstExpContext *ctx) = 0;
+
+  virtual void enterPosConstExp(transitionsParser::PosConstExpContext *ctx) = 0;
+  virtual void exitPosConstExp(transitionsParser::PosConstExpContext *ctx) = 0;
+
+  virtual void enterAtanhConstExp(transitionsParser::AtanhConstExpContext *ctx) = 0;
+  virtual void exitAtanhConstExp(transitionsParser::AtanhConstExpContext *ctx) = 0;
+
+  virtual void enterSqrConstExp(transitionsParser::SqrConstExpContext *ctx) = 0;
+  virtual void exitSqrConstExp(transitionsParser::SqrConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpBra(transitionsParser::ConstExpBraContext *ctx) = 0;
+  virtual void exitConstExpBra(transitionsParser::ConstExpBraContext *ctx) = 0;
+
+  virtual void enterSinhConstExp(transitionsParser::SinhConstExpContext *ctx) = 0;
+  virtual void exitSinhConstExp(transitionsParser::SinhConstExpContext *ctx) = 0;
+
+  virtual void enterAtanConstExp(transitionsParser::AtanConstExpContext *ctx) = 0;
+  virtual void exitAtanConstExp(transitionsParser::AtanConstExpContext *ctx) = 0;
+
+  virtual void enterAsinhConstExp(transitionsParser::AsinhConstExpContext *ctx) = 0;
+  virtual void exitAsinhConstExp(transitionsParser::AsinhConstExpContext *ctx) = 0;
+
+  virtual void enterConstExp(transitionsParser::ConstExpContext *ctx) = 0;
+  virtual void exitConstExp(transitionsParser::ConstExpContext *ctx) = 0;
+
+  virtual void enterNegConstExp(transitionsParser::NegConstExpContext *ctx) = 0;
+  virtual void exitNegConstExp(transitionsParser::NegConstExpContext *ctx) = 0;
+
+  virtual void enterAsinConstExp(transitionsParser::AsinConstExpContext *ctx) = 0;
+  virtual void exitAsinConstExp(transitionsParser::AsinConstExpContext *ctx) = 0;
+
+  virtual void enterTanConstExp(transitionsParser::TanConstExpContext *ctx) = 0;
+  virtual void exitTanConstExp(transitionsParser::TanConstExpContext *ctx) = 0;
+
+  virtual void enterNexpConstExp(transitionsParser::NexpConstExpContext *ctx) = 0;
+  virtual void exitNexpConstExp(transitionsParser::NexpConstExpContext *ctx) = 0;
+
+  virtual void enterCosConstExp(transitionsParser::CosConstExpContext *ctx) = 0;
+  virtual void exitCosConstExp(transitionsParser::CosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpMulDiv(transitionsParser::ConstExpMulDivContext *ctx) = 0;
+  virtual void exitConstExpMulDiv(transitionsParser::ConstExpMulDivContext *ctx) = 0;
+
+  virtual void enterExpConstExp(transitionsParser::ExpConstExpContext *ctx) = 0;
+  virtual void exitExpConstExp(transitionsParser::ExpConstExpContext *ctx) = 0;
+
+  virtual void enterCotConstExp(transitionsParser::CotConstExpContext *ctx) = 0;
+  virtual void exitCotConstExp(transitionsParser::CotConstExpContext *ctx) = 0;
+
+  virtual void enterCoshConstExp(transitionsParser::CoshConstExpContext *ctx) = 0;
+  virtual void exitCoshConstExp(transitionsParser::CoshConstExpContext *ctx) = 0;
+
+  virtual void enterAcoshConstExp(transitionsParser::AcoshConstExpContext *ctx) = 0;
+  virtual void exitAcoshConstExp(transitionsParser::AcoshConstExpContext *ctx) = 0;
+
+  virtual void enterSinConstExp(transitionsParser::SinConstExpContext *ctx) = 0;
+  virtual void exitSinConstExp(transitionsParser::SinConstExpContext *ctx) = 0;
+
+  virtual void enterAcosConstExp(transitionsParser::AcosConstExpContext *ctx) = 0;
+  virtual void exitAcosConstExp(transitionsParser::AcosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpAddSub(transitionsParser::ConstExpAddSubContext *ctx) = 0;
+  virtual void exitConstExpAddSub(transitionsParser::ConstExpAddSubContext *ctx) = 0;
+
+  virtual void enterLnConstExp(transitionsParser::LnConstExpContext *ctx) = 0;
+  virtual void exitLnConstExp(transitionsParser::LnConstExpContext *ctx) = 0;
+
+  virtual void enterAcotConstExp(transitionsParser::AcotConstExpContext *ctx) = 0;
+  virtual void exitAcotConstExp(transitionsParser::AcotConstExpContext *ctx) = 0;
+
   virtual void enterTanExp(transitionsParser::TanExpContext *ctx) = 0;
   virtual void exitTanExp(transitionsParser::TanExpContext *ctx) = 0;
 

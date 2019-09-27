@@ -80,6 +80,90 @@ public:
   virtual void enterInterval(settingsParser::IntervalContext *ctx) = 0;
   virtual void exitInterval(settingsParser::IntervalContext *ctx) = 0;
 
+  virtual void enterSqrtConstExp(settingsParser::SqrtConstExpContext *ctx) = 0;
+  virtual void exitSqrtConstExp(settingsParser::SqrtConstExpContext *ctx) = 0;
+
+  virtual void enterAcothConstExp(settingsParser::AcothConstExpContext *ctx) = 0;
+  virtual void exitAcothConstExp(settingsParser::AcothConstExpContext *ctx) = 0;
+
+  virtual void enterLogConstExp(settingsParser::LogConstExpContext *ctx) = 0;
+  virtual void exitLogConstExp(settingsParser::LogConstExpContext *ctx) = 0;
+
+  virtual void enterTanhConstExp(settingsParser::TanhConstExpContext *ctx) = 0;
+  virtual void exitTanhConstExp(settingsParser::TanhConstExpContext *ctx) = 0;
+
+  virtual void enterPowConstExp(settingsParser::PowConstExpContext *ctx) = 0;
+  virtual void exitPowConstExp(settingsParser::PowConstExpContext *ctx) = 0;
+
+  virtual void enterPosConstExp(settingsParser::PosConstExpContext *ctx) = 0;
+  virtual void exitPosConstExp(settingsParser::PosConstExpContext *ctx) = 0;
+
+  virtual void enterAtanhConstExp(settingsParser::AtanhConstExpContext *ctx) = 0;
+  virtual void exitAtanhConstExp(settingsParser::AtanhConstExpContext *ctx) = 0;
+
+  virtual void enterSqrConstExp(settingsParser::SqrConstExpContext *ctx) = 0;
+  virtual void exitSqrConstExp(settingsParser::SqrConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpBra(settingsParser::ConstExpBraContext *ctx) = 0;
+  virtual void exitConstExpBra(settingsParser::ConstExpBraContext *ctx) = 0;
+
+  virtual void enterSinhConstExp(settingsParser::SinhConstExpContext *ctx) = 0;
+  virtual void exitSinhConstExp(settingsParser::SinhConstExpContext *ctx) = 0;
+
+  virtual void enterAtanConstExp(settingsParser::AtanConstExpContext *ctx) = 0;
+  virtual void exitAtanConstExp(settingsParser::AtanConstExpContext *ctx) = 0;
+
+  virtual void enterAsinhConstExp(settingsParser::AsinhConstExpContext *ctx) = 0;
+  virtual void exitAsinhConstExp(settingsParser::AsinhConstExpContext *ctx) = 0;
+
+  virtual void enterConstExp(settingsParser::ConstExpContext *ctx) = 0;
+  virtual void exitConstExp(settingsParser::ConstExpContext *ctx) = 0;
+
+  virtual void enterNegConstExp(settingsParser::NegConstExpContext *ctx) = 0;
+  virtual void exitNegConstExp(settingsParser::NegConstExpContext *ctx) = 0;
+
+  virtual void enterAsinConstExp(settingsParser::AsinConstExpContext *ctx) = 0;
+  virtual void exitAsinConstExp(settingsParser::AsinConstExpContext *ctx) = 0;
+
+  virtual void enterTanConstExp(settingsParser::TanConstExpContext *ctx) = 0;
+  virtual void exitTanConstExp(settingsParser::TanConstExpContext *ctx) = 0;
+
+  virtual void enterNexpConstExp(settingsParser::NexpConstExpContext *ctx) = 0;
+  virtual void exitNexpConstExp(settingsParser::NexpConstExpContext *ctx) = 0;
+
+  virtual void enterCosConstExp(settingsParser::CosConstExpContext *ctx) = 0;
+  virtual void exitCosConstExp(settingsParser::CosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpMulDiv(settingsParser::ConstExpMulDivContext *ctx) = 0;
+  virtual void exitConstExpMulDiv(settingsParser::ConstExpMulDivContext *ctx) = 0;
+
+  virtual void enterExpConstExp(settingsParser::ExpConstExpContext *ctx) = 0;
+  virtual void exitExpConstExp(settingsParser::ExpConstExpContext *ctx) = 0;
+
+  virtual void enterCotConstExp(settingsParser::CotConstExpContext *ctx) = 0;
+  virtual void exitCotConstExp(settingsParser::CotConstExpContext *ctx) = 0;
+
+  virtual void enterCoshConstExp(settingsParser::CoshConstExpContext *ctx) = 0;
+  virtual void exitCoshConstExp(settingsParser::CoshConstExpContext *ctx) = 0;
+
+  virtual void enterAcoshConstExp(settingsParser::AcoshConstExpContext *ctx) = 0;
+  virtual void exitAcoshConstExp(settingsParser::AcoshConstExpContext *ctx) = 0;
+
+  virtual void enterSinConstExp(settingsParser::SinConstExpContext *ctx) = 0;
+  virtual void exitSinConstExp(settingsParser::SinConstExpContext *ctx) = 0;
+
+  virtual void enterAcosConstExp(settingsParser::AcosConstExpContext *ctx) = 0;
+  virtual void exitAcosConstExp(settingsParser::AcosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpAddSub(settingsParser::ConstExpAddSubContext *ctx) = 0;
+  virtual void exitConstExpAddSub(settingsParser::ConstExpAddSubContext *ctx) = 0;
+
+  virtual void enterLnConstExp(settingsParser::LnConstExpContext *ctx) = 0;
+  virtual void exitLnConstExp(settingsParser::LnConstExpContext *ctx) = 0;
+
+  virtual void enterAcotConstExp(settingsParser::AcotConstExpContext *ctx) = 0;
+  virtual void exitAcotConstExp(settingsParser::AcotConstExpContext *ctx) = 0;
+
   virtual void enterTanExp(settingsParser::TanExpContext *ctx) = 0;
   virtual void exitTanExp(settingsParser::TanExpContext *ctx) = 0;
 

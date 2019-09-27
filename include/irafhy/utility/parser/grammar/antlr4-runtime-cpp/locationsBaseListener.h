@@ -67,6 +67,90 @@ public:
   virtual void enterInterval(locationsParser::IntervalContext * /*ctx*/) override { }
   virtual void exitInterval(locationsParser::IntervalContext * /*ctx*/) override { }
 
+  virtual void enterSqrtConstExp(locationsParser::SqrtConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrtConstExp(locationsParser::SqrtConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcothConstExp(locationsParser::AcothConstExpContext * /*ctx*/) override { }
+  virtual void exitAcothConstExp(locationsParser::AcothConstExpContext * /*ctx*/) override { }
+
+  virtual void enterLogConstExp(locationsParser::LogConstExpContext * /*ctx*/) override { }
+  virtual void exitLogConstExp(locationsParser::LogConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanhConstExp(locationsParser::TanhConstExpContext * /*ctx*/) override { }
+  virtual void exitTanhConstExp(locationsParser::TanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPowConstExp(locationsParser::PowConstExpContext * /*ctx*/) override { }
+  virtual void exitPowConstExp(locationsParser::PowConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPosConstExp(locationsParser::PosConstExpContext * /*ctx*/) override { }
+  virtual void exitPosConstExp(locationsParser::PosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanhConstExp(locationsParser::AtanhConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanhConstExp(locationsParser::AtanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSqrConstExp(locationsParser::SqrConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrConstExp(locationsParser::SqrConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpBra(locationsParser::ConstExpBraContext * /*ctx*/) override { }
+  virtual void exitConstExpBra(locationsParser::ConstExpBraContext * /*ctx*/) override { }
+
+  virtual void enterSinhConstExp(locationsParser::SinhConstExpContext * /*ctx*/) override { }
+  virtual void exitSinhConstExp(locationsParser::SinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanConstExp(locationsParser::AtanConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanConstExp(locationsParser::AtanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinhConstExp(locationsParser::AsinhConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinhConstExp(locationsParser::AsinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExp(locationsParser::ConstExpContext * /*ctx*/) override { }
+  virtual void exitConstExp(locationsParser::ConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNegConstExp(locationsParser::NegConstExpContext * /*ctx*/) override { }
+  virtual void exitNegConstExp(locationsParser::NegConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinConstExp(locationsParser::AsinConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinConstExp(locationsParser::AsinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanConstExp(locationsParser::TanConstExpContext * /*ctx*/) override { }
+  virtual void exitTanConstExp(locationsParser::TanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNexpConstExp(locationsParser::NexpConstExpContext * /*ctx*/) override { }
+  virtual void exitNexpConstExp(locationsParser::NexpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCosConstExp(locationsParser::CosConstExpContext * /*ctx*/) override { }
+  virtual void exitCosConstExp(locationsParser::CosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpMulDiv(locationsParser::ConstExpMulDivContext * /*ctx*/) override { }
+  virtual void exitConstExpMulDiv(locationsParser::ConstExpMulDivContext * /*ctx*/) override { }
+
+  virtual void enterExpConstExp(locationsParser::ExpConstExpContext * /*ctx*/) override { }
+  virtual void exitExpConstExp(locationsParser::ExpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCotConstExp(locationsParser::CotConstExpContext * /*ctx*/) override { }
+  virtual void exitCotConstExp(locationsParser::CotConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCoshConstExp(locationsParser::CoshConstExpContext * /*ctx*/) override { }
+  virtual void exitCoshConstExp(locationsParser::CoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcoshConstExp(locationsParser::AcoshConstExpContext * /*ctx*/) override { }
+  virtual void exitAcoshConstExp(locationsParser::AcoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSinConstExp(locationsParser::SinConstExpContext * /*ctx*/) override { }
+  virtual void exitSinConstExp(locationsParser::SinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcosConstExp(locationsParser::AcosConstExpContext * /*ctx*/) override { }
+  virtual void exitAcosConstExp(locationsParser::AcosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpAddSub(locationsParser::ConstExpAddSubContext * /*ctx*/) override { }
+  virtual void exitConstExpAddSub(locationsParser::ConstExpAddSubContext * /*ctx*/) override { }
+
+  virtual void enterLnConstExp(locationsParser::LnConstExpContext * /*ctx*/) override { }
+  virtual void exitLnConstExp(locationsParser::LnConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcotConstExp(locationsParser::AcotConstExpContext * /*ctx*/) override { }
+  virtual void exitAcotConstExp(locationsParser::AcotConstExpContext * /*ctx*/) override { }
+
   virtual void enterTanExp(locationsParser::TanExpContext * /*ctx*/) override { }
   virtual void exitTanExp(locationsParser::TanExpContext * /*ctx*/) override { }
 

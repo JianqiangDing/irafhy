@@ -63,6 +63,118 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual antlrcpp::Any visitSqrtConstExp(definitionParser::SqrtConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcothConstExp(definitionParser::AcothConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitLogConstExp(definitionParser::LogConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitTanhConstExp(definitionParser::TanhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitPowConstExp(definitionParser::PowConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitPosConstExp(definitionParser::PosConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAtanhConstExp(definitionParser::AtanhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitSqrConstExp(definitionParser::SqrConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExpBra(definitionParser::ConstExpBraContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitSinhConstExp(definitionParser::SinhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAtanConstExp(definitionParser::AtanConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAsinhConstExp(definitionParser::AsinhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExp(definitionParser::ConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitNegConstExp(definitionParser::NegConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAsinConstExp(definitionParser::AsinConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitTanConstExp(definitionParser::TanConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitNexpConstExp(definitionParser::NexpConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitCosConstExp(definitionParser::CosConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExpMulDiv(definitionParser::ConstExpMulDivContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitExpConstExp(definitionParser::ExpConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitCotConstExp(definitionParser::CotConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitCoshConstExp(definitionParser::CoshConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcoshConstExp(definitionParser::AcoshConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitSinConstExp(definitionParser::SinConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcosConstExp(definitionParser::AcosConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExpAddSub(definitionParser::ConstExpAddSubContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitLnConstExp(definitionParser::LnConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcotConstExp(definitionParser::AcotConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual antlrcpp::Any visitTanExp(definitionParser::TanExpContext *ctx) override {
     return visitChildren(ctx);
   }

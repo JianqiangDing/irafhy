@@ -30,32 +30,32 @@ namespace irafhy
 	{
 		ItemVisitor itemVisitor(vars_);
 		Item		lhsExpression = itemVisitor.visit(ctx->expression());
-		double		rhsConstant   = 0.0;
-		if (ctx->NUMBER() != nullptr)
-		{
-			std::string numStr = ctx->NUMBER()->getText();
-			rhsConstant		   = strToNum(numStr);
-		}
-		else
-		{
-			std::string numStr = ctx->SCINUM()->getText();
-			rhsConstant		   = strToNum(numStr);
-		}
-		if (ctx->OP != nullptr)
-		{
-			switch (ctx->OP->getType())
-			{
-				case hybridautomatonParser::PLUS:
-					break;
-				case hybridautomatonParser::MINUS:
-				{
-					rhsConstant *= -1.0;
-					break;
-				}
-				default:
-					exit(EXIT_FAILURE);
-			}
-		}
+		double		rhsConstant   = itemVisitor.visit(ctx->const_expression());
+		// if (ctx->NUMBER() != nullptr)
+		// {
+		// 	std::string numStr = ctx->NUMBER()->getText();
+		// 	rhsConstant		   = strToNum(numStr);
+		// }
+		// else
+		// {
+		// 	std::string numStr = ctx->SCINUM()->getText();
+		// 	rhsConstant		   = strToNum(numStr);
+		// }
+		// if (ctx->OP != nullptr)
+		// {
+		// 	switch (ctx->OP->getType())
+		// 	{
+		// 		case hybridautomatonParser::PLUS:
+		// 			break;
+		// 		case hybridautomatonParser::MINUS:
+		// 		{
+		// 			rhsConstant *= -1.0;
+		// 			break;
+		// 		}
+		// 		default:
+		// 			exit(EXIT_FAILURE);
+		// 	}
+		// }
 		Item rhsExpression = Item(Constant(rhsConstant));
 		switch (ctx->RELATION->getType())
 		{

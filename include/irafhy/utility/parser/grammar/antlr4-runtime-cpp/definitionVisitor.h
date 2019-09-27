@@ -43,6 +43,62 @@ public:
 
     virtual antlrcpp::Any visitInterval(definitionParser::IntervalContext *context) = 0;
 
+    virtual antlrcpp::Any visitSqrtConstExp(definitionParser::SqrtConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcothConstExp(definitionParser::AcothConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitLogConstExp(definitionParser::LogConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanhConstExp(definitionParser::TanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPowConstExp(definitionParser::PowConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPosConstExp(definitionParser::PosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanhConstExp(definitionParser::AtanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSqrConstExp(definitionParser::SqrConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpBra(definitionParser::ConstExpBraContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinhConstExp(definitionParser::SinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanConstExp(definitionParser::AtanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinhConstExp(definitionParser::AsinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExp(definitionParser::ConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNegConstExp(definitionParser::NegConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinConstExp(definitionParser::AsinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanConstExp(definitionParser::TanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNexpConstExp(definitionParser::NexpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCosConstExp(definitionParser::CosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpMulDiv(definitionParser::ConstExpMulDivContext *context) = 0;
+
+    virtual antlrcpp::Any visitExpConstExp(definitionParser::ExpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCotConstExp(definitionParser::CotConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCoshConstExp(definitionParser::CoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcoshConstExp(definitionParser::AcoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinConstExp(definitionParser::SinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcosConstExp(definitionParser::AcosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpAddSub(definitionParser::ConstExpAddSubContext *context) = 0;
+
+    virtual antlrcpp::Any visitLnConstExp(definitionParser::LnConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcotConstExp(definitionParser::AcotConstExpContext *context) = 0;
+
     virtual antlrcpp::Any visitTanExp(definitionParser::TanExpContext *context) = 0;
 
     virtual antlrcpp::Any visitSqrExp(definitionParser::SqrExpContext *context) = 0;

@@ -19,10 +19,7 @@ matrix:
 	) vector (COMMA? vector)* RIGHTCURLYBRACKET;
 
 vector:
-	LEFTROUNDBRACKET OP += (PLUS | MINUS)? NUMBER
-	(
-		COMMA? OP += (PLUS | MINUS)? NUMBER
-	)* RIGHTROUNDBRACKET;
+	LEFTROUNDBRACKET const_expression (COMMA? const_expression)* RIGHTROUNDBRACKET;
 
 intervalhull:
 	KEY_INTERVAL_HULL LEFTCURLYBRACKET interval (COMMA? interval)* RIGHTCURLYBRACKET;
@@ -38,24 +35,45 @@ constraint:
 		| LEQ
 		| LSS
 		| GTR
-	) OP = (PLUS | MINUS)? (NUMBER | SCINUM);
+	) const_expression;
 
 system: formula+;
 
 formula: VARIABLE (DERIVATIVE)? ASSIGN expression interval?;
 
 interval:
-	LEFTSQUAREBRACKET OP += (PLUS | MINUS)? VAL +=
-	(
-		NUMBER
-		| SCINUM
-		| KEY_INFINITY
-	) COMMA OP += (PLUS | MINUS)? VAL +=
-	(
-		NUMBER
-		| SCINUM
-		| KEY_INFINITY
-	) RIGHTSQUAREBRACKET;
+	LEFTSQUAREBRACKET const_expression COMMA const_expression RIGHTSQUAREBRACKET;
+
+const_expression:
+	const_expression EXPONENT const_expression														# expConstExp
+	| PLUS const_expression																			# posConstExp
+	| MINUS const_expression																		# negConstExp
+	| const_expression OP = (MULTIPLY | DIVIDE) const_expression									# constExpMulDiv
+	| const_expression OP = (PLUS | MINUS) const_expression											# constExpAddSub
+	| LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET											# constExpBra
+	| KEY_SIN_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# sinConstExp
+	| KEY_ARCSIN_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET						# asinConstExp
+	| KEY_COS_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# cosConstExp
+	| KEY_ARCCOS_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET						# acosConstExp
+	| KEY_TAN_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# tanConstExp
+	| KEY_ARCTAN_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET						# atanConstExp
+	| KEY_COT_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# cotConstExp
+	| KEY_ARCCOT_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET						# acotConstExp
+	| KEY_SINH_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# sinhConstExp
+	| KEY_ARCSINH_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET						# asinhConstExp
+	| KEY_COSH_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# coshConstExp
+	| KEY_ARCCOSH_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET						# acoshConstExp
+	| KEY_TANH_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# tanhConstExp
+	| KEY_ARCTANH_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET						# atanhConstExp
+	| KEY_COTH_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# acothConstExp
+	| KEY_LN_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# lnConstExp
+	| KEY_LOG_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# logConstExp
+	| KEY_NATURAL_EXP_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET					# nexpConstExp
+	| KEY_SQR_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# sqrConstExp
+	| KEY_SQRT_FUNCTION LEFTROUNDBRACKET const_expression RIGHTROUNDBRACKET							# sqrtConstExp
+	| KEY_POWER_FUNCTION LEFTROUNDBRACKET const_expression COMMA const_expression RIGHTROUNDBRACKET	#
+		powConstExp
+	| (NUMBER | SCINUM | KEY_INFINITY) # constExp;
 
 expression:
 	expression EXPONENT expression														# expExp
