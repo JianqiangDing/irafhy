@@ -104,7 +104,7 @@ namespace irafhy
 			Eigen::MatrixXd constraintMatrix(normals.cols(), normals.cols());
 			Eigen::VectorXd constraintVector(normals.cols());
 			int				pos = 0;
-			for (int index = 0; index < normals.rows(); ++index)
+			for (std::size_t index = 0; index < normals.rows(); ++index)
 			{
 				if (indicator[index])
 				{
@@ -122,7 +122,7 @@ namespace irafhy
 		} while (std::next_permutation(indicator.begin(), indicator.end()));
 		//filter the points which out of the convex hull
 		std::vector<Point> constraintVertices;
-		for (int index = 0; index < intersections.size(); ++index)
+		for (std::size_t index = 0; index < intersections.size(); ++index)
 		{
 			bool			isAllSatisfy = true;
 			Eigen::VectorXd curValues	= normals * intersections[index].coordinate() + offsets;

@@ -19,7 +19,7 @@ matrix:
 	) vector (COMMA? vector)* RIGHTCURLYBRACKET;
 
 vector:
-	LEFTROUNDBRACKET const_expression (COMMA? const_expression)* RIGHTROUNDBRACKET;
+	LEFTROUNDBRACKET const_expression (COMMA const_expression)* RIGHTROUNDBRACKET;
 
 intervalhull:
 	KEY_INTERVAL_HULL LEFTCURLYBRACKET interval (COMMA? interval)* RIGHTCURLYBRACKET;

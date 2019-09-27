@@ -18,17 +18,19 @@ protected:
 		std::size_t startPos = rootPath.find("IRafhy");
 		if (startPos == std::string::npos)
 			startPos = rootPath.find("irafhy");
-		rootPath	  = rootPath.substr(0, startPos + 6);
-		case_0_path   = rootPath + case_0_path;
-		case_1_path   = rootPath + case_1_path;
-		case_2_path   = rootPath + case_2_path;
-		hpolytopePath = rootPath + hpolytopePath;
-		vpolytopePath = rootPath + vpolytopePath;
+		rootPath		 = rootPath.substr(0, startPos + 6);
+		case_0_path		 = rootPath + case_0_path;
+		case_1_path		 = rootPath + case_1_path;
+		case_2_path		 = rootPath + case_2_path;
+		hpolytopePath	= rootPath + hpolytopePath;
+		vpolytopePath	= rootPath + vpolytopePath;
+		dodecahedronPath = rootPath + dodecahedronPath;
 		case_0_ifstream.open(case_0_path);
 		case_1_ifstream.open(case_1_path);
 		case_2_ifstream.open(case_2_path);
 		hpolytopeIfstream.open(hpolytopePath);
 		vpolytopeIfstream.open(vpolytopePath);
+		dodecahedronIfstream.open(dodecahedronPath);
 		//construct 2d interval hull
 		std::vector<capd::interval> _2dConstraints;
 		_2dConstraints.emplace_back(capd::interval(-1.22, 2.57));
@@ -57,17 +59,19 @@ protected:
 	irafhy::IntervalHull _2dIntervalHull;
 	irafhy::IntervalHull _3dIntervalHull;
 	irafhy::IntervalHull _5dIntervalHull;
-	std::string			 rootPath	  = boost::filesystem::current_path().string();
-	std::string			 case_0_path   = "/resource/script/constraints_0.expr";
-	std::string			 case_1_path   = "/resource/script/constraints_1.expr";
-	std::string			 case_2_path   = "/resource/script/constraints_2.expr";
-	std::string			 hpolytopePath = "/resource/script/hpolytope.expr";
-	std::string			 vpolytopePath = "/resource/script/vpolytope.expr";
+	std::string			 rootPath		  = boost::filesystem::current_path().string();
+	std::string			 case_0_path	  = "/resource/script/constraints_0.expr";
+	std::string			 case_1_path	  = "/resource/script/constraints_1.expr";
+	std::string			 case_2_path	  = "/resource/script/constraints_2.expr";
+	std::string			 hpolytopePath	= "/resource/script/hpolytope.expr";
+	std::string			 vpolytopePath	= "/resource/script/vpolytope.expr";
+	std::string			 dodecahedronPath = "/resource/script/dodecahedron.expr";
 	std::ifstream		 case_0_ifstream;
 	std::ifstream		 case_1_ifstream;
 	std::ifstream		 case_2_ifstream;
 	std::ifstream		 hpolytopeIfstream;
 	std::ifstream		 vpolytopeIfstream;
+	std::ifstream		 dodecahedronIfstream;
 };
 
 TEST_F(runCSPSolverTest, case_0)
@@ -154,7 +158,6 @@ TEST_F(runCSPSolverTest, case_5)
 	for (const auto& intervalHull : boundaryIntervalHulls)
 		std::cout << intervalHull << std::endl;
 	irafhy::viewer::show(boundaryIntervalHulls, {}, {}, {0, 1, 2}, irafhy::VIEW_TYPE::LINE);
-	//TODO
 }
 
 TEST_F(runCSPSolverTest, case_6)
@@ -171,5 +174,22 @@ TEST_F(runCSPSolverTest, case_6)
 	std::vector<irafhy::IntervalHull> boundaryIntervalHulls = irafhy::CSPSolver::branchPruneSolve(polytope, curEpsilon);
 	for (const auto& intervalHull : boundaryIntervalHulls)
 		std::cout << intervalHull << std::endl;
+	irafhy::viewer::show(boundaryIntervalHulls, {}, {}, {0, 1, 2}, irafhy::VIEW_TYPE::LINE);
+}
+
+TEST_F(runCSPSolverTest, case_7)
+{
+	antlr4::ANTLRInputStream				 hpolytopeAntlrInputStream(this->dodecahedronIfstream);
+	hybridautomatonLexer					 hpolytopeLexer(&hpolytopeAntlrInputStream);
+	antlr4::CommonTokenStream				 hpolytopeCommonTokenStream(&hpolytopeLexer);
+	hybridautomatonParser					 hpolytopeParser(&hpolytopeCommonTokenStream);
+	hybridautomatonParser::HpolytopeContext* hpolytopeContext = hpolytopeParser.hpolytope();
+	irafhy::DefinitionVisitor				 definitionVisitor;
+	irafhy::Polytope						 polytope = definitionVisitor.visit(hpolytopeContext);
+	std::cout << polytope << std::endl;
+	double							  curEpsilon			= 0.03;
+	std::vector<irafhy::IntervalHull> boundaryIntervalHulls = irafhy::CSPSolver::branchPruneSolve(polytope, curEpsilon);
+	// for (const auto& intervalHull : boundaryIntervalHulls)
+	// 	std::cout << intervalHull << std::endl;
 	irafhy::viewer::show(boundaryIntervalHulls, {}, {}, {0, 1, 2}, irafhy::VIEW_TYPE::LINE);
 }

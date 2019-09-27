@@ -185,7 +185,7 @@ source code of ./algorithm/overApproximateForward/settings/settings.h
 
 ## configure the test case
 
-All the configurations related to the test case should be defined in two files, one for **_Hybrid System_**, the other for **_Settings_**. e.g.
+All the configurations related to the test case should be defined in two files, one for **Hybrid System**, the other for **Settings**. e.g.
 
 ```html
 HYBRID_AUTOMATON
@@ -274,6 +274,6 @@ as you can see, you should provide the geometry objects, points, the time interv
 
 *  Thomas A Henzinger. The theory of hybrid automata. In Verification of
 digital and hybrid systems, pages 265–292. Springer, 2000
-* Bai Xue, Zhikun She, and Arvind Easwaran. Under-approximating backward reachable sets by polytopes. In International Conference on Computer Aided Verification, pages 457–476. Springer, 2016
+* Bai Xue, Zhikun She, and Arvind Easwaran. Under-approximating backward reachable sets by polytopes. In International Conference on Computer Aided Verification, pages 457–476. Springer, 2016
 * Alec Jacobson, Daniele Panozzo, et al. libigl: A simple C++ geometry
 processing library, 2018. https://libigl.github.io/
