@@ -11,6 +11,7 @@ var searchData=
   ['equal_5fto',['EQUAL_TO',['../namespaceirafhy.html#a538890aa2a68a9b10fcecaeb1f218349ae8649d5a647df35b6cca92f59590c335',1,'irafhy']]],
   ['evaluation',['Evaluation',['../classirafhy_1_1Evaluation.html',1,'irafhy::Evaluation'],['../classirafhy_1_1Evaluation.html#a35f8e336ddd7d8bc70815bf411369e8f',1,'irafhy::Evaluation::Evaluation()'],['../classirafhy_1_1Evaluation.html#a37886566f8edebeb24356fa4738b1492',1,'irafhy::Evaluation::Evaluation(const LINEPROG_SOLUTION &amp;solution)'],['../classirafhy_1_1Evaluation.html#ad93ef05d4fe49585e17d1a5b54ae280e',1,'irafhy::Evaluation::Evaluation(Eigen::VectorXd optimalCoordinate, const LINEPROG_SOLUTION &amp;solution)'],['../classirafhy_1_1Evaluation.html#a199dcc5754ce7316803174a0bea40319',1,'irafhy::Evaluation::Evaluation(const double &amp;supportValue, Eigen::VectorXd optimalCoordinate, const LINEPROG_SOLUTION &amp;solution)']]],
   ['evaluation_2ehpp',['evaluation.hpp',['../evaluation_8hpp.html',1,'']]],
+  ['exactboundarysolve',['exactBoundarySolve',['../classirafhy_1_1CSPSolver.html#a4214350fca56c9da539dc28c371b7122',1,'irafhy::CSPSolver']]],
   ['examples',['Examples',['../example.html',1,'']]],
   ['example_2emd',['example.md',['../example_8md.html',1,'']]],
   ['example_5f0_2emd',['example_0.md',['../example__0_8md.html',1,'']]],
@@ -22,5 +23,6 @@ var searchData=
   ['exteigen_2ecpp',['extEigen.cpp',['../extEigen_8cpp.html',1,'']]],
   ['exteigen_2eh',['extEigen.h',['../extEigen_8h.html',1,'']]],
   ['extqhull_2ehpp',['extQhull.hpp',['../extQhull_8hpp.html',1,'']]],
-  ['extremevertices',['extremeVertices',['../classirafhy_1_1IntervalHull.html#ac554ff6609a60fce051eed4cb0179f69',1,'irafhy::IntervalHull']]]
+  ['extremevertices',['extremeVertices',['../classirafhy_1_1IntervalHull.html#ac554ff6609a60fce051eed4cb0179f69',1,'irafhy::IntervalHull']]],
+  ['extremeverticesenumeration',['extremeVerticesEnumeration',['../classirafhy_1_1CSPSolver.html#a92eb8a69d9bde24f86bf2152019ba962',1,'irafhy::CSPSolver']]]
 ];

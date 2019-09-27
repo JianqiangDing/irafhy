@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classirafhy_1_1CSPSolver.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="classirafhy_1_1CSPSolver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">irafhy::CSPSolver Class Reference</div>  </div>
@@ -97,25 +98,32 @@ $(document).ready(function(){initNavTree('classirafhy_1_1CSPSolver.html','');});
 Collaboration diagram for irafhy::CSPSolver:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirafhy_1_1CSPSolver__coll__graph.jpg" border="0" usemap="#irafhy_1_1CSPSolver_coll__map" alt="Collaboration graph"/></div>
-<map name="irafhy_1_1CSPSolver_coll__map" id="irafhy_1_1CSPSolver_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab503eb331a936365b84b0c42c067bab2"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1CSPSolver.html#ab503eb331a936365b84b0c42c067bab2">solve</a> (const <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &amp;intervalHull, double epsilon)</td></tr>
-<tr class="memdesc:ab503eb331a936365b84b0c42c067bab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the boundary interval hulls in specified precision  <a href="#ab503eb331a936365b84b0c42c067bab2">More...</a><br /></td></tr>
-<tr class="separator:ab503eb331a936365b84b0c42c067bab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4214350fca56c9da539dc28c371b7122"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1CSPSolver.html#a4214350fca56c9da539dc28c371b7122">exactBoundarySolve</a> (const <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &amp;intervalHull, double epsilon)</td></tr>
+<tr class="memdesc:a4214350fca56c9da539dc28c371b7122"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the boundary interval hulls in specified precision  <a href="#a4214350fca56c9da539dc28c371b7122">More...</a><br /></td></tr>
+<tr class="separator:a4214350fca56c9da539dc28c371b7122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af30f6fdbe70695e28b849a9889b6437b"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1CSPSolver.html#af30f6fdbe70695e28b849a9889b6437b">branchPruneSolve</a> (const <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &amp;intervalHull, double epsilon)</td></tr>
 <tr class="memdesc:af30f6fdbe70695e28b849a9889b6437b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the boundary interval hulls of the given interval hull in specified precision using branch and prune method  <a href="#af30f6fdbe70695e28b849a9889b6437b">More...</a><br /></td></tr>
 <tr class="separator:af30f6fdbe70695e28b849a9889b6437b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10fa66c819cfc91210579de41557cdc2"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1CSPSolver.html#a10fa66c819cfc91210579de41557cdc2">branchPruneSolve</a> (const <a class="el" href="classirafhy_1_1Constraints.html">Constraints</a> &amp;constraints, double epsilon)</td></tr>
 <tr class="memdesc:a10fa66c819cfc91210579de41557cdc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the boundary interval hulls of the domain which defined by the given constraints in specified precision using branch and prune method  <a href="#a10fa66c819cfc91210579de41557cdc2">More...</a><br /></td></tr>
 <tr class="separator:a10fa66c819cfc91210579de41557cdc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaded9ac9e630694e1b76848eba8c5ad"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1CSPSolver.html#aaaded9ac9e630694e1b76848eba8c5ad">branchPruneSolve</a> (const <a class="el" href="classirafhy_1_1Polytope.html">Polytope</a> &amp;polytope, double epsilon)</td></tr>
+<tr class="memdesc:aaaded9ac9e630694e1b76848eba8c5ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the boundary interval hulls of the domain which defined by the given constraints in specified precision using branch and prune method  <a href="#aaaded9ac9e630694e1b76848eba8c5ad">More...</a><br /></td></tr>
+<tr class="separator:aaaded9ac9e630694e1b76848eba8c5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a92eb8a69d9bde24f86bf2152019ba962"><td class="memItemLeft" align="right" valign="top">static Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1CSPSolver.html#a92eb8a69d9bde24f86bf2152019ba962">extremeVerticesEnumeration</a> (const Eigen::MatrixXd &amp;A, const Eigen::VectorXd &amp;b)</td></tr>
+<tr class="memdesc:a92eb8a69d9bde24f86bf2152019ba962"><td class="mdescLeft">&#160;</td><td class="mdescRight">enumerate the extreme vertices of the convex hull which defined by the given linear system Ax&lt;=b  <a href="#a92eb8a69d9bde24f86bf2152019ba962">More...</a><br /></td></tr>
+<tr class="separator:a92eb8a69d9bde24f86bf2152019ba962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="af30f6fdbe70695e28b849a9889b6437b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af30f6fdbe70695e28b849a9889b6437b">&#9670;&nbsp;</a></span>branchPruneSolve() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af30f6fdbe70695e28b849a9889b6437b">&#9670;&nbsp;</a></span>branchPruneSolve() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,20 +166,21 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>resulting boundary precision </dd></dl>
 
-<p class="reference">References <a class="el" href="classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744">irafhy::IntervalHull::dimension()</a>.</p>
+<p class="reference">References <a class="el" href="classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6">irafhy::IntervalHull::constraints()</a>, and <a class="el" href="classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744">irafhy::IntervalHull::dimension()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirafhy_1_1CSPSolver_af30f6fdbe70695e28b849a9889b6437b_cgraph.jpg" border="0" usemap="#classirafhy_1_1CSPSolver_af30f6fdbe70695e28b849a9889b6437b_cgraph" alt=""/></div>
 <map name="classirafhy_1_1CSPSolver_af30f6fdbe70695e28b849a9889b6437b_cgraph" id="classirafhy_1_1CSPSolver_af30f6fdbe70695e28b849a9889b6437b_cgraph">
-<area shape="rect" id="node2" href="classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="get the dimension of the space which the interval hull in " alt="" coords="188,5,316,47"/>
+<area shape="rect" id="node2" href="classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="get the constraints of the interval hull " alt="" coords="188,5,316,47"/>
+<area shape="rect" id="node3" href="classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="get the dimension of the space which the interval hull in " alt="" coords="188,71,316,112"/>
 </map>
 </div>
 
 </div>
 </div>
 <a id="a10fa66c819cfc91210579de41557cdc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10fa66c819cfc91210579de41557cdc2">&#9670;&nbsp;</a></span>branchPruneSolve() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a10fa66c819cfc91210579de41557cdc2">&#9670;&nbsp;</a></span>branchPruneSolve() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,23 +223,22 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>resulting boundary interval hulls </dd></dl>
 
-<p class="reference">References <a class="el" href="classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6">irafhy::IntervalHull::constraints()</a>, <a class="el" href="classirafhy_1_1Constraints.html#af069f072ae2e637a2fc10c1d22a3e38c">irafhy::Constraints::dimension()</a>, <a class="el" href="classirafhy_1_1Constraints.html#ac08eec8f47564fee3ea416f3e03012f5">irafhy::Constraints::isSatisfy()</a>, <a class="el" href="namespaceirafhy.html#a4b25adb47d4193d6f8a5bd1f0996d442a76e621c7da5bbdfc9b42d234a342e470">irafhy::PARTIAL_SATISFIED</a>, and <a class="el" href="classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793">irafhy::Constraints::size()</a>.</p>
+<p class="reference">References <a class="el" href="classirafhy_1_1Constraints.html#af069f072ae2e637a2fc10c1d22a3e38c">irafhy::Constraints::dimension()</a>, <a class="el" href="classirafhy_1_1CSPSolver.html#a92eb8a69d9bde24f86bf2152019ba962">extremeVerticesEnumeration()</a>, <a class="el" href="namespaceirafhy.html#a538890aa2a68a9b10fcecaeb1f218349a35f26c7d758a3009e8d59285e49d4f76">irafhy::LESS_THAN_OR_EQUAL_TO</a>, and <a class="el" href="classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793">irafhy::Constraints::size()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirafhy_1_1CSPSolver_a10fa66c819cfc91210579de41557cdc2_cgraph.jpg" border="0" usemap="#classirafhy_1_1CSPSolver_a10fa66c819cfc91210579de41557cdc2_cgraph" alt=""/></div>
 <map name="classirafhy_1_1CSPSolver_a10fa66c819cfc91210579de41557cdc2_cgraph" id="classirafhy_1_1CSPSolver_a10fa66c819cfc91210579de41557cdc2_cgraph">
-<area shape="rect" id="node2" href="classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="get the constraints of the interval hull " alt="" coords="189,5,317,47"/>
-<area shape="rect" id="node3" href="classirafhy_1_1Constraints.html#af069f072ae2e637a2fc10c1d22a3e38c" title="get the dimension of the system " alt="" coords="188,71,317,112"/>
-<area shape="rect" id="node4" href="classirafhy_1_1Constraints.html#ac08eec8f47564fee3ea416f3e03012f5" title="check if the given values inside the target domain defined by the given constraints or not ..." alt="" coords="188,136,317,177"/>
-<area shape="rect" id="node5" href="classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793" title="get the size of the inequalities " alt="" coords="188,201,317,243"/>
+<area shape="rect" id="node2" href="classirafhy_1_1Constraints.html#af069f072ae2e637a2fc10c1d22a3e38c" title="get the dimension of the system " alt="" coords="219,5,348,47"/>
+<area shape="rect" id="node3" href="classirafhy_1_1CSPSolver.html#a92eb8a69d9bde24f86bf2152019ba962" title="enumerate the extreme vertices of the convex hull which defined by the given linear system Ax&lt;=b ..." alt="" coords="188,71,379,112"/>
+<area shape="rect" id="node4" href="classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793" title="get the size of the inequalities " alt="" coords="219,136,348,177"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ab503eb331a936365b84b0c42c067bab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab503eb331a936365b84b0c42c067bab2">&#9670;&nbsp;</a></span>solve()</h2>
+<a id="aaaded9ac9e630694e1b76848eba8c5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaded9ac9e630694e1b76848eba8c5ad">&#9670;&nbsp;</a></span>branchPruneSolve() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +247,66 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt; irafhy::CSPSolver::solve </td>
+          <td class="memname">std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt; irafhy::CSPSolver::branchPruneSolve </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classirafhy_1_1Polytope.html">Polytope</a> &amp;&#160;</td>
+          <td class="paramname"><em>polytope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>epsilon</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the boundary interval hulls of the domain which defined by the given constraints in specified precision using branch and prune method </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">polytope</td><td>convex polytope which define the target domain </td></tr>
+    <tr><td class="paramname">epsilon</td><td>specified precision </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>resulting boundary interval hulls </dd></dl>
+
+<p class="reference">References <a class="el" href="classirafhy_1_1Polytope.html#a727f19f4a7ef4722568fedd7b6bf9f63">irafhy::Polytope::constraints()</a>, <a class="el" href="classirafhy_1_1Polytope.html#a577daeaab44335fa9be4a7675d8db365">irafhy::Polytope::dimension()</a>, <a class="el" href="classirafhy_1_1Polytope.html#af65668d35a5d1f0c42c63094d6b1a23e">irafhy::Polytope::empty()</a>, and <a class="el" href="classirafhy_1_1Polytope.html#a23c9170e0f25d3c6c5a401179b1a37c2">irafhy::Polytope::halfSpaceConstraints()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classirafhy_1_1CSPSolver_aaaded9ac9e630694e1b76848eba8c5ad_cgraph.jpg" border="0" usemap="#classirafhy_1_1CSPSolver_aaaded9ac9e630694e1b76848eba8c5ad_cgraph" alt=""/></div>
+<map name="classirafhy_1_1CSPSolver_aaaded9ac9e630694e1b76848eba8c5ad_cgraph" id="classirafhy_1_1CSPSolver_aaaded9ac9e630694e1b76848eba8c5ad_cgraph">
+<area shape="rect" id="node2" href="classirafhy_1_1Polytope.html#a727f19f4a7ef4722568fedd7b6bf9f63" title="get the variance constraints of all dimensions " alt="" coords="188,5,373,32"/>
+<area shape="rect" id="node3" href="classirafhy_1_1Polytope.html#a577daeaab44335fa9be4a7675d8db365" title="get the dimension of the space which the polytope in " alt="" coords="191,56,371,83"/>
+<area shape="rect" id="node4" href="classirafhy_1_1Polytope.html#af65668d35a5d1f0c42c63094d6b1a23e" title="check if the polytope is empty or not " alt="" coords="202,107,359,133"/>
+<area shape="rect" id="node5" href="classirafhy_1_1Polytope.html#a23c9170e0f25d3c6c5a401179b1a37c2" title="get the half space constraints of the polytope " alt="" coords="191,158,370,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4214350fca56c9da539dc28c371b7122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4214350fca56c9da539dc28c371b7122">&#9670;&nbsp;</a></span>exactBoundarySolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &gt; irafhy::CSPSolver::exactBoundarySolve </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classirafhy_1_1IntervalHull.html">IntervalHull</a> &amp;&#160;</td>
           <td class="paramname"><em>intervalHull</em>, </td>
@@ -277,12 +344,60 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classirafhy_1_1CSPSolver_ab503eb331a936365b84b0c42c067bab2_cgraph.jpg" border="0" usemap="#classirafhy_1_1CSPSolver_ab503eb331a936365b84b0c42c067bab2_cgraph" alt=""/></div>
-<map name="classirafhy_1_1CSPSolver_ab503eb331a936365b84b0c42c067bab2_cgraph" id="classirafhy_1_1CSPSolver_ab503eb331a936365b84b0c42c067bab2_cgraph">
-<area shape="rect" id="node2" href="classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="get the constraints of the interval hull " alt="" coords="188,5,316,47"/>
-<area shape="rect" id="node3" href="classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="get the dimension of the space which the interval hull in " alt="" coords="188,71,316,112"/>
+<div class="center"><img src="classirafhy_1_1CSPSolver_a4214350fca56c9da539dc28c371b7122_cgraph.jpg" border="0" usemap="#classirafhy_1_1CSPSolver_a4214350fca56c9da539dc28c371b7122_cgraph" alt=""/></div>
+<map name="classirafhy_1_1CSPSolver_a4214350fca56c9da539dc28c371b7122_cgraph" id="classirafhy_1_1CSPSolver_a4214350fca56c9da539dc28c371b7122_cgraph">
+<area shape="rect" id="node2" href="classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="get the constraints of the interval hull " alt="" coords="196,5,324,47"/>
+<area shape="rect" id="node3" href="classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="get the dimension of the space which the interval hull in " alt="" coords="196,71,324,112"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a92eb8a69d9bde24f86bf2152019ba962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92eb8a69d9bde24f86bf2152019ba962">&#9670;&nbsp;</a></span>extremeVerticesEnumeration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd irafhy::CSPSolver::extremeVerticesEnumeration </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>enumerate the extreme vertices of the convex hull which defined by the given linear system Ax&lt;=b </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>coefficient matrix of the given linear system </td></tr>
+    <tr><td class="paramname">b</td><td>offset vector of the given linear system </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>extreme vertices of the given convex hull </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="classirafhy_1_1CSPSolver.html#a10fa66c819cfc91210579de41557cdc2">branchPruneSolve()</a>.</p>
 
 </div>
 </div>

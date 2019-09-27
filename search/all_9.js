@@ -33,7 +33,7 @@ var searchData=
   ['item_2ecpp',['item.cpp',['../item_8cpp.html',1,'']]],
   ['item_2eh',['item.h',['../item_8h.html',1,'']]],
   ['item_5ft',['ITEM_T',['../namespaceirafhy.html#ae827a6ef2d9a89564f82aaa099b8e43b',1,'irafhy']]],
-  ['itemvisitor',['ItemVisitor',['../classirafhy_1_1ItemVisitor.html',1,'irafhy::ItemVisitor'],['../classirafhy_1_1ItemVisitor.html#a838728a8eec5984e8b6cc72900eaa1ca',1,'irafhy::ItemVisitor::ItemVisitor()']]],
+  ['itemvisitor',['ItemVisitor',['../classirafhy_1_1ItemVisitor.html',1,'irafhy::ItemVisitor'],['../classirafhy_1_1ItemVisitor.html#a494f0b1b91f94aa2e4a9f5fcbc29c27b',1,'irafhy::ItemVisitor::ItemVisitor()'],['../classirafhy_1_1ItemVisitor.html#a838728a8eec5984e8b6cc72900eaa1ca',1,'irafhy::ItemVisitor::ItemVisitor(const std::vector&lt; std::string &gt; &amp;vars)']]],
   ['itemvisitor_2ecpp',['itemVisitor.cpp',['../itemVisitor_8cpp.html',1,'']]],
   ['itemvisitor_2eh',['itemVisitor.h',['../itemVisitor_8h.html',1,'']]]
 ];

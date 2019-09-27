@@ -1,12 +1,18 @@
 <map id="/home/jianqiang/CLionProjects/irafhy/src/utility/parser/visitor/definitionVisitor.cpp" name="/home/jianqiang/CLionProjects/irafhy/src/utility/parser/visitor/definitionVisitor.cpp">
-<area shape="rect" id="node2" href="$intervalHull_8h.html" title="irafhy/representation\l/geometric/intervalHull.h" alt="" coords="46,206,209,247"/>
-<area shape="rect" id="node10" href="$polytope_8h.html" title="irafhy/representation\l/geometric/polytope.h" alt="" coords="550,206,697,247"/>
-<area shape="rect" id="node27" href="$condition_8h.html" title="irafhy/representation\l/formal/basic/condition.h" alt="" coords="383,109,547,151"/>
-<area shape="rect" id="node30" href="$definitionVisitor_8h.html" title="irafhy/utility/parser\l/visitor/definitionVisitor.h" alt="" coords="1651,109,1817,151"/>
-<area shape="rect" id="node6" href="$point_8h.html" title="irafhy/representation\l/geometric/basic/point.h" alt="" coords="181,571,343,612"/>
-<area shape="rect" id="node9" href="$geometry_8h.html" title="irafhy/representation\l/geometric/geometry.h" alt="" coords="119,303,271,344"/>
-<area shape="rect" id="node11" href="$halfSpace_8h.html" title="irafhy/representation\l/geometric/basic/halfSpace.h" alt="" coords="233,481,424,523"/>
-<area shape="rect" id="node12" href="$convexHull_8hpp.html" title="irafhy/utility/compGeometry\l/convexHull.hpp" alt="" coords="903,303,1085,344"/>
-<area shape="rect" id="node13" href="$extQhull_8hpp.html" title="irafhy/utility/extension\l/extQhull.hpp" alt="" coords="757,392,906,433"/>
-<area shape="rect" id="node28" href="$enum_8h.html" title="irafhy/utility/definition\l/enum.h" alt="" coords="233,206,379,247"/>
+<area shape="rect" id="node2" href="$intervalHull_8h.html" title="irafhy/representation\l/geometric/intervalHull.h" alt="" coords="1493,206,1655,247"/>
+<area shape="rect" id="node10" href="$polytope_8h.html" title="irafhy/representation\l/geometric/polytope.h" alt="" coords="1322,206,1469,247"/>
+<area shape="rect" id="node27" href="$condition_8h.html" title="irafhy/representation\l/formal/basic/condition.h" alt="" coords="1659,109,1823,151"/>
+<area shape="rect" id="node30" href="$item_8h.html" title="irafhy/representation\l/formal/basic/item.h" alt="" coords="1991,109,2131,151"/>
+<area shape="rect" id="node37" href="$definitionVisitor_8h.html" title="irafhy/utility/parser\l/visitor/definitionVisitor.h" alt="" coords="2851,109,3017,151"/>
+<area shape="rect" id="node44" href="$itemVisitor_8h.html" title="irafhy/utility/parser\l/visitor/itemVisitor.h" alt="" coords="3055,109,3194,151"/>
+<area shape="rect" id="node6" href="$point_8h.html" title="irafhy/representation\l/geometric/basic/point.h" alt="" coords="1335,571,1496,612"/>
+<area shape="rect" id="node9" href="$geometry_8h.html" title="irafhy/representation\l/geometric/geometry.h" alt="" coords="1634,303,1786,344"/>
+<area shape="rect" id="node11" href="$halfSpace_8h.html" title="irafhy/representation\l/geometric/basic/halfSpace.h" alt="" coords="1387,481,1577,523"/>
+<area shape="rect" id="node12" href="$convexHull_8hpp.html" title="irafhy/utility/compGeometry\l/convexHull.hpp" alt="" coords="763,303,945,344"/>
+<area shape="rect" id="node13" href="$extQhull_8hpp.html" title="irafhy/utility/extension\l/extQhull.hpp" alt="" coords="779,392,929,433"/>
+<area shape="rect" id="node28" href="$enum_8h.html" title="irafhy/utility/definition\l/enum.h" alt="" coords="2212,303,2357,344"/>
+<area shape="rect" id="node31" href="$constant_8h.html" title="irafhy/representation\l/formal/basic/entity\l/constant.h" alt="" coords="1991,199,2131,255"/>
+<area shape="rect" id="node33" href="$variable_8h.html" title="irafhy/representation\l/formal/basic/entity\l/variable.h" alt="" coords="1827,199,1967,255"/>
+<area shape="rect" id="node34" href="$unaryItem_8h.html" title="irafhy/representation\l/formal/basic/entity\l/unaryItem.h" alt="" coords="2207,199,2347,255"/>
+<area shape="rect" id="node36" href="$binaryItem_8h.html" title="irafhy/representation\l/formal/basic/entity\l/binaryItem.h" alt="" coords="2371,199,2511,255"/>
 </map>

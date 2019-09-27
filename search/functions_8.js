@@ -13,5 +13,5 @@ var searchData=
   ['isreversed',['isReversed',['../classirafhy_1_1Formula.html#abf503e64a690ad6cd94802bec2fe5254',1,'irafhy::Formula']]],
   ['issatisfy',['isSatisfy',['../classirafhy_1_1Constraint.html#a96e013adf1be75c720b95d1513195ee7',1,'irafhy::Constraint::isSatisfy()'],['../classirafhy_1_1Constraints.html#ac08eec8f47564fee3ea416f3e03012f5',1,'irafhy::Constraints::isSatisfy()']]],
   ['item',['Item',['../classirafhy_1_1Item.html#a3fde898d52845e46aa4ba8e87637c23b',1,'irafhy::Item::Item()'],['../classirafhy_1_1Item.html#a183c053633c2ba89100e62f81ed3bb07',1,'irafhy::Item::Item(const Entity &amp;entity)']]],
-  ['itemvisitor',['ItemVisitor',['../classirafhy_1_1ItemVisitor.html#a838728a8eec5984e8b6cc72900eaa1ca',1,'irafhy::ItemVisitor']]]
+  ['itemvisitor',['ItemVisitor',['../classirafhy_1_1ItemVisitor.html#a494f0b1b91f94aa2e4a9f5fcbc29c27b',1,'irafhy::ItemVisitor::ItemVisitor()'],['../classirafhy_1_1ItemVisitor.html#a838728a8eec5984e8b6cc72900eaa1ca',1,'irafhy::ItemVisitor::ItemVisitor(const std::vector&lt; std::string &gt; &amp;vars)']]]
 ];

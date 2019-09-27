@@ -86,6 +86,7 @@ $(document).ready(function(){initNavTree('classirafhy_1_1ConstraintsVisitor.html
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classirafhy_1_1ConstraintsVisitor-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -98,15 +99,11 @@ $(document).ready(function(){initNavTree('classirafhy_1_1ConstraintsVisitor.html
 Inheritance diagram for irafhy::ConstraintsVisitor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirafhy_1_1ConstraintsVisitor__inherit__graph.jpg" border="0" usemap="#irafhy_1_1ConstraintsVisitor_inherit__map" alt="Inheritance graph"/></div>
-<map name="irafhy_1_1ConstraintsVisitor_inherit__map" id="irafhy_1_1ConstraintsVisitor_inherit__map">
-</map>
 </div>
 <div class="dynheader">
 Collaboration diagram for irafhy::ConstraintsVisitor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirafhy_1_1ConstraintsVisitor__coll__graph.jpg" border="0" usemap="#irafhy_1_1ConstraintsVisitor_coll__map" alt="Collaboration graph"/></div>
-<map name="irafhy_1_1ConstraintsVisitor_coll__map" id="irafhy_1_1ConstraintsVisitor_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -120,6 +117,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5356e085afa8b4b38b15add0c04d687e"><td class="memItemLeft" align="right" valign="top">antlrcpp::Any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1ConstraintsVisitor.html#a5356e085afa8b4b38b15add0c04d687e">visitConstraint</a> (hybridautomatonParser::ConstraintContext *ctx) override</td></tr>
 <tr class="memdesc:a5356e085afa8b4b38b15add0c04d687e"><td class="mdescLeft">&#160;</td><td class="mdescRight">constraint visitor  <a href="#a5356e085afa8b4b38b15add0c04d687e">More...</a><br /></td></tr>
 <tr class="separator:a5356e085afa8b4b38b15add0c04d687e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a99627cf257ee811f5d1c2301496ac8cf"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1ConstraintsVisitor.html#a99627cf257ee811f5d1c2301496ac8cf">strToNum</a> (const std::string &amp;numStr) const</td></tr>
+<tr class="memdesc:a99627cf257ee811f5d1c2301496ac8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert given string to number  <a href="#a99627cf257ee811f5d1c2301496ac8cf">More...</a><br /></td></tr>
+<tr class="separator:a99627cf257ee811f5d1c2301496ac8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -165,6 +168,41 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a99627cf257ee811f5d1c2301496ac8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99627cf257ee811f5d1c2301496ac8cf">&#9670;&nbsp;</a></span>strToNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double irafhy::ConstraintsVisitor::strToNum </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>numStr</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>convert given string to number </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numStr</td><td>given string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>resulting number </dd></dl>
+
+</div>
+</div>
 <a id="a5356e085afa8b4b38b15add0c04d687e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5356e085afa8b4b38b15add0c04d687e">&#9670;&nbsp;</a></span>visitConstraint()</h2>
 

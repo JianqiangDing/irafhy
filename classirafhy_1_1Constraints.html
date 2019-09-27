@@ -99,8 +99,6 @@ $(document).ready(function(){initNavTree('classirafhy_1_1Constraints.html','');}
 Collaboration diagram for irafhy::Constraints:</div>
 <div class="dyncontent">
 <div class="center"><img src="classirafhy_1_1Constraints__coll__graph.jpg" border="0" usemap="#irafhy_1_1Constraints_coll__map" alt="Collaboration graph"/></div>
-<map name="irafhy_1_1Constraints_coll__map" id="irafhy_1_1Constraints_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -123,6 +121,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac08eec8f47564fee3ea416f3e03012f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceirafhy.html#a4b25adb47d4193d6f8a5bd1f0996d442">CONSTRAINTS_SOLUTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1Constraints.html#ac08eec8f47564fee3ea416f3e03012f5">isSatisfy</a> (const capd::interval &amp;t, const std::vector&lt; capd::interval &gt; &amp;in, const std::vector&lt; capd::interval &gt; &amp;params) const</td></tr>
 <tr class="memdesc:ac08eec8f47564fee3ea416f3e03012f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if the given values inside the target domain defined by the given constraints or not  <a href="#ac08eec8f47564fee3ea416f3e03012f5">More...</a><br /></td></tr>
 <tr class="separator:ac08eec8f47564fee3ea416f3e03012f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f46f42a29be00dd9f24f6ca03b345b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classirafhy_1_1Constraint.html">Constraint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1Constraints.html#a57f46f42a29be00dd9f24f6ca03b345b">operator[]</a> (std::size_t index)</td></tr>
+<tr class="memdesc:a57f46f42a29be00dd9f24f6ca03b345b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the specified constraint  <a href="#a57f46f42a29be00dd9f24f6ca03b345b">More...</a><br /></td></tr>
+<tr class="separator:a57f46f42a29be00dd9f24f6ca03b345b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f7482bdd8d1d234f98b12afccc853b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classirafhy_1_1Constraint.html">Constraint</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classirafhy_1_1Constraints.html#a34f7482bdd8d1d234f98b12afccc853b">operator[]</a> (std::size_t index) const</td></tr>
+<tr class="memdesc:a34f7482bdd8d1d234f98b12afccc853b"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the specified constraint  <a href="#a34f7482bdd8d1d234f98b12afccc853b">More...</a><br /></td></tr>
+<tr class="separator:a34f7482bdd8d1d234f98b12afccc853b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -311,7 +315,63 @@ Here is the call graph for this function:</div>
 
 <p class="reference">References <a class="el" href="namespaceirafhy.html#a4b25adb47d4193d6f8a5bd1f0996d442a42f3e88b40b8c285d2186d8d4dacb3a2">irafhy::ALL_SATISFIED</a>, <a class="el" href="namespaceirafhy.html#a4b25adb47d4193d6f8a5bd1f0996d442a4cc80079cce336344b18929ddae58a74">irafhy::ALL_UNSATISFIED</a>, <a class="el" href="classirafhy_1_1Constraints.html#ae7878e6326486e904f0e511850e45ac2">inequalities_</a>, and <a class="el" href="namespaceirafhy.html#a4b25adb47d4193d6f8a5bd1f0996d442a76e621c7da5bbdfc9b42d234a342e470">irafhy::PARTIAL_SATISFIED</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="classirafhy_1_1CSPSolver.html#a10fa66c819cfc91210579de41557cdc2">irafhy::CSPSolver::branchPruneSolve()</a>.</p>
+</div>
+</div>
+<a id="a57f46f42a29be00dd9f24f6ca03b345b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f46f42a29be00dd9f24f6ca03b345b">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classirafhy_1_1Constraint.html">Constraint</a> irafhy::Constraints::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the specified constraint </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the target constraint </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>resulting constraint </dd></dl>
+
+<p class="reference">References <a class="el" href="classirafhy_1_1Constraints.html#a5b3763268150a45b6eb2eb6e6147b61e">dimension_</a>, and <a class="el" href="classirafhy_1_1Constraints.html#ae7878e6326486e904f0e511850e45ac2">inequalities_</a>.</p>
+
+</div>
+</div>
+<a id="a34f7482bdd8d1d234f98b12afccc853b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f7482bdd8d1d234f98b12afccc853b">&#9670;&nbsp;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classirafhy_1_1Constraint.html">Constraint</a> &amp; irafhy::Constraints::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get the specified constraint </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the index of the target constraint </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>resulting constraint </dd></dl>
+
+<p class="reference">References <a class="el" href="classirafhy_1_1Constraints.html#ae7878e6326486e904f0e511850e45ac2">inequalities_</a>.</p>
 
 </div>
 </div>
@@ -409,7 +469,7 @@ Here is the call graph for this function:</div>
 
 <p>dimension of the system </p>
 
-<p class="reference">Referenced by <a class="el" href="classirafhy_1_1Constraints.html#a2d1a21c54c2fb8921661fd2786e217ae">Constraints()</a>, and <a class="el" href="classirafhy_1_1Constraints.html#af069f072ae2e637a2fc10c1d22a3e38c">dimension()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classirafhy_1_1Constraints.html#a2d1a21c54c2fb8921661fd2786e217ae">Constraints()</a>, <a class="el" href="classirafhy_1_1Constraints.html#af069f072ae2e637a2fc10c1d22a3e38c">dimension()</a>, and <a class="el" href="classirafhy_1_1Constraints.html#a57f46f42a29be00dd9f24f6ca03b345b">operator[]()</a>.</p>
 
 </div>
 </div>
@@ -435,7 +495,7 @@ Here is the call graph for this function:</div>
 
 <p>constraints of the system </p>
 
-<p class="reference">Referenced by <a class="el" href="classirafhy_1_1Constraints.html#a2d1a21c54c2fb8921661fd2786e217ae">Constraints()</a>, <a class="el" href="classirafhy_1_1Constraints.html#ac08eec8f47564fee3ea416f3e03012f5">isSatisfy()</a>, <a class="el" href="namespaceirafhy.html#a43d93187d5312de7d0d68fa4391386ac">irafhy::operator&lt;&lt;()</a>, and <a class="el" href="classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793">size()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classirafhy_1_1Constraints.html#a2d1a21c54c2fb8921661fd2786e217ae">Constraints()</a>, <a class="el" href="classirafhy_1_1Constraints.html#ac08eec8f47564fee3ea416f3e03012f5">isSatisfy()</a>, <a class="el" href="namespaceirafhy.html#a43d93187d5312de7d0d68fa4391386ac">irafhy::operator&lt;&lt;()</a>, <a class="el" href="classirafhy_1_1Constraints.html#a57f46f42a29be00dd9f24f6ca03b345b">operator[]()</a>, and <a class="el" href="classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793">size()</a>.</p>
 
 </div>
 </div>
