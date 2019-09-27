@@ -78,7 +78,7 @@ mkdir build && cd build
 ...
 make
 make test
-```
+``` 
 
 ## Contributors
 
@@ -87,5 +87,3 @@ See also the list of [contributors](https://github.com/JianqiangDing/irafhy/grap
 ## License
 
 This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE.md) file for details
-
-## Acknowledgments
