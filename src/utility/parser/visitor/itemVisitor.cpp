@@ -19,6 +19,8 @@ namespace irafhy
 		return retNum;
 	}
 
+	ItemVisitor::ItemVisitor() { vars_.clear(); }
+
 	ItemVisitor::ItemVisitor(const std::vector<std::string>& vars)
 	{
 		assert(!vars.empty());
@@ -215,4 +217,181 @@ namespace irafhy
 			return Item(BinaryItem(lhs, rhs, BINARY::PLUS));
 		return Item(BinaryItem(lhs, rhs, BINARY::MINUS));
 	}
+
+	antlrcpp::Any ItemVisitor::visitSqrtConstExp(hybridautomatonParser::SqrtConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::sqrt(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitAcothConstExp(hybridautomatonParser::AcothConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::log((value + 1.0) / (value - 1.0)) / 2.0;
+	}
+
+	antlrcpp::Any ItemVisitor::visitLogConstExp(hybridautomatonParser::LogConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::log(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitTanhConstExp(hybridautomatonParser::TanhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::tanh(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitPowConstExp(hybridautomatonParser::PowConstExpContext* ctx)
+	{
+		double   lhsValue = visit(ctx->const_expression(0));
+		double_t rhsValue = visit(ctx->const_expression(1));
+		return std::pow(lhsValue, rhsValue);
+	}
+
+	antlrcpp::Any ItemVisitor::visitPosConstExp(hybridautomatonParser::PosConstExpContext* ctx)
+	{
+		return visit(ctx->const_expression());
+	}
+
+	antlrcpp::Any ItemVisitor::visitAtanhConstExp(hybridautomatonParser::AtanhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::atanh(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitSqrConstExp(hybridautomatonParser::SqrConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return value * value;
+	}
+
+	antlrcpp::Any ItemVisitor::visitConstExpBra(hybridautomatonParser::ConstExpBraContext* ctx)
+	{
+		return visit(ctx->const_expression());
+	}
+
+	antlrcpp::Any ItemVisitor::visitSinhConstExp(hybridautomatonParser::SinhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::sinh(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitAtanConstExp(hybridautomatonParser::AtanConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::atanh(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitAsinhConstExp(hybridautomatonParser::AsinhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::asinh(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitConstExp(hybridautomatonParser::ConstExpContext* ctx)
+	{
+		if (ctx->KEY_INFINITY() != nullptr)
+			return std::numeric_limits<double>::infinity();
+		double thisNum = strToNum(ctx->getText());
+		return thisNum;
+	}
+
+	antlrcpp::Any ItemVisitor::visitNegConstExp(hybridautomatonParser::NegConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return -1.0 * value;
+	}
+
+	antlrcpp::Any ItemVisitor::visitAsinConstExp(hybridautomatonParser::AsinConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::asin(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitTanConstExp(hybridautomatonParser::TanConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::tan(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitNexpConstExp(hybridautomatonParser::NexpConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::exp(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitCosConstExp(hybridautomatonParser::CosConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::cos(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitConstExpMulDiv(hybridautomatonParser::ConstExpMulDivContext* ctx)
+	{
+		double lhsValue = visit(ctx->const_expression(0));
+		double rhsValue = visit(ctx->const_expression(1));
+		if (ctx->OP->getType() == hybridautomatonParser::MULTIPLY)
+			return lhsValue * rhsValue;
+		return lhsValue / rhsValue;
+	}
+
+	antlrcpp::Any ItemVisitor::visitExpConstExp(hybridautomatonParser::ExpConstExpContext* ctx)
+	{
+		double lhsValue = visit(ctx->const_expression(0));
+		double rhsValue = visit(ctx->const_expression(1));
+		return std::pow(lhsValue, rhsValue);
+	}
+
+	antlrcpp::Any ItemVisitor::visitCotConstExp(hybridautomatonParser::CotConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::cos(value) / std::sin(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitCoshConstExp(hybridautomatonParser::CoshConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::cosh(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitAcoshConstExp(hybridautomatonParser::AcoshConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::acosh(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitSinConstExp(hybridautomatonParser::SinConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::sin(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitAcosConstExp(hybridautomatonParser::AcosConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::acos(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitConstExpAddSub(hybridautomatonParser::ConstExpAddSubContext* ctx)
+	{
+		double lhsValue = visit(ctx->const_expression(0));
+		double rhsValue = visit(ctx->const_expression(1));
+		if (ctx->OP->getType() == hybridautomatonParser::PLUS)
+			return lhsValue + rhsValue;
+		return lhsValue - rhsValue;
+	}
+
+	antlrcpp::Any ItemVisitor::visitLnConstExp(hybridautomatonParser::LnConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::log(value);
+	}
+
+	antlrcpp::Any ItemVisitor::visitAcotConstExp(hybridautomatonParser::AcotConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return (acos(-1.0) / 2.0) - std::atan(value);
+	}
+
 } // namespace irafhy

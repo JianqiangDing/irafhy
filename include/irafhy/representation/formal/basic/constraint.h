@@ -49,6 +49,31 @@ namespace irafhy
 									 const std::vector<capd::interval>& in,
 									 const std::vector<capd::interval>& params) const;
 		/**
+		 * @brief get the value of the left hand side expression
+		 * @param t current time interval
+		 * @param in input values
+		 * @param params parameters necessary
+		 * @return value of the left hand sid expression
+		 */
+		capd::interval lhsValue(const capd::interval&			   t,
+								const std::vector<capd::interval>& in,
+								const std::vector<capd::interval>& params) const;
+		/**
+		 * @brief get the value of the right hand side expression
+		 * @param t current time interval
+		 * @param in input values
+		 * @param params parameters necessary
+		 * @return value of the right hand side expression
+		 */
+		capd::interval rhsValue(const capd::interval&			   t,
+								const std::vector<capd::interval>& in,
+								const std::vector<capd::interval>& params) const;
+		/**
+		 * @brief get the relation of the constraint
+		 * @return the relation of the constraint
+		 */
+		[[nodiscard]] RELATION relation() const;
+		/**
 		 * @brief out the given constraint to standard stream
 		 * @param out given out stream
 		 * @param rhs given constraint object

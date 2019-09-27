@@ -59,6 +59,90 @@ public:
   virtual void enterInterval(hybridautomatonParser::IntervalContext *ctx) = 0;
   virtual void exitInterval(hybridautomatonParser::IntervalContext *ctx) = 0;
 
+  virtual void enterSqrtConstExp(hybridautomatonParser::SqrtConstExpContext *ctx) = 0;
+  virtual void exitSqrtConstExp(hybridautomatonParser::SqrtConstExpContext *ctx) = 0;
+
+  virtual void enterAcothConstExp(hybridautomatonParser::AcothConstExpContext *ctx) = 0;
+  virtual void exitAcothConstExp(hybridautomatonParser::AcothConstExpContext *ctx) = 0;
+
+  virtual void enterLogConstExp(hybridautomatonParser::LogConstExpContext *ctx) = 0;
+  virtual void exitLogConstExp(hybridautomatonParser::LogConstExpContext *ctx) = 0;
+
+  virtual void enterTanhConstExp(hybridautomatonParser::TanhConstExpContext *ctx) = 0;
+  virtual void exitTanhConstExp(hybridautomatonParser::TanhConstExpContext *ctx) = 0;
+
+  virtual void enterPowConstExp(hybridautomatonParser::PowConstExpContext *ctx) = 0;
+  virtual void exitPowConstExp(hybridautomatonParser::PowConstExpContext *ctx) = 0;
+
+  virtual void enterPosConstExp(hybridautomatonParser::PosConstExpContext *ctx) = 0;
+  virtual void exitPosConstExp(hybridautomatonParser::PosConstExpContext *ctx) = 0;
+
+  virtual void enterAtanhConstExp(hybridautomatonParser::AtanhConstExpContext *ctx) = 0;
+  virtual void exitAtanhConstExp(hybridautomatonParser::AtanhConstExpContext *ctx) = 0;
+
+  virtual void enterSqrConstExp(hybridautomatonParser::SqrConstExpContext *ctx) = 0;
+  virtual void exitSqrConstExp(hybridautomatonParser::SqrConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpBra(hybridautomatonParser::ConstExpBraContext *ctx) = 0;
+  virtual void exitConstExpBra(hybridautomatonParser::ConstExpBraContext *ctx) = 0;
+
+  virtual void enterSinhConstExp(hybridautomatonParser::SinhConstExpContext *ctx) = 0;
+  virtual void exitSinhConstExp(hybridautomatonParser::SinhConstExpContext *ctx) = 0;
+
+  virtual void enterAtanConstExp(hybridautomatonParser::AtanConstExpContext *ctx) = 0;
+  virtual void exitAtanConstExp(hybridautomatonParser::AtanConstExpContext *ctx) = 0;
+
+  virtual void enterAsinhConstExp(hybridautomatonParser::AsinhConstExpContext *ctx) = 0;
+  virtual void exitAsinhConstExp(hybridautomatonParser::AsinhConstExpContext *ctx) = 0;
+
+  virtual void enterConstExp(hybridautomatonParser::ConstExpContext *ctx) = 0;
+  virtual void exitConstExp(hybridautomatonParser::ConstExpContext *ctx) = 0;
+
+  virtual void enterNegConstExp(hybridautomatonParser::NegConstExpContext *ctx) = 0;
+  virtual void exitNegConstExp(hybridautomatonParser::NegConstExpContext *ctx) = 0;
+
+  virtual void enterAsinConstExp(hybridautomatonParser::AsinConstExpContext *ctx) = 0;
+  virtual void exitAsinConstExp(hybridautomatonParser::AsinConstExpContext *ctx) = 0;
+
+  virtual void enterTanConstExp(hybridautomatonParser::TanConstExpContext *ctx) = 0;
+  virtual void exitTanConstExp(hybridautomatonParser::TanConstExpContext *ctx) = 0;
+
+  virtual void enterNexpConstExp(hybridautomatonParser::NexpConstExpContext *ctx) = 0;
+  virtual void exitNexpConstExp(hybridautomatonParser::NexpConstExpContext *ctx) = 0;
+
+  virtual void enterCosConstExp(hybridautomatonParser::CosConstExpContext *ctx) = 0;
+  virtual void exitCosConstExp(hybridautomatonParser::CosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpMulDiv(hybridautomatonParser::ConstExpMulDivContext *ctx) = 0;
+  virtual void exitConstExpMulDiv(hybridautomatonParser::ConstExpMulDivContext *ctx) = 0;
+
+  virtual void enterExpConstExp(hybridautomatonParser::ExpConstExpContext *ctx) = 0;
+  virtual void exitExpConstExp(hybridautomatonParser::ExpConstExpContext *ctx) = 0;
+
+  virtual void enterCotConstExp(hybridautomatonParser::CotConstExpContext *ctx) = 0;
+  virtual void exitCotConstExp(hybridautomatonParser::CotConstExpContext *ctx) = 0;
+
+  virtual void enterCoshConstExp(hybridautomatonParser::CoshConstExpContext *ctx) = 0;
+  virtual void exitCoshConstExp(hybridautomatonParser::CoshConstExpContext *ctx) = 0;
+
+  virtual void enterAcoshConstExp(hybridautomatonParser::AcoshConstExpContext *ctx) = 0;
+  virtual void exitAcoshConstExp(hybridautomatonParser::AcoshConstExpContext *ctx) = 0;
+
+  virtual void enterSinConstExp(hybridautomatonParser::SinConstExpContext *ctx) = 0;
+  virtual void exitSinConstExp(hybridautomatonParser::SinConstExpContext *ctx) = 0;
+
+  virtual void enterAcosConstExp(hybridautomatonParser::AcosConstExpContext *ctx) = 0;
+  virtual void exitAcosConstExp(hybridautomatonParser::AcosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpAddSub(hybridautomatonParser::ConstExpAddSubContext *ctx) = 0;
+  virtual void exitConstExpAddSub(hybridautomatonParser::ConstExpAddSubContext *ctx) = 0;
+
+  virtual void enterLnConstExp(hybridautomatonParser::LnConstExpContext *ctx) = 0;
+  virtual void exitLnConstExp(hybridautomatonParser::LnConstExpContext *ctx) = 0;
+
+  virtual void enterAcotConstExp(hybridautomatonParser::AcotConstExpContext *ctx) = 0;
+  virtual void exitAcotConstExp(hybridautomatonParser::AcotConstExpContext *ctx) = 0;
+
   virtual void enterTanExp(hybridautomatonParser::TanExpContext *ctx) = 0;
   virtual void exitTanExp(hybridautomatonParser::TanExpContext *ctx) = 0;
 

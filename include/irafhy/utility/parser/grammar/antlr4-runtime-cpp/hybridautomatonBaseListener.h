@@ -61,6 +61,90 @@ public:
   virtual void enterInterval(hybridautomatonParser::IntervalContext * /*ctx*/) override { }
   virtual void exitInterval(hybridautomatonParser::IntervalContext * /*ctx*/) override { }
 
+  virtual void enterSqrtConstExp(hybridautomatonParser::SqrtConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrtConstExp(hybridautomatonParser::SqrtConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcothConstExp(hybridautomatonParser::AcothConstExpContext * /*ctx*/) override { }
+  virtual void exitAcothConstExp(hybridautomatonParser::AcothConstExpContext * /*ctx*/) override { }
+
+  virtual void enterLogConstExp(hybridautomatonParser::LogConstExpContext * /*ctx*/) override { }
+  virtual void exitLogConstExp(hybridautomatonParser::LogConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanhConstExp(hybridautomatonParser::TanhConstExpContext * /*ctx*/) override { }
+  virtual void exitTanhConstExp(hybridautomatonParser::TanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPowConstExp(hybridautomatonParser::PowConstExpContext * /*ctx*/) override { }
+  virtual void exitPowConstExp(hybridautomatonParser::PowConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPosConstExp(hybridautomatonParser::PosConstExpContext * /*ctx*/) override { }
+  virtual void exitPosConstExp(hybridautomatonParser::PosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanhConstExp(hybridautomatonParser::AtanhConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanhConstExp(hybridautomatonParser::AtanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSqrConstExp(hybridautomatonParser::SqrConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrConstExp(hybridautomatonParser::SqrConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpBra(hybridautomatonParser::ConstExpBraContext * /*ctx*/) override { }
+  virtual void exitConstExpBra(hybridautomatonParser::ConstExpBraContext * /*ctx*/) override { }
+
+  virtual void enterSinhConstExp(hybridautomatonParser::SinhConstExpContext * /*ctx*/) override { }
+  virtual void exitSinhConstExp(hybridautomatonParser::SinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanConstExp(hybridautomatonParser::AtanConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanConstExp(hybridautomatonParser::AtanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinhConstExp(hybridautomatonParser::AsinhConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinhConstExp(hybridautomatonParser::AsinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExp(hybridautomatonParser::ConstExpContext * /*ctx*/) override { }
+  virtual void exitConstExp(hybridautomatonParser::ConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNegConstExp(hybridautomatonParser::NegConstExpContext * /*ctx*/) override { }
+  virtual void exitNegConstExp(hybridautomatonParser::NegConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinConstExp(hybridautomatonParser::AsinConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinConstExp(hybridautomatonParser::AsinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanConstExp(hybridautomatonParser::TanConstExpContext * /*ctx*/) override { }
+  virtual void exitTanConstExp(hybridautomatonParser::TanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNexpConstExp(hybridautomatonParser::NexpConstExpContext * /*ctx*/) override { }
+  virtual void exitNexpConstExp(hybridautomatonParser::NexpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCosConstExp(hybridautomatonParser::CosConstExpContext * /*ctx*/) override { }
+  virtual void exitCosConstExp(hybridautomatonParser::CosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpMulDiv(hybridautomatonParser::ConstExpMulDivContext * /*ctx*/) override { }
+  virtual void exitConstExpMulDiv(hybridautomatonParser::ConstExpMulDivContext * /*ctx*/) override { }
+
+  virtual void enterExpConstExp(hybridautomatonParser::ExpConstExpContext * /*ctx*/) override { }
+  virtual void exitExpConstExp(hybridautomatonParser::ExpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCotConstExp(hybridautomatonParser::CotConstExpContext * /*ctx*/) override { }
+  virtual void exitCotConstExp(hybridautomatonParser::CotConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCoshConstExp(hybridautomatonParser::CoshConstExpContext * /*ctx*/) override { }
+  virtual void exitCoshConstExp(hybridautomatonParser::CoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcoshConstExp(hybridautomatonParser::AcoshConstExpContext * /*ctx*/) override { }
+  virtual void exitAcoshConstExp(hybridautomatonParser::AcoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSinConstExp(hybridautomatonParser::SinConstExpContext * /*ctx*/) override { }
+  virtual void exitSinConstExp(hybridautomatonParser::SinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcosConstExp(hybridautomatonParser::AcosConstExpContext * /*ctx*/) override { }
+  virtual void exitAcosConstExp(hybridautomatonParser::AcosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpAddSub(hybridautomatonParser::ConstExpAddSubContext * /*ctx*/) override { }
+  virtual void exitConstExpAddSub(hybridautomatonParser::ConstExpAddSubContext * /*ctx*/) override { }
+
+  virtual void enterLnConstExp(hybridautomatonParser::LnConstExpContext * /*ctx*/) override { }
+  virtual void exitLnConstExp(hybridautomatonParser::LnConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcotConstExp(hybridautomatonParser::AcotConstExpContext * /*ctx*/) override { }
+  virtual void exitAcotConstExp(hybridautomatonParser::AcotConstExpContext * /*ctx*/) override { }
+
   virtual void enterTanExp(hybridautomatonParser::TanExpContext * /*ctx*/) override { }
   virtual void exitTanExp(hybridautomatonParser::TanExpContext * /*ctx*/) override { }
 

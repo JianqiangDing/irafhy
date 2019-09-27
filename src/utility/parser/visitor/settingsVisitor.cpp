@@ -1,9 +1,11 @@
 #include <capd/capdlib.h>
 #include <boost/lexical_cast.hpp>
 #include <irafhy/utility/parser/visitor/settingsVisitor.h>
+#include <irafhy/utility/parser/visitor/itemVisitor.h>
 #include <irafhy/representation/geometric/intervalHull.h>
 #include <irafhy/representation/geometric/polytope.h>
 #include <irafhy/representation/formal/basic/condition.h>
+#include <irafhy/representation/formal/basic/item.h>
 #include <irafhy/utility/definition/metaStructure.h>
 #include <irafhy/utility/definition/enum.h>
 #include <irafhy/settings.h>
@@ -56,7 +58,7 @@ namespace irafhy
 	antlrcpp::Any SettingsVisitor::visitHpolytope(settingsParser::HpolytopeContext* ctx)
 	{
 		Eigen::VectorXd offsets = visit(ctx->vector());
-		Eigen::MatrixXd norms   = visit(ctx->matrix());
+		Eigen::MatrixXd norms	= visit(ctx->matrix());
 		assert(offsets.rows() == norms.rows());
 		std::vector<HalfSpace> constraints;
 		constraints.reserve(offsets.rows());
@@ -82,9 +84,9 @@ namespace irafhy
 
 	antlrcpp::Any SettingsVisitor::visitMatrix(settingsParser::MatrixContext* ctx)
 	{
-		std::size_t		rowCnt   = ctx->vector().size();
+		std::size_t		rowCnt	 = ctx->vector().size();
 		Eigen::VectorXd frontVec = visit(ctx->vector(0));
-		std::size_t		colCnt   = static_cast<std::size_t>(frontVec.rows());
+		std::size_t		colCnt	 = static_cast<std::size_t>(frontVec.rows());
 		Eigen::MatrixXd retMatrix(rowCnt, colCnt);
 		for (std::size_t idx = 0; idx < rowCnt; ++idx)
 		{
@@ -98,46 +100,14 @@ namespace irafhy
 
 	antlrcpp::Any SettingsVisitor::visitVector(settingsParser::VectorContext* ctx)
 	{
-		Eigen::VectorXd retVec(ctx->NUMBER().size());
-		std::size_t		numCtxIdx = 0;
-		if (ctx->OP.empty())
+		Eigen::VectorXd retVec(ctx->const_expression().size());
+		std::size_t		numIdx = 0;
+		ItemVisitor		itemVisitor;
+		for (const auto& constExpCtx : ctx->const_expression())
 		{
-			for (std::size_t idx = 0; idx < retVec.rows(); ++idx)
-			{
-				std::string thisNumStr = ctx->NUMBER(idx)->getText();
-				double		thisNum	= strToNum(thisNumStr);
-				retVec(idx)			   = thisNum;
-			}
-		}
-		else
-		{
-			for (const auto& thisOPCtx : ctx->OP)
-			{
-				std::size_t curOPStartIdx  = thisOPCtx->getStartIndex();
-				std::size_t curNumStartIdx = ctx->NUMBER(numCtxIdx)->getSymbol()->getStartIndex();
-				while (curOPStartIdx >= curNumStartIdx)
-				{
-					std::string thisNumStr = ctx->NUMBER(numCtxIdx)->getText();
-					double		thisNum	= strToNum(thisNumStr);
-					retVec(numCtxIdx)	  = thisNum;
-					++numCtxIdx;
-					curNumStartIdx = ctx->NUMBER(numCtxIdx)->getSymbol()->getStartIndex();
-				}
-				if (thisOPCtx->getType() == settingsParser::MINUS)
-				{
-					std::string thisNumStr = ctx->NUMBER(numCtxIdx)->getText();
-					double		thisNum	= strToNum(thisNumStr);
-					retVec(numCtxIdx)	  = thisNum * -1.0;
-					++numCtxIdx;
-				}
-			}
-			while (numCtxIdx < ctx->NUMBER().size())
-			{
-				std::string thisNumStr = ctx->NUMBER(numCtxIdx)->getText();
-				double		thisNum	= strToNum(thisNumStr);
-				retVec(numCtxIdx)	  = thisNum;
-				++numCtxIdx;
-			}
+			double value   = itemVisitor.visit(constExpCtx);
+			retVec(numIdx) = value;
+			numIdx++;
 		}
 		return retVec;
 	}
@@ -156,53 +126,15 @@ namespace irafhy
 
 	antlrcpp::Any SettingsVisitor::visitInterval(settingsParser::IntervalContext* ctx)
 	{
-		std::size_t lowerValIndex(0), upperValIndex(0), lowerOpIndex(0), upperOpIndex(0);
-		std::size_t commaIndex = ctx->COMMA()->getSymbol()->getStartIndex();
-		double		lowerConstraint(0.0), upperConstraint(0.0);
-		for (const auto& val : ctx->VAL)
-		{
-			std::size_t thisValIndex = val->getStartIndex();
-			if (thisValIndex < commaIndex)
-			{
-				lowerValIndex = thisValIndex;
-				if (val->getType() == settingsParser::KEY_INFINITY)
-				{
-					lowerConstraint = std::numeric_limits<double>::infinity() * -1.0;
-				}
-				else
-				{
-					lowerConstraint = strToNum(val->getText());
-				}
-			}
-			else
-			{
-				upperValIndex = thisValIndex;
-				if (val->getType() == settingsParser::KEY_INFINITY)
-				{
-					upperConstraint = std::numeric_limits<double>::infinity();
-				}
-				else
-				{
-					upperConstraint = strToNum(val->getText());
-				}
-			}
-		}
-		for (const auto& op : ctx->OP)
-		{
-			std::size_t thisOpIndex = op->getStartIndex();
-			if (thisOpIndex < commaIndex && op->getType() == settingsParser::MINUS && !std::isinf(lowerConstraint))
-			{
-				lowerOpIndex = thisOpIndex;
-				assert(lowerOpIndex < lowerValIndex);
-				lowerConstraint *= double(-1);
-			}
-			else if (commaIndex < thisOpIndex && op->getType() == settingsParser::MINUS && !std::isinf(upperConstraint))
-			{
-				upperOpIndex = thisOpIndex;
-				assert(upperOpIndex < upperValIndex);
-				upperConstraint *= double(-1);
-			}
-		}
+		std::size_t commaIndex	  = ctx->COMMA()->getSymbol()->getStartIndex();
+		std::size_t lowerValIndex = ctx->const_expression(0)->getStart()->getStartIndex();
+		std::size_t upperValIndex = ctx->const_expression(1)->getStart()->getStartIndex();
+		assert(lowerValIndex < commaIndex && commaIndex < upperValIndex);
+		//TODO
+		double lowerConstraint = visit(ctx->const_expression(0));
+		double upperConstraint = visit(ctx->const_expression(1));
+		if (std::isinf(lowerConstraint))
+			lowerConstraint *= -1.0;
 		if (!std::isinf(lowerConstraint) && !std::isinf(upperConstraint))
 			assert(lowerConstraint <= upperConstraint);
 		return capd::interval(lowerConstraint, upperConstraint);
@@ -223,7 +155,7 @@ namespace irafhy
 	antlrcpp::Any SettingsVisitor::visitStepSetting(settingsParser::StepSettingContext* ctx)
 	{
 		std::string numStr = ctx->NUMBER()->getText();
-		double		num	= strToNum(numStr);
+		double		num	   = strToNum(numStr);
 		assert(num >= 0);
 		return num;
 	}
@@ -382,5 +314,181 @@ namespace irafhy
 			}
 		}
 		return settings;
+	}
+
+	antlrcpp::Any SettingsVisitor::visitSqrtConstExp(settingsParser::SqrtConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::sqrt(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAcothConstExp(settingsParser::AcothConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::log((value + 1.0) / (value - 1.0)) / 2.0;
+	}
+
+	antlrcpp::Any SettingsVisitor::visitLogConstExp(settingsParser::LogConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::log(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitTanhConstExp(settingsParser::TanhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::tanh(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitPowConstExp(settingsParser::PowConstExpContext* ctx)
+	{
+		double	 lhsValue = visit(ctx->const_expression(0));
+		double_t rhsValue = visit(ctx->const_expression(1));
+		return std::pow(lhsValue, rhsValue);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitPosConstExp(settingsParser::PosConstExpContext* ctx)
+	{
+		return visit(ctx->const_expression());
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAtanhConstExp(settingsParser::AtanhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::atanh(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitSqrConstExp(settingsParser::SqrConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return value * value;
+	}
+
+	antlrcpp::Any SettingsVisitor::visitConstExpBra(settingsParser::ConstExpBraContext* ctx)
+	{
+		return visit(ctx->const_expression());
+	}
+
+	antlrcpp::Any SettingsVisitor::visitSinhConstExp(settingsParser::SinhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::sinh(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAtanConstExp(settingsParser::AtanConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::atanh(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAsinhConstExp(settingsParser::AsinhConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::asinh(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitConstExp(settingsParser::ConstExpContext* ctx)
+	{
+		if (ctx->KEY_INFINITY() != nullptr)
+			return std::numeric_limits<double>::infinity();
+		double thisNum = strToNum(ctx->getText());
+		return thisNum;
+	}
+
+	antlrcpp::Any SettingsVisitor::visitNegConstExp(settingsParser::NegConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return -1.0 * value;
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAsinConstExp(settingsParser::AsinConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::asin(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitTanConstExp(settingsParser::TanConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::tan(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitNexpConstExp(settingsParser::NexpConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::exp(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitCosConstExp(settingsParser::CosConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::cos(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitConstExpMulDiv(settingsParser::ConstExpMulDivContext* ctx)
+	{
+		double lhsValue = visit(ctx->const_expression(0));
+		double rhsValue = visit(ctx->const_expression(1));
+		if (ctx->OP->getType() == hybridautomatonParser::MULTIPLY)
+			return lhsValue * rhsValue;
+		return lhsValue / rhsValue;
+	}
+
+	antlrcpp::Any SettingsVisitor::visitExpConstExp(settingsParser::ExpConstExpContext* ctx)
+	{
+		double lhsValue = visit(ctx->const_expression(0));
+		double rhsValue = visit(ctx->const_expression(1));
+		return std::pow(lhsValue, rhsValue);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitCotConstExp(settingsParser::CotConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::cos(value) / std::sin(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitCoshConstExp(settingsParser::CoshConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::cosh(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAcoshConstExp(settingsParser::AcoshConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::acosh(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitSinConstExp(settingsParser::SinConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::sin(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAcosConstExp(settingsParser::AcosConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::acos(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitConstExpAddSub(settingsParser::ConstExpAddSubContext* ctx)
+	{
+		double lhsValue = visit(ctx->const_expression(0));
+		double rhsValue = visit(ctx->const_expression(1));
+		if (ctx->OP->getType() == hybridautomatonParser::PLUS)
+			return lhsValue + rhsValue;
+		return lhsValue - rhsValue;
+	}
+
+	antlrcpp::Any SettingsVisitor::visitLnConstExp(settingsParser::LnConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return std::log(value);
+	}
+
+	antlrcpp::Any SettingsVisitor::visitAcotConstExp(settingsParser::AcotConstExpContext* ctx)
+	{
+		double value = visit(ctx->const_expression());
+		return (acos(-1.0) / 2.0) - std::atan(value);
 	}
 } // namespace irafhy

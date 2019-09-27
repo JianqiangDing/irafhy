@@ -55,6 +55,18 @@ namespace irafhy
 													 const std::vector<capd::interval>& in,
 													 const std::vector<capd::interval>& params) const;
 		/**
+		 * @brief get the specified constraint
+		 * @param index the index of the target constraint
+		 * @return resulting constraint
+		 */
+		Constraint operator[](std::size_t index);
+		/**
+		 * @brief get the specified constraint
+		 * @param index the index of the target constraint
+		 * @return resulting constraint
+		 */
+		const Constraint& operator[](std::size_t index) const;
+		/**
 		 * @brief out the given constraints to standard out stream
 		 * @param out given out stream
 		 * @param rhs given right hand side constraints

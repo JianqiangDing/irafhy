@@ -63,4 +63,4 @@ fragment SPECIALCHARACTER: [_\\];
 //  @brief or use '_'|'\' instead
 
 //  @brief another line or something
-WS: [ \t\r\n]+ ->channel(HIDDEN);
+WS: [ \t\r\n]+ -> channel(HIDDEN);

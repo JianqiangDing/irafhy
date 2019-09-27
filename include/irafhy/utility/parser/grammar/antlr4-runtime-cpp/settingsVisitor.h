@@ -63,6 +63,62 @@ public:
 
     virtual antlrcpp::Any visitInterval(settingsParser::IntervalContext *context) = 0;
 
+    virtual antlrcpp::Any visitSqrtConstExp(settingsParser::SqrtConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcothConstExp(settingsParser::AcothConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitLogConstExp(settingsParser::LogConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanhConstExp(settingsParser::TanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPowConstExp(settingsParser::PowConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPosConstExp(settingsParser::PosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanhConstExp(settingsParser::AtanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSqrConstExp(settingsParser::SqrConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpBra(settingsParser::ConstExpBraContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinhConstExp(settingsParser::SinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanConstExp(settingsParser::AtanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinhConstExp(settingsParser::AsinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExp(settingsParser::ConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNegConstExp(settingsParser::NegConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinConstExp(settingsParser::AsinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanConstExp(settingsParser::TanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNexpConstExp(settingsParser::NexpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCosConstExp(settingsParser::CosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpMulDiv(settingsParser::ConstExpMulDivContext *context) = 0;
+
+    virtual antlrcpp::Any visitExpConstExp(settingsParser::ExpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCotConstExp(settingsParser::CotConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCoshConstExp(settingsParser::CoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcoshConstExp(settingsParser::AcoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinConstExp(settingsParser::SinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcosConstExp(settingsParser::AcosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpAddSub(settingsParser::ConstExpAddSubContext *context) = 0;
+
+    virtual antlrcpp::Any visitLnConstExp(settingsParser::LnConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcotConstExp(settingsParser::AcotConstExpContext *context) = 0;
+
     virtual antlrcpp::Any visitTanExp(settingsParser::TanExpContext *context) = 0;
 
     virtual antlrcpp::Any visitSqrExp(settingsParser::SqrExpContext *context) = 0;

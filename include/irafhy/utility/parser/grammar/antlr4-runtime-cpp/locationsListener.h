@@ -65,6 +65,90 @@ public:
   virtual void enterInterval(locationsParser::IntervalContext *ctx) = 0;
   virtual void exitInterval(locationsParser::IntervalContext *ctx) = 0;
 
+  virtual void enterSqrtConstExp(locationsParser::SqrtConstExpContext *ctx) = 0;
+  virtual void exitSqrtConstExp(locationsParser::SqrtConstExpContext *ctx) = 0;
+
+  virtual void enterAcothConstExp(locationsParser::AcothConstExpContext *ctx) = 0;
+  virtual void exitAcothConstExp(locationsParser::AcothConstExpContext *ctx) = 0;
+
+  virtual void enterLogConstExp(locationsParser::LogConstExpContext *ctx) = 0;
+  virtual void exitLogConstExp(locationsParser::LogConstExpContext *ctx) = 0;
+
+  virtual void enterTanhConstExp(locationsParser::TanhConstExpContext *ctx) = 0;
+  virtual void exitTanhConstExp(locationsParser::TanhConstExpContext *ctx) = 0;
+
+  virtual void enterPowConstExp(locationsParser::PowConstExpContext *ctx) = 0;
+  virtual void exitPowConstExp(locationsParser::PowConstExpContext *ctx) = 0;
+
+  virtual void enterPosConstExp(locationsParser::PosConstExpContext *ctx) = 0;
+  virtual void exitPosConstExp(locationsParser::PosConstExpContext *ctx) = 0;
+
+  virtual void enterAtanhConstExp(locationsParser::AtanhConstExpContext *ctx) = 0;
+  virtual void exitAtanhConstExp(locationsParser::AtanhConstExpContext *ctx) = 0;
+
+  virtual void enterSqrConstExp(locationsParser::SqrConstExpContext *ctx) = 0;
+  virtual void exitSqrConstExp(locationsParser::SqrConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpBra(locationsParser::ConstExpBraContext *ctx) = 0;
+  virtual void exitConstExpBra(locationsParser::ConstExpBraContext *ctx) = 0;
+
+  virtual void enterSinhConstExp(locationsParser::SinhConstExpContext *ctx) = 0;
+  virtual void exitSinhConstExp(locationsParser::SinhConstExpContext *ctx) = 0;
+
+  virtual void enterAtanConstExp(locationsParser::AtanConstExpContext *ctx) = 0;
+  virtual void exitAtanConstExp(locationsParser::AtanConstExpContext *ctx) = 0;
+
+  virtual void enterAsinhConstExp(locationsParser::AsinhConstExpContext *ctx) = 0;
+  virtual void exitAsinhConstExp(locationsParser::AsinhConstExpContext *ctx) = 0;
+
+  virtual void enterConstExp(locationsParser::ConstExpContext *ctx) = 0;
+  virtual void exitConstExp(locationsParser::ConstExpContext *ctx) = 0;
+
+  virtual void enterNegConstExp(locationsParser::NegConstExpContext *ctx) = 0;
+  virtual void exitNegConstExp(locationsParser::NegConstExpContext *ctx) = 0;
+
+  virtual void enterAsinConstExp(locationsParser::AsinConstExpContext *ctx) = 0;
+  virtual void exitAsinConstExp(locationsParser::AsinConstExpContext *ctx) = 0;
+
+  virtual void enterTanConstExp(locationsParser::TanConstExpContext *ctx) = 0;
+  virtual void exitTanConstExp(locationsParser::TanConstExpContext *ctx) = 0;
+
+  virtual void enterNexpConstExp(locationsParser::NexpConstExpContext *ctx) = 0;
+  virtual void exitNexpConstExp(locationsParser::NexpConstExpContext *ctx) = 0;
+
+  virtual void enterCosConstExp(locationsParser::CosConstExpContext *ctx) = 0;
+  virtual void exitCosConstExp(locationsParser::CosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpMulDiv(locationsParser::ConstExpMulDivContext *ctx) = 0;
+  virtual void exitConstExpMulDiv(locationsParser::ConstExpMulDivContext *ctx) = 0;
+
+  virtual void enterExpConstExp(locationsParser::ExpConstExpContext *ctx) = 0;
+  virtual void exitExpConstExp(locationsParser::ExpConstExpContext *ctx) = 0;
+
+  virtual void enterCotConstExp(locationsParser::CotConstExpContext *ctx) = 0;
+  virtual void exitCotConstExp(locationsParser::CotConstExpContext *ctx) = 0;
+
+  virtual void enterCoshConstExp(locationsParser::CoshConstExpContext *ctx) = 0;
+  virtual void exitCoshConstExp(locationsParser::CoshConstExpContext *ctx) = 0;
+
+  virtual void enterAcoshConstExp(locationsParser::AcoshConstExpContext *ctx) = 0;
+  virtual void exitAcoshConstExp(locationsParser::AcoshConstExpContext *ctx) = 0;
+
+  virtual void enterSinConstExp(locationsParser::SinConstExpContext *ctx) = 0;
+  virtual void exitSinConstExp(locationsParser::SinConstExpContext *ctx) = 0;
+
+  virtual void enterAcosConstExp(locationsParser::AcosConstExpContext *ctx) = 0;
+  virtual void exitAcosConstExp(locationsParser::AcosConstExpContext *ctx) = 0;
+
+  virtual void enterConstExpAddSub(locationsParser::ConstExpAddSubContext *ctx) = 0;
+  virtual void exitConstExpAddSub(locationsParser::ConstExpAddSubContext *ctx) = 0;
+
+  virtual void enterLnConstExp(locationsParser::LnConstExpContext *ctx) = 0;
+  virtual void exitLnConstExp(locationsParser::LnConstExpContext *ctx) = 0;
+
+  virtual void enterAcotConstExp(locationsParser::AcotConstExpContext *ctx) = 0;
+  virtual void exitAcotConstExp(locationsParser::AcotConstExpContext *ctx) = 0;
+
   virtual void enterTanExp(locationsParser::TanExpContext *ctx) = 0;
   virtual void exitTanExp(locationsParser::TanExpContext *ctx) = 0;
 

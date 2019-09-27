@@ -42,7 +42,7 @@ public:
     RuleLocations = 4, RuleCondition = 5, RulePolytope = 6, RuleHpolytope = 7, 
     RuleVpolytope = 8, RuleMatrix = 9, RuleVector = 10, RuleIntervalhull = 11, 
     RuleConstraints = 12, RuleConstraint = 13, RuleSystem = 14, RuleFormula = 15, 
-    RuleInterval = 16, RuleExpression = 17
+    RuleInterval = 16, RuleConst_expression = 17, RuleExpression = 18
   };
 
   locationsParser(antlr4::TokenStream *input);
@@ -72,6 +72,7 @@ public:
   class SystemContext;
   class FormulaContext;
   class IntervalContext;
+  class Const_expressionContext;
   class ExpressionContext; 
 
   class  ModelidContext : public antlr4::ParserRuleContext {
@@ -265,21 +266,12 @@ public:
 
   class  VectorContext : public antlr4::ParserRuleContext {
   public:
-    antlr4::Token *plusToken = nullptr;;
-    std::vector<antlr4::Token *> OP;;
-    antlr4::Token *minusToken = nullptr;;
-    antlr4::Token *_tset115 = nullptr;;
-    antlr4::Token *_tset135 = nullptr;;
     VectorContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
-    std::vector<antlr4::tree::TerminalNode *> NUMBER();
-    antlr4::tree::TerminalNode* NUMBER(size_t i);
+    std::vector<Const_expressionContext *> const_expression();
+    Const_expressionContext* const_expression(size_t i);
     antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
-    std::vector<antlr4::tree::TerminalNode *> PLUS();
-    antlr4::tree::TerminalNode* PLUS(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> MINUS();
-    antlr4::tree::TerminalNode* MINUS(size_t i);
     std::vector<antlr4::tree::TerminalNode *> COMMA();
     antlr4::tree::TerminalNode* COMMA(size_t i);
 
@@ -334,8 +326,8 @@ public:
     antlr4::Token *RELATION = nullptr;;
     ConstraintContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
-    std::vector<ExpressionContext *> expression();
-    ExpressionContext* expression(size_t i);
+    ExpressionContext *expression();
+    Const_expressionContext *const_expression();
     antlr4::tree::TerminalNode *EQUAL();
     antlr4::tree::TerminalNode *UNEQUAL();
     antlr4::tree::TerminalNode *GEQ();
@@ -389,32 +381,13 @@ public:
 
   class  IntervalContext : public antlr4::ParserRuleContext {
   public:
-    antlr4::Token *plusToken = nullptr;;
-    std::vector<antlr4::Token *> OP;;
-    antlr4::Token *minusToken = nullptr;;
-    antlr4::Token *_tset251 = nullptr;;
-    antlr4::Token *numberToken = nullptr;;
-    std::vector<antlr4::Token *> VAL;;
-    antlr4::Token *scinumToken = nullptr;;
-    antlr4::Token *key_infinityToken = nullptr;;
-    antlr4::Token *_tset264 = nullptr;;
-    antlr4::Token *_tset284 = nullptr;;
-    antlr4::Token *_tset297 = nullptr;;
     IntervalContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *LEFTSQUAREBRACKET();
+    std::vector<Const_expressionContext *> const_expression();
+    Const_expressionContext* const_expression(size_t i);
     antlr4::tree::TerminalNode *COMMA();
     antlr4::tree::TerminalNode *RIGHTSQUAREBRACKET();
-    std::vector<antlr4::tree::TerminalNode *> NUMBER();
-    antlr4::tree::TerminalNode* NUMBER(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> SCINUM();
-    antlr4::tree::TerminalNode* SCINUM(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> KEY_INFINITY();
-    antlr4::tree::TerminalNode* KEY_INFINITY(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> PLUS();
-    antlr4::tree::TerminalNode* PLUS(size_t i);
-    std::vector<antlr4::tree::TerminalNode *> MINUS();
-    antlr4::tree::TerminalNode* MINUS(size_t i);
 
     virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
     virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
@@ -425,6 +398,410 @@ public:
 
   IntervalContext* interval();
 
+  class  Const_expressionContext : public antlr4::ParserRuleContext {
+  public:
+    Const_expressionContext(antlr4::ParserRuleContext *parent, size_t invokingState);
+   
+    Const_expressionContext() = default;
+    void copyFrom(Const_expressionContext *context);
+    using antlr4::ParserRuleContext::copyFrom;
+
+    virtual size_t getRuleIndex() const override;
+
+   
+  };
+
+  class  SqrtConstExpContext : public Const_expressionContext {
+  public:
+    SqrtConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_SQRT_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AcothConstExpContext : public Const_expressionContext {
+  public:
+    AcothConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_COTH_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  LogConstExpContext : public Const_expressionContext {
+  public:
+    LogConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_LOG_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  TanhConstExpContext : public Const_expressionContext {
+  public:
+    TanhConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_TANH_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  PowConstExpContext : public Const_expressionContext {
+  public:
+    PowConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_POWER_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    std::vector<Const_expressionContext *> const_expression();
+    Const_expressionContext* const_expression(size_t i);
+    antlr4::tree::TerminalNode *COMMA();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  PosConstExpContext : public Const_expressionContext {
+  public:
+    PosConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *PLUS();
+    Const_expressionContext *const_expression();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AtanhConstExpContext : public Const_expressionContext {
+  public:
+    AtanhConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_ARCTANH_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  SqrConstExpContext : public Const_expressionContext {
+  public:
+    SqrConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_SQR_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  ConstExpBraContext : public Const_expressionContext {
+  public:
+    ConstExpBraContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  SinhConstExpContext : public Const_expressionContext {
+  public:
+    SinhConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_SINH_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AtanConstExpContext : public Const_expressionContext {
+  public:
+    AtanConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_ARCTAN_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AsinhConstExpContext : public Const_expressionContext {
+  public:
+    AsinhConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_ARCSINH_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  ConstExpContext : public Const_expressionContext {
+  public:
+    ConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *NUMBER();
+    antlr4::tree::TerminalNode *SCINUM();
+    antlr4::tree::TerminalNode *KEY_INFINITY();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  NegConstExpContext : public Const_expressionContext {
+  public:
+    NegConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *MINUS();
+    Const_expressionContext *const_expression();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AsinConstExpContext : public Const_expressionContext {
+  public:
+    AsinConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_ARCSIN_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  TanConstExpContext : public Const_expressionContext {
+  public:
+    TanConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_TAN_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  NexpConstExpContext : public Const_expressionContext {
+  public:
+    NexpConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_NATURAL_EXP_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  CosConstExpContext : public Const_expressionContext {
+  public:
+    CosConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_COS_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  ConstExpMulDivContext : public Const_expressionContext {
+  public:
+    ConstExpMulDivContext(Const_expressionContext *ctx);
+
+    antlr4::Token *OP = nullptr;
+    std::vector<Const_expressionContext *> const_expression();
+    Const_expressionContext* const_expression(size_t i);
+    antlr4::tree::TerminalNode *MULTIPLY();
+    antlr4::tree::TerminalNode *DIVIDE();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  ExpConstExpContext : public Const_expressionContext {
+  public:
+    ExpConstExpContext(Const_expressionContext *ctx);
+
+    std::vector<Const_expressionContext *> const_expression();
+    Const_expressionContext* const_expression(size_t i);
+    antlr4::tree::TerminalNode *EXPONENT();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  CotConstExpContext : public Const_expressionContext {
+  public:
+    CotConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_COT_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  CoshConstExpContext : public Const_expressionContext {
+  public:
+    CoshConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_COSH_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AcoshConstExpContext : public Const_expressionContext {
+  public:
+    AcoshConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_ARCCOSH_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  SinConstExpContext : public Const_expressionContext {
+  public:
+    SinConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_SIN_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AcosConstExpContext : public Const_expressionContext {
+  public:
+    AcosConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_ARCCOS_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  ConstExpAddSubContext : public Const_expressionContext {
+  public:
+    ConstExpAddSubContext(Const_expressionContext *ctx);
+
+    antlr4::Token *OP = nullptr;
+    std::vector<Const_expressionContext *> const_expression();
+    Const_expressionContext* const_expression(size_t i);
+    antlr4::tree::TerminalNode *PLUS();
+    antlr4::tree::TerminalNode *MINUS();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  LnConstExpContext : public Const_expressionContext {
+  public:
+    LnConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_LN_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  AcotConstExpContext : public Const_expressionContext {
+  public:
+    AcotConstExpContext(Const_expressionContext *ctx);
+
+    antlr4::tree::TerminalNode *KEY_ARCCOT_FUNCTION();
+    antlr4::tree::TerminalNode *LEFTROUNDBRACKET();
+    Const_expressionContext *const_expression();
+    antlr4::tree::TerminalNode *RIGHTROUNDBRACKET();
+    virtual void enterRule(antlr4::tree::ParseTreeListener *listener) override;
+    virtual void exitRule(antlr4::tree::ParseTreeListener *listener) override;
+
+    virtual antlrcpp::Any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  Const_expressionContext* const_expression();
+  Const_expressionContext* const_expression(int precedence);
   class  ExpressionContext : public antlr4::ParserRuleContext {
   public:
     ExpressionContext(antlr4::ParserRuleContext *parent, size_t invokingState);
@@ -855,6 +1232,7 @@ public:
   ExpressionContext* expression(int precedence);
 
   virtual bool sempred(antlr4::RuleContext *_localctx, size_t ruleIndex, size_t predicateIndex) override;
+  bool const_expressionSempred(Const_expressionContext *_localctx, size_t predicateIndex);
   bool expressionSempred(ExpressionContext *_localctx, size_t predicateIndex);
 
 private:

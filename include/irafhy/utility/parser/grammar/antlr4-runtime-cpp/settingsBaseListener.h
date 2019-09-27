@@ -82,6 +82,90 @@ public:
   virtual void enterInterval(settingsParser::IntervalContext * /*ctx*/) override { }
   virtual void exitInterval(settingsParser::IntervalContext * /*ctx*/) override { }
 
+  virtual void enterSqrtConstExp(settingsParser::SqrtConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrtConstExp(settingsParser::SqrtConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcothConstExp(settingsParser::AcothConstExpContext * /*ctx*/) override { }
+  virtual void exitAcothConstExp(settingsParser::AcothConstExpContext * /*ctx*/) override { }
+
+  virtual void enterLogConstExp(settingsParser::LogConstExpContext * /*ctx*/) override { }
+  virtual void exitLogConstExp(settingsParser::LogConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanhConstExp(settingsParser::TanhConstExpContext * /*ctx*/) override { }
+  virtual void exitTanhConstExp(settingsParser::TanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPowConstExp(settingsParser::PowConstExpContext * /*ctx*/) override { }
+  virtual void exitPowConstExp(settingsParser::PowConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPosConstExp(settingsParser::PosConstExpContext * /*ctx*/) override { }
+  virtual void exitPosConstExp(settingsParser::PosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanhConstExp(settingsParser::AtanhConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanhConstExp(settingsParser::AtanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSqrConstExp(settingsParser::SqrConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrConstExp(settingsParser::SqrConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpBra(settingsParser::ConstExpBraContext * /*ctx*/) override { }
+  virtual void exitConstExpBra(settingsParser::ConstExpBraContext * /*ctx*/) override { }
+
+  virtual void enterSinhConstExp(settingsParser::SinhConstExpContext * /*ctx*/) override { }
+  virtual void exitSinhConstExp(settingsParser::SinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanConstExp(settingsParser::AtanConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanConstExp(settingsParser::AtanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinhConstExp(settingsParser::AsinhConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinhConstExp(settingsParser::AsinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExp(settingsParser::ConstExpContext * /*ctx*/) override { }
+  virtual void exitConstExp(settingsParser::ConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNegConstExp(settingsParser::NegConstExpContext * /*ctx*/) override { }
+  virtual void exitNegConstExp(settingsParser::NegConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinConstExp(settingsParser::AsinConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinConstExp(settingsParser::AsinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanConstExp(settingsParser::TanConstExpContext * /*ctx*/) override { }
+  virtual void exitTanConstExp(settingsParser::TanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNexpConstExp(settingsParser::NexpConstExpContext * /*ctx*/) override { }
+  virtual void exitNexpConstExp(settingsParser::NexpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCosConstExp(settingsParser::CosConstExpContext * /*ctx*/) override { }
+  virtual void exitCosConstExp(settingsParser::CosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpMulDiv(settingsParser::ConstExpMulDivContext * /*ctx*/) override { }
+  virtual void exitConstExpMulDiv(settingsParser::ConstExpMulDivContext * /*ctx*/) override { }
+
+  virtual void enterExpConstExp(settingsParser::ExpConstExpContext * /*ctx*/) override { }
+  virtual void exitExpConstExp(settingsParser::ExpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCotConstExp(settingsParser::CotConstExpContext * /*ctx*/) override { }
+  virtual void exitCotConstExp(settingsParser::CotConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCoshConstExp(settingsParser::CoshConstExpContext * /*ctx*/) override { }
+  virtual void exitCoshConstExp(settingsParser::CoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcoshConstExp(settingsParser::AcoshConstExpContext * /*ctx*/) override { }
+  virtual void exitAcoshConstExp(settingsParser::AcoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSinConstExp(settingsParser::SinConstExpContext * /*ctx*/) override { }
+  virtual void exitSinConstExp(settingsParser::SinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcosConstExp(settingsParser::AcosConstExpContext * /*ctx*/) override { }
+  virtual void exitAcosConstExp(settingsParser::AcosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpAddSub(settingsParser::ConstExpAddSubContext * /*ctx*/) override { }
+  virtual void exitConstExpAddSub(settingsParser::ConstExpAddSubContext * /*ctx*/) override { }
+
+  virtual void enterLnConstExp(settingsParser::LnConstExpContext * /*ctx*/) override { }
+  virtual void exitLnConstExp(settingsParser::LnConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcotConstExp(settingsParser::AcotConstExpContext * /*ctx*/) override { }
+  virtual void exitAcotConstExp(settingsParser::AcotConstExpContext * /*ctx*/) override { }
+
   virtual void enterTanExp(settingsParser::TanExpContext * /*ctx*/) override { }
   virtual void exitTanExp(settingsParser::TanExpContext * /*ctx*/) override { }
 

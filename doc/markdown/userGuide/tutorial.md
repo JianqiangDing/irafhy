@@ -77,7 +77,7 @@ source code of ./algorithm/overApproximateForward/analyser/analyser.cpp
 
 As you can see, there is nothing special within the analyser but an ODE
 solver calling. all you need to do is to define your own class which inherited from the pre-defined **Analyser** and overwrite the pure virtual method
-compute. you can also define a relatively complex analyser class like this which implement the algorithm in **Xuebai**'s paper
+compute. you can also define a relatively complex analyser class like this which implement the algorithm in **Bai Xue**'s paper
 
 ```cpp
 #pragma once
@@ -185,7 +185,7 @@ source code of ./algorithm/overApproximateForward/settings/settings.h
 
 ## configure the test case
 
-All the configurations related to the test case should be defined into two files, one for **_Hybrid System_**, the other for **_Settings_**. e.g.
+All the configurations related to the test case should be defined in two files, one for **Hybrid System**, the other for **Settings**. e.g.
 
 ```html
 HYBRID_AUTOMATON
@@ -274,6 +274,6 @@ as you can see, you should provide the geometry objects, points, the time interv
 
 *  Thomas A Henzinger. The theory of hybrid automata. In Verification of
 digital and hybrid systems, pages 265–292. Springer, 2000
-* Bai Xue, Zhikun She, and Arvind Easwaran. Under-approximating backward reachable sets by polytopes. In International Conference on Computer Aided Verification, pages 457–476. Springer, 2016
+* Bai Xue, Zhikun She, and Arvind Easwaran. Under-approximating backward reachable sets by polytopes. In International Conference on Computer Aided Verification, pages 457–476. Springer, 2016
 * Alec Jacobson, Daniele Panozzo, et al. libigl: A simple C++ geometry
 processing library, 2018. https://libigl.github.io/

@@ -52,6 +52,90 @@ public:
   virtual void enterInterval(definitionParser::IntervalContext * /*ctx*/) override { }
   virtual void exitInterval(definitionParser::IntervalContext * /*ctx*/) override { }
 
+  virtual void enterSqrtConstExp(definitionParser::SqrtConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrtConstExp(definitionParser::SqrtConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcothConstExp(definitionParser::AcothConstExpContext * /*ctx*/) override { }
+  virtual void exitAcothConstExp(definitionParser::AcothConstExpContext * /*ctx*/) override { }
+
+  virtual void enterLogConstExp(definitionParser::LogConstExpContext * /*ctx*/) override { }
+  virtual void exitLogConstExp(definitionParser::LogConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanhConstExp(definitionParser::TanhConstExpContext * /*ctx*/) override { }
+  virtual void exitTanhConstExp(definitionParser::TanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPowConstExp(definitionParser::PowConstExpContext * /*ctx*/) override { }
+  virtual void exitPowConstExp(definitionParser::PowConstExpContext * /*ctx*/) override { }
+
+  virtual void enterPosConstExp(definitionParser::PosConstExpContext * /*ctx*/) override { }
+  virtual void exitPosConstExp(definitionParser::PosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanhConstExp(definitionParser::AtanhConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanhConstExp(definitionParser::AtanhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSqrConstExp(definitionParser::SqrConstExpContext * /*ctx*/) override { }
+  virtual void exitSqrConstExp(definitionParser::SqrConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpBra(definitionParser::ConstExpBraContext * /*ctx*/) override { }
+  virtual void exitConstExpBra(definitionParser::ConstExpBraContext * /*ctx*/) override { }
+
+  virtual void enterSinhConstExp(definitionParser::SinhConstExpContext * /*ctx*/) override { }
+  virtual void exitSinhConstExp(definitionParser::SinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAtanConstExp(definitionParser::AtanConstExpContext * /*ctx*/) override { }
+  virtual void exitAtanConstExp(definitionParser::AtanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinhConstExp(definitionParser::AsinhConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinhConstExp(definitionParser::AsinhConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExp(definitionParser::ConstExpContext * /*ctx*/) override { }
+  virtual void exitConstExp(definitionParser::ConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNegConstExp(definitionParser::NegConstExpContext * /*ctx*/) override { }
+  virtual void exitNegConstExp(definitionParser::NegConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAsinConstExp(definitionParser::AsinConstExpContext * /*ctx*/) override { }
+  virtual void exitAsinConstExp(definitionParser::AsinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterTanConstExp(definitionParser::TanConstExpContext * /*ctx*/) override { }
+  virtual void exitTanConstExp(definitionParser::TanConstExpContext * /*ctx*/) override { }
+
+  virtual void enterNexpConstExp(definitionParser::NexpConstExpContext * /*ctx*/) override { }
+  virtual void exitNexpConstExp(definitionParser::NexpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCosConstExp(definitionParser::CosConstExpContext * /*ctx*/) override { }
+  virtual void exitCosConstExp(definitionParser::CosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpMulDiv(definitionParser::ConstExpMulDivContext * /*ctx*/) override { }
+  virtual void exitConstExpMulDiv(definitionParser::ConstExpMulDivContext * /*ctx*/) override { }
+
+  virtual void enterExpConstExp(definitionParser::ExpConstExpContext * /*ctx*/) override { }
+  virtual void exitExpConstExp(definitionParser::ExpConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCotConstExp(definitionParser::CotConstExpContext * /*ctx*/) override { }
+  virtual void exitCotConstExp(definitionParser::CotConstExpContext * /*ctx*/) override { }
+
+  virtual void enterCoshConstExp(definitionParser::CoshConstExpContext * /*ctx*/) override { }
+  virtual void exitCoshConstExp(definitionParser::CoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcoshConstExp(definitionParser::AcoshConstExpContext * /*ctx*/) override { }
+  virtual void exitAcoshConstExp(definitionParser::AcoshConstExpContext * /*ctx*/) override { }
+
+  virtual void enterSinConstExp(definitionParser::SinConstExpContext * /*ctx*/) override { }
+  virtual void exitSinConstExp(definitionParser::SinConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcosConstExp(definitionParser::AcosConstExpContext * /*ctx*/) override { }
+  virtual void exitAcosConstExp(definitionParser::AcosConstExpContext * /*ctx*/) override { }
+
+  virtual void enterConstExpAddSub(definitionParser::ConstExpAddSubContext * /*ctx*/) override { }
+  virtual void exitConstExpAddSub(definitionParser::ConstExpAddSubContext * /*ctx*/) override { }
+
+  virtual void enterLnConstExp(definitionParser::LnConstExpContext * /*ctx*/) override { }
+  virtual void exitLnConstExp(definitionParser::LnConstExpContext * /*ctx*/) override { }
+
+  virtual void enterAcotConstExp(definitionParser::AcotConstExpContext * /*ctx*/) override { }
+  virtual void exitAcotConstExp(definitionParser::AcotConstExpContext * /*ctx*/) override { }
+
   virtual void enterTanExp(definitionParser::TanExpContext * /*ctx*/) override { }
   virtual void exitTanExp(definitionParser::TanExpContext * /*ctx*/) override { }
 

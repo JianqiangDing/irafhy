@@ -75,6 +75,118 @@ public:
     return visitChildren(ctx);
   }
 
+  virtual antlrcpp::Any visitSqrtConstExp(hybridautomatonParser::SqrtConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcothConstExp(hybridautomatonParser::AcothConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitLogConstExp(hybridautomatonParser::LogConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitTanhConstExp(hybridautomatonParser::TanhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitPowConstExp(hybridautomatonParser::PowConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitPosConstExp(hybridautomatonParser::PosConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAtanhConstExp(hybridautomatonParser::AtanhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitSqrConstExp(hybridautomatonParser::SqrConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExpBra(hybridautomatonParser::ConstExpBraContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitSinhConstExp(hybridautomatonParser::SinhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAtanConstExp(hybridautomatonParser::AtanConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAsinhConstExp(hybridautomatonParser::AsinhConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExp(hybridautomatonParser::ConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitNegConstExp(hybridautomatonParser::NegConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAsinConstExp(hybridautomatonParser::AsinConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitTanConstExp(hybridautomatonParser::TanConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitNexpConstExp(hybridautomatonParser::NexpConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitCosConstExp(hybridautomatonParser::CosConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExpMulDiv(hybridautomatonParser::ConstExpMulDivContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitExpConstExp(hybridautomatonParser::ExpConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitCotConstExp(hybridautomatonParser::CotConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitCoshConstExp(hybridautomatonParser::CoshConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcoshConstExp(hybridautomatonParser::AcoshConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitSinConstExp(hybridautomatonParser::SinConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcosConstExp(hybridautomatonParser::AcosConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitConstExpAddSub(hybridautomatonParser::ConstExpAddSubContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitLnConstExp(hybridautomatonParser::LnConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
+  virtual antlrcpp::Any visitAcotConstExp(hybridautomatonParser::AcotConstExpContext *ctx) override {
+    return visitChildren(ctx);
+  }
+
   virtual antlrcpp::Any visitTanExp(hybridautomatonParser::TanExpContext *ctx) override {
     return visitChildren(ctx);
   }

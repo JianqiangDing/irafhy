@@ -49,6 +49,62 @@ public:
 
     virtual antlrcpp::Any visitInterval(hybridautomatonParser::IntervalContext *context) = 0;
 
+    virtual antlrcpp::Any visitSqrtConstExp(hybridautomatonParser::SqrtConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcothConstExp(hybridautomatonParser::AcothConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitLogConstExp(hybridautomatonParser::LogConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanhConstExp(hybridautomatonParser::TanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPowConstExp(hybridautomatonParser::PowConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPosConstExp(hybridautomatonParser::PosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanhConstExp(hybridautomatonParser::AtanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSqrConstExp(hybridautomatonParser::SqrConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpBra(hybridautomatonParser::ConstExpBraContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinhConstExp(hybridautomatonParser::SinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanConstExp(hybridautomatonParser::AtanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinhConstExp(hybridautomatonParser::AsinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExp(hybridautomatonParser::ConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNegConstExp(hybridautomatonParser::NegConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinConstExp(hybridautomatonParser::AsinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanConstExp(hybridautomatonParser::TanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNexpConstExp(hybridautomatonParser::NexpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCosConstExp(hybridautomatonParser::CosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpMulDiv(hybridautomatonParser::ConstExpMulDivContext *context) = 0;
+
+    virtual antlrcpp::Any visitExpConstExp(hybridautomatonParser::ExpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCotConstExp(hybridautomatonParser::CotConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCoshConstExp(hybridautomatonParser::CoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcoshConstExp(hybridautomatonParser::AcoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinConstExp(hybridautomatonParser::SinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcosConstExp(hybridautomatonParser::AcosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpAddSub(hybridautomatonParser::ConstExpAddSubContext *context) = 0;
+
+    virtual antlrcpp::Any visitLnConstExp(hybridautomatonParser::LnConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcotConstExp(hybridautomatonParser::AcotConstExpContext *context) = 0;
+
     virtual antlrcpp::Any visitTanExp(hybridautomatonParser::TanExpContext *context) = 0;
 
     virtual antlrcpp::Any visitSqrExp(hybridautomatonParser::SqrExpContext *context) = 0;

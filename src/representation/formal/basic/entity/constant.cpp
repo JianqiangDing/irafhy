@@ -1,8 +1,9 @@
 #include <irafhy/representation/formal/basic/entity/constant.h>
+#include <limits>
 
 namespace irafhy
 {
-	Constant::Constant() { value_ = 0.0; }
+	Constant::Constant() { value_ = std::numeric_limits<double>::infinity(); }
 
 	Constant::Constant(double value) { value_ = value; }
 

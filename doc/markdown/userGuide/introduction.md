@@ -21,7 +21,7 @@ for a specific algorithm, it is necessary to set a specific module to address th
 
 **verification method**
 
-when discussing the reach-ability of hybrid system, although the duration of the analysis is specified, it is necessary to
+when discussing the reach-ability of hybrid system, although the duration of the analysis is specified, it is necessary to
 verify the intermediate results of the running process. e.g. when discussing the safety of hybrid system, it is necessary to verify whether the running state
 set intersects with the unsafe set, and then the running of the algorithm is generally terminated.
 
@@ -30,9 +30,9 @@ set intersects with the unsafe set, and then the running of the algorithm is gen
 Most of current tools focus on over-approximation or under-approximation computing, Nevertheless, most of them only focus on the implementation
 of some specific algorithms, if someone want to test a completely new idea about hybrid systems’ reach-ability analysis, one may need to write lots of
 code from bottom to top, or assemble lots of old or new tools as modules which hardly guarantee the compatibility with each other, into one program.
-All of these ”dirty works” really will killing and time wasting. The idea of the framework is providing such a framework which allows users can customize and
+All of these "dirty works" really will killing and time wasting. The idea of the framework is providing such a framework which allows users can customize and
 test their algorithms about reach-ability analysis easily, fewer code, more clear computing procedure, so that allowing researchers pay more attention
 to refine the core of their research.
 
-To cut a long story short, what we want to do is, providing a framework which can present a paper’s idea clearly to make it easy to be captured by
+To cut a long story short, what we want to do is, providing a framework which can present a paper's idea clearly to make it easy to be captured by
 others while the authors only need to write relatively small amount of core code.

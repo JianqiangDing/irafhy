@@ -1,7 +1,9 @@
 #include <irafhy/representation/geometric/intervalHull.h>
 #include <irafhy/representation/geometric/polytope.h>
 #include <irafhy/representation/formal/basic/condition.h>
+#include <irafhy/representation/formal/basic/item.h>
 #include <irafhy/utility/parser/visitor/definitionVisitor.h>
+#include <irafhy/utility/parser/visitor/itemVisitor.h>
 #include <boost/lexical_cast.hpp>
 
 namespace irafhy
@@ -94,46 +96,14 @@ namespace irafhy
 
 	antlrcpp::Any DefinitionVisitor::visitVector(hybridautomatonParser::VectorContext* ctx)
 	{
-		Eigen::VectorXd retVec(ctx->NUMBER().size());
-		std::size_t		numCtxIdx = 0;
-		if (ctx->OP.empty())
+		Eigen::VectorXd retVec(ctx->const_expression().size());
+		std::size_t		numIdx = 0;
+		ItemVisitor		itemVisitor;
+		for (const auto& constExpCtx : ctx->const_expression())
 		{
-			for (std::size_t idx = 0; idx < retVec.rows(); ++idx)
-			{
-				std::string thisNumStr = ctx->NUMBER(idx)->getText();
-				double		thisNum	= strToNum(thisNumStr);
-				retVec(idx)			   = thisNum;
-			}
-		}
-		else
-		{
-			for (const auto& thisOPCtx : ctx->OP)
-			{
-				std::size_t curOPStartIdx  = thisOPCtx->getStartIndex();
-				std::size_t curNumStartIdx = ctx->NUMBER(numCtxIdx)->getSymbol()->getStartIndex();
-				while (curOPStartIdx >= curNumStartIdx)
-				{
-					std::string thisNumStr = ctx->NUMBER(numCtxIdx)->getText();
-					double		thisNum	= strToNum(thisNumStr);
-					retVec(numCtxIdx)	  = thisNum;
-					++numCtxIdx;
-					curNumStartIdx = ctx->NUMBER(numCtxIdx)->getSymbol()->getStartIndex();
-				}
-				if (thisOPCtx->getType() == hybridautomatonParser::MINUS)
-				{
-					std::string thisNumStr = ctx->NUMBER(numCtxIdx)->getText();
-					double		thisNum	= strToNum(thisNumStr);
-					retVec(numCtxIdx)	  = thisNum * -1.0;
-					++numCtxIdx;
-				}
-			}
-			while (numCtxIdx < ctx->NUMBER().size())
-			{
-				std::string thisNumStr = ctx->NUMBER(numCtxIdx)->getText();
-				double		thisNum	= strToNum(thisNumStr);
-				retVec(numCtxIdx)	  = thisNum;
-				++numCtxIdx;
-			}
+			double value   = itemVisitor.visit(constExpCtx);
+			retVec(numIdx) = value;
+			numIdx++;
 		}
 		return retVec;
 	}
@@ -152,55 +122,13 @@ namespace irafhy
 
 	antlrcpp::Any DefinitionVisitor::visitInterval(hybridautomatonParser::IntervalContext* ctx)
 	{
-		std::size_t lowerValIndex(0), upperValIndex(0), lowerOpIndex(0), upperOpIndex(0);
-		std::size_t commaIndex = ctx->COMMA()->getSymbol()->getStartIndex();
-		double		lowerConstraint(0.0), upperConstraint(0.0);
-		for (const auto& val : ctx->VAL)
-		{
-			std::size_t thisValIndex = val->getStartIndex();
-			if (thisValIndex < commaIndex)
-			{
-				lowerValIndex = thisValIndex;
-				if (val->getType() == hybridautomatonParser::KEY_INFINITY)
-				{
-					lowerConstraint = std::numeric_limits<double>::infinity() * -1.0;
-				}
-				else
-				{
-					lowerConstraint = strToNum(val->getText());
-				}
-			}
-			else
-			{
-				upperValIndex = thisValIndex;
-				if (val->getType() == hybridautomatonParser::KEY_INFINITY)
-				{
-					upperConstraint = std::numeric_limits<double>::infinity();
-				}
-				else
-				{
-					upperConstraint = strToNum(val->getText());
-				}
-			}
-		}
-		for (const auto& op : ctx->OP)
-		{
-			std::size_t thisOpIndex = op->getStartIndex();
-			if (thisOpIndex < commaIndex && op->getType() == hybridautomatonParser::MINUS
-				&& !std::isinf(lowerConstraint))
-			{
-				lowerOpIndex = thisOpIndex;
-				assert(lowerOpIndex < lowerValIndex);
-				lowerConstraint *= double(-1);
-			}
-			else if (commaIndex < thisOpIndex && op->getType() == hybridautomatonParser::MINUS
-					 && !std::isinf(upperConstraint))
-			{
-				upperOpIndex = thisOpIndex;
-				assert(upperOpIndex < upperValIndex);
-				upperConstraint *= double(-1);
-			}
-		}
+		std::size_t commaIndex	= ctx->COMMA()->getSymbol()->getStartIndex();
+		std::size_t lowerValIndex = ctx->const_expression(0)->getStart()->getStartIndex();
+		std::size_t upperValIndex = ctx->const_expression(1)->getStart()->getStartIndex();
+		assert(lowerValIndex < commaIndex && commaIndex < upperValIndex);
+		ItemVisitor itemVisitor;
+		double		lowerConstraint = itemVisitor.visit(ctx->const_expression(0));
+		double		upperConstraint = itemVisitor.visit(ctx->const_expression(1));
 		if (!std::isinf(lowerConstraint) && !std::isinf(upperConstraint))
 			assert(lowerConstraint <= upperConstraint);
 		return capd::interval(lowerConstraint, upperConstraint);

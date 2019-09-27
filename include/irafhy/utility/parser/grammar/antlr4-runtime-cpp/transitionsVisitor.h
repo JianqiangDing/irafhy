@@ -55,6 +55,62 @@ public:
 
     virtual antlrcpp::Any visitInterval(transitionsParser::IntervalContext *context) = 0;
 
+    virtual antlrcpp::Any visitSqrtConstExp(transitionsParser::SqrtConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcothConstExp(transitionsParser::AcothConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitLogConstExp(transitionsParser::LogConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanhConstExp(transitionsParser::TanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPowConstExp(transitionsParser::PowConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitPosConstExp(transitionsParser::PosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanhConstExp(transitionsParser::AtanhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSqrConstExp(transitionsParser::SqrConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpBra(transitionsParser::ConstExpBraContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinhConstExp(transitionsParser::SinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAtanConstExp(transitionsParser::AtanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinhConstExp(transitionsParser::AsinhConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExp(transitionsParser::ConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNegConstExp(transitionsParser::NegConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAsinConstExp(transitionsParser::AsinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitTanConstExp(transitionsParser::TanConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitNexpConstExp(transitionsParser::NexpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCosConstExp(transitionsParser::CosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpMulDiv(transitionsParser::ConstExpMulDivContext *context) = 0;
+
+    virtual antlrcpp::Any visitExpConstExp(transitionsParser::ExpConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCotConstExp(transitionsParser::CotConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitCoshConstExp(transitionsParser::CoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcoshConstExp(transitionsParser::AcoshConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitSinConstExp(transitionsParser::SinConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcosConstExp(transitionsParser::AcosConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitConstExpAddSub(transitionsParser::ConstExpAddSubContext *context) = 0;
+
+    virtual antlrcpp::Any visitLnConstExp(transitionsParser::LnConstExpContext *context) = 0;
+
+    virtual antlrcpp::Any visitAcotConstExp(transitionsParser::AcotConstExpContext *context) = 0;
+
     virtual antlrcpp::Any visitTanExp(transitionsParser::TanExpContext *context) = 0;
 
     virtual antlrcpp::Any visitSqrExp(transitionsParser::SqrExpContext *context) = 0;

@@ -33,8 +33,8 @@ protected:
 	}
 	std::string   rootPath		= boost::filesystem::current_path().string();
 	std::string   example_0Path = "/resource/model/example_0/setting.cfg";
-	std::string   example_1Path = "/resource/model/example_0/setting.cfg";
-	std::string   example_2Path = "/resource/model/example_0/setting.cfg";
+	std::string   example_1Path = "/resource/model/example_1/setting.cfg";
+	std::string   example_2Path = "/resource/model/example_2/setting.cfg";
 	std::ifstream example_0Ifstream;
 	std::ifstream example_1Ifstream;
 	std::ifstream example_2Ifstream;
@@ -47,7 +47,7 @@ TEST_F(runSettingsVisitorTest, case_0)
 	antlr4::CommonTokenStream		settingsCommonTokenStream(&lexer);
 	settingsParser					parser(&settingsCommonTokenStream);
 	settingsParser::SettingContext* settingContext = parser.setting();
-	std::vector<std::string>		vars		   = {"x", "y"};
+	std::vector<std::string>		vars		   = {"u", "v"};
 	irafhy::SettingsVisitor			settingsVisitor(vars);
 	irafhy::Settings				settings = settingsVisitor.visit(settingContext);
 	std::cout << settings << std::endl;
@@ -89,7 +89,7 @@ TEST_F(runSettingsVisitorTest, case_2)
 	antlr4::CommonTokenStream		settingsCommonTokenStream(&lexer);
 	settingsParser					parser(&settingsCommonTokenStream);
 	settingsParser::SettingContext* settingContext = parser.setting();
-	std::vector<std::string>		vars		   = {"u", "v"};
+	std::vector<std::string>		vars		   = {"x", "y"};
 	irafhy::SettingsVisitor			settingsVisitor(vars);
 	irafhy::Settings				settings = settingsVisitor.visit(settingContext);
 	std::cout << settings << std::endl;
