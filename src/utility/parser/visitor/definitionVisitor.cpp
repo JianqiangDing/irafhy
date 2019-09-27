@@ -54,7 +54,7 @@ namespace irafhy
 	antlrcpp::Any DefinitionVisitor::visitHpolytope(hybridautomatonParser::HpolytopeContext* ctx)
 	{
 		Eigen::VectorXd offsets = visit(ctx->vector());
-		Eigen::MatrixXd norms   = visit(ctx->matrix());
+		Eigen::MatrixXd norms	= visit(ctx->matrix());
 		assert(offsets.rows() == norms.rows());
 		std::vector<HalfSpace> constraints;
 		constraints.reserve(offsets.rows());
@@ -80,9 +80,9 @@ namespace irafhy
 
 	antlrcpp::Any DefinitionVisitor::visitMatrix(hybridautomatonParser::MatrixContext* ctx)
 	{
-		std::size_t		rowCnt   = ctx->vector().size();
+		std::size_t		rowCnt	 = ctx->vector().size();
 		Eigen::VectorXd frontVec = visit(ctx->vector(0));
-		std::size_t		colCnt   = static_cast<std::size_t>(frontVec.rows());
+		std::size_t		colCnt	 = static_cast<std::size_t>(frontVec.rows());
 		Eigen::MatrixXd retMatrix(rowCnt, colCnt);
 		for (std::size_t idx = 0; idx < rowCnt; ++idx)
 		{
@@ -125,15 +125,13 @@ namespace irafhy
 
 	antlrcpp::Any DefinitionVisitor::visitInterval(hybridautomatonParser::IntervalContext* ctx)
 	{
-		std::size_t commaIndex	= ctx->COMMA()->getSymbol()->getStartIndex();
+		std::size_t commaIndex	  = ctx->COMMA()->getSymbol()->getStartIndex();
 		std::size_t lowerValIndex = ctx->const_expression(0)->getStart()->getStartIndex();
 		std::size_t upperValIndex = ctx->const_expression(1)->getStart()->getStartIndex();
 		assert(lowerValIndex < commaIndex && commaIndex < upperValIndex);
 		ItemVisitor itemVisitor;
 		double		lowerConstraint = itemVisitor.visit(ctx->const_expression(0));
 		double		upperConstraint = itemVisitor.visit(ctx->const_expression(1));
-		if (std::isinf(lowerConstraint))
-			lowerConstraint *= -1.0;
 		if (!std::isinf(lowerConstraint) && !std::isinf(upperConstraint))
 			assert(lowerConstraint <= upperConstraint);
 		return capd::interval(lowerConstraint, upperConstraint);

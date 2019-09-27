@@ -145,6 +145,174 @@ namespace irafhy
 		 * @return settings instance
 		 */
 		antlrcpp::Any visitSetting(settingsParser::SettingContext* ctx) override;
+		/**
+		 * @brief visitor of sqrt function of constant expression
+		 * @param ctx context of sqrt function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitSqrtConstExp(settingsParser::SqrtConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc cot function of constant expression
+		 * @param ctx context of arc cot function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAcothConstExp(settingsParser::AcothConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of log function of constant expression
+		 * @param ctx context of log function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitLogConstExp(settingsParser::LogConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of tanh function of constant expression
+		 * @param ctx context of tanh function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitTanhConstExp(settingsParser::TanhConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of power function of constant expression
+		 * @param ctx context of power function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitPowConstExp(settingsParser::PowConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of positive function of constant expression
+		 * @param ctx context of positive function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitPosConstExp(settingsParser::PosConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc tanh function of constant expression
+		 * @param ctx context of arc tanh function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAtanhConstExp(settingsParser::AtanhConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of sqr function of constant expression
+		 * @param ctx context of sqr function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitSqrConstExp(settingsParser::SqrConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of constant expression enclosed in brackets
+		 * @param ctx context of brackets enclosing a constant expression
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitConstExpBra(settingsParser::ConstExpBraContext* ctx) override;
+		/**
+		 * @brief visitor of sinh function of constant expression
+		 * @param ctx context of sinh function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitSinhConstExp(settingsParser::SinhConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc tan function of constant expression
+		 * @param ctx context of arc tan function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAtanConstExp(settingsParser::AtanConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc sin function of constant exprssion
+		 * @param ctx context of arc sin function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAsinhConstExp(settingsParser::AsinhConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of constant expression
+		 * @param ctx context of constant expression
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitConstExp(settingsParser::ConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of negative function of constant expression
+		 * @param ctx context of negative function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitNegConstExp(settingsParser::NegConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc sin function of constant expression
+		 * @param ctx context of arc sin function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAsinConstExp(settingsParser::AsinConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of tan function of constant expression
+		 * @param ctx context of tanh function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitTanConstExp(settingsParser::TanConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of natural exponential function of constant expression
+		 * @param ctx context of natural exponential function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitNexpConstExp(settingsParser::NexpConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of cos function of constant expression
+		 * @param ctx context of cos function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitCosConstExp(settingsParser::CosConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of multiplication or division of constant expression
+		 * @param ctx context of multiplication or division
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitConstExpMulDiv(settingsParser::ConstExpMulDivContext* ctx) override;
+		/**
+		 * @brief visitor of exponential function of constant expression
+		 * @param ctx context of exponential function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitExpConstExp(settingsParser::ExpConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of cot function of constant expression
+		 * @param ctx context of cot function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitCotConstExp(settingsParser::CotConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of cosh function of constant expression
+		 * @param ctx context of cosh function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitCoshConstExp(settingsParser::CoshConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc cosh function of constant expression
+		 * @param ctx context of arc cosh function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAcoshConstExp(settingsParser::AcoshConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of sin function of constant expression
+		 * @param ctx context of sin function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitSinConstExp(settingsParser::SinConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc cos function of constant expression
+		 * @param ctx context of arc cos function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAcosConstExp(settingsParser::AcosConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of addition or subtraction of constant expression
+		 * @param ctx context of addition or subtraction
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitConstExpAddSub(settingsParser::ConstExpAddSubContext* ctx) override;
+		/**
+		 * @brief visitor of ln function of constant expression
+		 * @param ctx context of ln function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitLnConstExp(settingsParser::LnConstExpContext* ctx) override;
+		/**
+		 * @brief visitor of arc cot function of constant expression
+		 * @param ctx context of arc cot function
+		 * @return resulting constant
+		 */
+		antlrcpp::Any visitAcotConstExp(settingsParser::AcotConstExpContext* ctx) override;
 	};
 } // namespace irafhy
 #endif //UTILITY_PARSER_VISITOR_SETTINGS_VISITOR_H
