@@ -23,7 +23,7 @@ or the boundary interval hulls of a dodecahedron.
     <img src="dodecahedron.png" alt="dodecahedron" width="1000" >
 </p>
 
-It should be noted that, for getting the boundary interval hulls of an interval hull, it is recommended you to use the "EXACT" method, which will return
+It should be noted that, for getting the boundary interval hulls of an interval hull, it is recommended that you should use the "EXACT" method, which will return
  the exact boundary of the given interval hull, not interval hulls enclosing the boundary.
 
 | WARNING: We only support to get the boundary boxes of the convex hull so far. |
