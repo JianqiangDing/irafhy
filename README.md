@@ -80,7 +80,10 @@ make
 make test
 ``` 
 
-## Contributors
+## Authors
+
+* **Jianqiang Ding** - <jq.ding.szu@gmail.com>
+* **Bai Xue** - [Homepage](http://lcs.ios.ac.cn/~xuebai/index.html)
 
 See also the list of [contributors](https://github.com/JianqiangDing/irafhy/graphs/contributors) who participated in this project.
 
