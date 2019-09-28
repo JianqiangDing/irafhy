@@ -4,3 +4,5 @@
 /bin/
 /lib/
 /cmake-build-debug/
+/doc/out/
+/.idea/
