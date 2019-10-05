@@ -13,10 +13,6 @@ set(ANTLR_BINARY_LIB /usr/local/lib)
 find_package(OpenMP REQUIRED QUIET)
 find_package(PythonLibs 2.7 REQUIRED QUIET)
 
-foreach(path ${PYTHON_LIBRARIES})
-  message(${path})
-endforeach()
-
 set(TEST_LINKED_LIBRARIES
     ${PROJECT_NAME}
     ${PYTHON_LIBRARIES}

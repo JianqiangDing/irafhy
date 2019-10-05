@@ -7,3 +7,4 @@ This section provides the brief introduction of all the third-party libraies use
 * @subpage solver
 * @subpage viewer
 * @subpage plotter
+* @subpage printer

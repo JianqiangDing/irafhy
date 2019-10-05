@@ -253,7 +253,7 @@ namespace irafhy
 		out << "IntervalHull: {" << std::endl;
 		for (int index = 0; index < dim; ++index)
 		{
-			out << "               " << rhs.constraints()[index] << std::endl;
+			out << "               		" << rhs.constraints()[index] << std::endl;
 		}
 		out << "              }" << std::endl;
 		return out;
