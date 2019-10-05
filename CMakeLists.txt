@@ -12,7 +12,7 @@ project(
     "Interval arithematic based Reachability Analysis Facility for Hybrid system"
   LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS NO)
 set(CMAKE_CXX_EXTENSIONS NO)

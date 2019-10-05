@@ -3,6 +3,7 @@
 
 #include <Eigen/Core>
 #include <Eigen/Dense>
+#include <vector>
 
 namespace irafhy
 {

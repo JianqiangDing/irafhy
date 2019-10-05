@@ -7,6 +7,7 @@
 #include <irafhy/utility/parser/visitor/hybridautomatonVisitor.h>
 #include <irafhy/utility/parser/visitor/settingsVisitor.h>
 #include <irafhy/utility/viewer.h>
+#include <irafhy/utility/plotter.h>
 #include <overApproximateForward/analyser/analyser.h>
 #include <overApproximateForward/settings/settings.h>
 #include <overApproximateForward/verifier/verifier.h>
@@ -129,6 +130,7 @@ TEST_F(runOAFAnalyserTest, runOAFAnalyserTest_helicopterController_Test)
 		resultIntervalHulls.emplace_back(irafhy::IntervalHull(thisConstraints));
 	}
 	irafhy::viewer::show(resultIntervalHulls, {}, timeSequence, {0, 3}, irafhy::VIEW_TYPE::PLANE);
+	irafhy::Plotter::plot(timeSequence, resultIntervalHulls, {0});
 	// irafhy::viewer::show(resultIntervalHulls, {}, {}, {0, 1}, irafhy::VIEW_TYPE::PLANE);
 }
 

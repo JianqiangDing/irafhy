@@ -20,7 +20,6 @@ int main()
 	std::string modelFilePath   = rootPath + "/resource/model/example_5/model.mdl";
 	std::string settingFilePath = rootPath + "/resource/model/example_5/setting.cfg";
 	//hybrid automaton parsing
-	//hybrid automaton parsing
 	irafhy::HybridAutomaton<irafhy::UABPAnalyser, irafhy::UABPVerifier> hybridAutomaton
 		= irafhy::HybridAutomatonParser<irafhy::UABPAnalyser, irafhy::UABPVerifier>::parse(modelFilePath);
 	//setting parsing

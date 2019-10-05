@@ -11,9 +11,11 @@ endif()
 
 set(ANTLR_BINARY_LIB /usr/local/lib)
 find_package(OpenMP REQUIRED QUIET)
+find_package(PythonLibs 2.7 REQUIRED QUIET)
 
 set(TEST_LINKED_LIBRARIES
     ${PROJECT_NAME}
+    ${PYTHON_LIBRARIES}
     igl::core
     igl::opengl
     igl::opengl_glfw

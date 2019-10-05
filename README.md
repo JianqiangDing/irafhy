@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo">
+  <a href="https://jianqiangding.github.io/irafhy/index.html">
     <img src="doc/pics/logo_big.png" alt="Logo" width="300" height="300">
   </a>
 </p>
