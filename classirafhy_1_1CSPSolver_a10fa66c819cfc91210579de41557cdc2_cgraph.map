@@ -1,5 +1,8 @@
 <map id="irafhy::CSPSolver::branchPruneSolve" name="irafhy::CSPSolver::branchPruneSolve">
 <area shape="rect" id="node2" href="$classirafhy_1_1Constraints.html#af069f072ae2e637a2fc10c1d22a3e38c" title="get the dimension of the system " alt="" coords="219,5,348,47"/>
 <area shape="rect" id="node3" href="$classirafhy_1_1CSPSolver.html#a92eb8a69d9bde24f86bf2152019ba962" title="enumerate the extreme vertices of the convex hull which defined by the given linear system Ax&lt;=b ..." alt="" coords="188,71,379,112"/>
-<area shape="rect" id="node4" href="$classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793" title="get the size of the inequalities " alt="" coords="219,136,348,177"/>
+<area shape="rect" id="node7" href="$classirafhy_1_1Constraints.html#a8f0b7989aac357dae13b9ed95496e793" title="get the size of the inequalities " alt="" coords="219,136,348,177"/>
+<area shape="rect" id="node4" href="$namespacematplotlibcpp.html#a00a57926330764f8490142b3ce06bd2e" title="matplotlibcpp::fill" alt="" coords="427,78,547,105"/>
+<area shape="rect" id="node5" href="$namespacematplotlibcpp.html#a62d86e190f22181acf7ead76bd57497f" title="matplotlibcpp::get\l_array" alt="" coords="595,41,720,83"/>
+<area shape="rect" id="node6" href="$structmatplotlibcpp_1_1detail_1_1__interpreter.html#a3ddc4e50c23738307da3dc64c47cdbc0" title="matplotlibcpp::detail\l::_interpreter::get" alt="" coords="768,71,907,112"/>
 </map>

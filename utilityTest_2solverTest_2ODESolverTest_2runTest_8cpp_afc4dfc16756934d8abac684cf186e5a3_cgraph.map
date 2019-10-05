@@ -2,8 +2,8 @@
 <area shape="rect" id="node2" href="$classirafhy_1_1Condition.html#a26f33ad996c9a3358dc3fcc8c3791751" title="get the set representation of the current condition " alt="" coords="131,78,273,105"/>
 <area shape="rect" id="node5" href="$classirafhy_1_1ODESolver.html#a1b6f27a63d71819d29104ca656739d35" title="irafhy::ODESolver::\lsolve" alt="" coords="134,205,270,247"/>
 <area shape="rect" id="node12" href="$classhybridautomatonParser.html#a98a6216b85157bfa7ced9d2735b00b72" title="hybridautomatonParser\l::system" alt="" coords="124,372,280,413"/>
-<area shape="rect" id="node3" href="$classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="get the dimension of the space which the interval hull in " alt="" coords="357,5,485,47"/>
-<area shape="rect" id="node4" href="$classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="get the constraints of the interval hull " alt="" coords="357,71,485,112"/>
+<area shape="rect" id="node3" href="$classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="irafhy::IntervalHull\l::dimension" alt="" coords="357,5,485,47"/>
+<area shape="rect" id="node4" href="$classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="irafhy::IntervalHull\l::constraints" alt="" coords="357,71,485,112"/>
 <area shape="rect" id="node6" href="$classirafhy_1_1System.html#ac8a42e564314cc4cff786f7218a42a0a" title="get the arithmetic function of the current vector field " alt="" coords="330,137,511,163"/>
 <area shape="rect" id="node9" href="$structirafhy_1_1Time.html#a0e035046f8ac387c2511aa69176c54a4" title="irafhy::Time::range" alt="" coords="355,187,486,214"/>
 <area shape="rect" id="node10" href="$structirafhy_1_1Time.html#a8dc2177a984feb26f5470dc23be42f50" title="irafhy::Time::start" alt="" coords="358,238,483,265"/>

@@ -6,6 +6,10 @@ var dir_7df3b37c193de6704646b3dd73998ea4 =
     [ "optimizer", "dir_18137846da927edf1d779b8272c326fe.html", "dir_18137846da927edf1d779b8272c326fe" ],
     [ "parser", "dir_d50ca215bbb10a13dbc91d89f4bbf1fe.html", "dir_d50ca215bbb10a13dbc91d89f4bbf1fe" ],
     [ "solver", "dir_b6291d836cf8463888fcb545ebbfa160.html", "dir_b6291d836cf8463888fcb545ebbfa160" ],
+    [ "matplotlibcpp.h", "matplotlibcpp_8h.html", "matplotlibcpp_8h" ],
+    [ "plotter.h", "plotter_8h.html", [
+      [ "Plotter", "classirafhy_1_1Plotter.html", null ]
+    ] ],
     [ "printer.h", "printer_8h.html", [
       [ "Printer", "classirafhy_1_1Printer.html", null ]
     ] ],

@@ -1,3 +1,4 @@
 <map id="irafhy::SettingsVisitor::visitVector" name="irafhy::SettingsVisitor::visitVector">
-<area shape="rect" id="node2" href="$classirafhy_1_1SettingsVisitor.html#a45b250ae9593b60ae9e9799cdd0136e8" title="convert given string to number " alt="" coords="200,5,347,47"/>
+<area shape="rect" id="node2" href="$classsettingsParser_1_1VectorContext.html#a396d97be01a0ecb9808e7f6e513beddf" title="settingsParser::VectorContext\l::NUMBER" alt="" coords="200,5,399,47"/>
+<area shape="rect" id="node3" href="$classirafhy_1_1SettingsVisitor.html#a45b250ae9593b60ae9e9799cdd0136e8" title="irafhy::SettingsVisitor\l::strToNum" alt="" coords="226,71,373,112"/>
 </map>

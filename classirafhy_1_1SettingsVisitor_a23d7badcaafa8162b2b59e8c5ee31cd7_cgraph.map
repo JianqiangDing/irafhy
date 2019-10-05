@@ -1,3 +1,4 @@
 <map id="irafhy::SettingsVisitor::visitInterval" name="irafhy::SettingsVisitor::visitInterval">
-<area shape="rect" id="node2" href="$classirafhy_1_1SettingsVisitor.html#a45b250ae9593b60ae9e9799cdd0136e8" title="convert given string to number " alt="" coords="200,5,347,47"/>
+<area shape="rect" id="node2" href="$classsettingsParser_1_1IntervalContext.html#a41b51dae26a18e055fc646204261308d" title="settingsParser::Interval\lContext::COMMA" alt="" coords="200,5,357,47"/>
+<area shape="rect" id="node3" href="$classirafhy_1_1SettingsVisitor.html#a45b250ae9593b60ae9e9799cdd0136e8" title="irafhy::SettingsVisitor\l::strToNum" alt="" coords="205,71,352,112"/>
 </map>

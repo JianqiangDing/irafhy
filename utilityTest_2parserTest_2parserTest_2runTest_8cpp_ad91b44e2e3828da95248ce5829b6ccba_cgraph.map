@@ -1,7 +1,7 @@
 <map id="TEST_F" name="TEST_F">
 <area shape="rect" id="node2" href="$classirafhy_1_1HybridAutomatonParser.html#a39987f18cb8666e52dc1dcf50a2728c4" title="irafhy::HybridAutomatonParser\l::parse" alt="" coords="124,267,325,308"/>
 <area shape="rect" id="node3" href="$classirafhy_1_1SettingsParser.html#adda642bd50bd53f529b0176d1d80c5a5" title="irafhy::SettingsParser\l::parse" alt="" coords="151,332,299,373"/>
-<area shape="rect" id="node18" href="$classirafhy_1_1HybridAutomaton.html#a2878f153d5847a4daccc1bbb74be1237" title="get the variables of the hybrid automaton " alt="" coords="143,397,306,439"/>
+<area shape="rect" id="node18" href="$classirafhy_1_1HybridAutomaton.html#a2878f153d5847a4daccc1bbb74be1237" title="irafhy::HybridAutomaton\l::variables" alt="" coords="143,397,306,439"/>
 <area shape="rect" id="node4" href="$classsettingsParser.html#a760afceb570edd882d47358dc4323b32" title="settingsParser::setting" alt="" coords="373,339,527,366"/>
 <area shape="rect" id="node5" href="$classsettingsParser_1_1SettingContext.html#a875c643a2927d3594fb9ee2fc0c33816" title="settingsParser::SettingContext\l::enterRule" alt="" coords="575,5,776,47"/>
 <area shape="rect" id="node7" href="$classsettingsParser_1_1SettingContext.html#ae756b24fb1bdaaf3d9a8023b30f586e5" title="settingsParser::SettingContext\l::exitRule" alt="" coords="575,71,776,112"/>

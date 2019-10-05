@@ -2,12 +2,12 @@
 <area shape="rect" id="node2" href="$classirafhy_1_1Condition.html#a26f33ad996c9a3358dc3fcc8c3791751" title="get the set representation of the current condition " alt="" coords="131,39,273,66"/>
 <area shape="rect" id="node5" href="$classirafhy_1_1viewer.html#a4ae19d45ac1bc1e9e00a3dbe4d626ee5" title="irafhy::viewer::show" alt="" coords="133,163,271,190"/>
 <area shape="rect" id="node10" href="$classhybridautomatonParser.html#a98a6216b85157bfa7ced9d2735b00b72" title="hybridautomatonParser\l::system" alt="" coords="124,297,280,339"/>
-<area shape="rect" id="node3" href="$classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="get the dimension of the space which the interval hull in " alt="" coords="773,5,901,47"/>
-<area shape="rect" id="node4" href="$classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="get the constraints of the interval hull " alt="" coords="357,32,485,73"/>
+<area shape="rect" id="node3" href="$classirafhy_1_1IntervalHull.html#a5f0a3228d29f4de1b1fdb8e7c91b9744" title="irafhy::IntervalHull\l::dimension" alt="" coords="773,5,901,47"/>
+<area shape="rect" id="node4" href="$classirafhy_1_1IntervalHull.html#a8c7fe0de17ccd11258c95776a93952b6" title="irafhy::IntervalHull\l::constraints" alt="" coords="357,32,485,73"/>
 <area shape="rect" id="node6" href="$classirafhy_1_1viewer.html#a12f21dfd465b05a54ca0184ebba83fa8" title="irafhy::viewer::interval\lHullMatrix" alt="" coords="345,97,496,139"/>
 <area shape="rect" id="node8" href="$classirafhy_1_1viewer.html#aedda5d9c6f7de42b669f9cdba6229d7f" title="irafhy::viewer::pointMatrix" alt="" coords="335,163,507,190"/>
 <area shape="rect" id="node9" href="$classirafhy_1_1viewer.html#a77661ef6a69be6f6e441d60322043b4a" title="irafhy::viewer::drawAxes" alt="" coords="337,214,504,241"/>
-<area shape="rect" id="node7" href="$classirafhy_1_1IntervalHull.html#a94cae3a06f5da53a0b63623d3f8908ee" title="check if the interval hull is empty " alt="" coords="579,67,707,108"/>
+<area shape="rect" id="node7" href="$classirafhy_1_1IntervalHull.html#a94cae3a06f5da53a0b63623d3f8908ee" title="irafhy::IntervalHull\l::empty" alt="" coords="579,67,707,108"/>
 <area shape="rect" id="node11" href="$classhybridautomatonParser_1_1SystemContext.html#aa537e948d95f7051b7c6f87011b309b4" title="hybridautomatonParser\l::SystemContext::enterRule" alt="" coords="328,265,513,307"/>
 <area shape="rect" id="node13" href="$classhybridautomatonParser_1_1SystemContext.html#a68081289590c24094f5068edff9e89f0" title="hybridautomatonParser\l::SystemContext::exitRule" alt="" coords="332,331,509,372"/>
 <area shape="rect" id="node15" href="$classhybridautomatonParser_1_1SystemContext.html#aeb90b744135a2fe322e89292ba26a419" title="hybridautomatonParser\l::SystemContext::formula" alt="" coords="335,396,507,437"/>

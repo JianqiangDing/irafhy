@@ -30,6 +30,7 @@ var namespaceirafhy =
     [ "LocationsVisitor", "classirafhy_1_1LocationsVisitor.html", "classirafhy_1_1LocationsVisitor" ],
     [ "Model", "classirafhy_1_1Model.html", "classirafhy_1_1Model" ],
     [ "ODESolver", "classirafhy_1_1ODESolver.html", null ],
+    [ "Plotter", "classirafhy_1_1Plotter.html", null ],
     [ "Point", "classirafhy_1_1Point.html", "classirafhy_1_1Point" ],
     [ "Polytope", "classirafhy_1_1Polytope.html", "classirafhy_1_1Polytope" ],
     [ "Printer", "classirafhy_1_1Printer.html", null ],

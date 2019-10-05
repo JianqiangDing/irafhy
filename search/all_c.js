@@ -1,6 +1,10 @@
 var searchData=
 [
+  ['detail',['detail',['../namespacematplotlibcpp_1_1detail.html',1,'matplotlibcpp']]],
+  ['internal',['internal',['../namespacematplotlibcpp_1_1internal.html',1,'matplotlibcpp']]],
   ['mainpage_2emd',['mainPage.md',['../mainPage_8md.html',1,'']]],
+  ['matplotlibcpp',['matplotlibcpp',['../namespacematplotlibcpp.html',1,'']]],
+  ['matplotlibcpp_2eh',['matplotlibcpp.h',['../matplotlibcpp_8h.html',1,'']]],
   ['max',['MAX',['../namespaceirafhy.html#a8147b20637a5d599ec4daf0be4106ad9a550568a671861f045bbe22494fe72a94',1,'irafhy']]],
   ['maxjump',['maxJump',['../classirafhy_1_1Settings.html#a0a233a11b38443854c9c61d189ae0255',1,'irafhy::Settings']]],
   ['maxjump_5f',['maxJump_',['../classirafhy_1_1Settings.html#a8e8466f54ab0164252d77fcef96111e1',1,'irafhy::Settings']]],

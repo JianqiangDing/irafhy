@@ -1,9 +1,13 @@
 var searchData=
 [
-  ['halfspace',['HalfSpace',['../classirafhy_1_1HalfSpace.html#a858e37b276bb513a7b7ad453f3d2249d',1,'irafhy::HalfSpace::HalfSpace()'],['../classirafhy_1_1HalfSpace.html#a7c2936b4f3454501c4d16d0419ffca2a',1,'irafhy::HalfSpace::HalfSpace(const HalfSpace &amp;halfSpace)=default'],['../classirafhy_1_1HalfSpace.html#a9093677ad355b0982c3ecf2e58aa8395',1,'irafhy::HalfSpace::HalfSpace(HalfSpace &amp;&amp;halfSpace)=default'],['../classirafhy_1_1HalfSpace.html#a2bdbf39a8c19a6c59209415fab7aabd9',1,'irafhy::HalfSpace::HalfSpace(const Eigen::VectorXd &amp;normal, double offset)'],['../classirafhy_1_1HalfSpace.html#aade396236aa414f4f44d223153dbcf9a',1,'irafhy::HalfSpace::HalfSpace(Eigen::VectorXd &amp;&amp;normal, double &amp;&amp;offset)']]],
-  ['halfspaceconstraints',['halfSpaceConstraints',['../classirafhy_1_1Polytope.html#a23c9170e0f25d3c6c5a401179b1a37c2',1,'irafhy::Polytope::halfSpaceConstraints()'],['../structirafhy_1_1convexConstraints.html#a2092734204b65642e50ddcfb331d7714',1,'irafhy::convexConstraints::halfSpaceConstraints()']]],
-  ['help',['help',['../classirafhy_1_1Settings.html#a5430d117fa80bf248d8f9c1d0b4baad8',1,'irafhy::Settings']]],
-  ['holds',['holds',['../classirafhy_1_1HalfSpace.html#aa777b6e908221c5ab256c22463e8e5a4',1,'irafhy::HalfSpace::holds(const Point &amp;point) const'],['../classirafhy_1_1HalfSpace.html#ae9f561a02ec5796889dce8eb54f1146f',1,'irafhy::HalfSpace::holds(const Eigen::VectorXd &amp;coordinate) const']]],
-  ['hybridautomaton',['HybridAutomaton',['../classirafhy_1_1HybridAutomaton.html#ae2a222ca31001466010151f5f93ee079',1,'irafhy::HybridAutomaton::HybridAutomaton()'],['../classirafhy_1_1HybridAutomaton.html#aefe3091aba2603d83bf45cad1e7b2127',1,'irafhy::HybridAutomaton::HybridAutomaton(const HybridAutomaton&lt; Analyser, Verifier &gt; &amp;hybridAutomaton)=default'],['../classirafhy_1_1HybridAutomaton.html#ac3d8ace87ac69f26fc70ce6a5c5b91a1',1,'irafhy::HybridAutomaton::HybridAutomaton(HybridAutomaton&lt; Analyser, Verifier &gt; &amp;&amp;hybridAutomaton)=default'],['../classirafhy_1_1HybridAutomaton.html#a1c4521946b89ff0c5a413c6594c0d393',1,'irafhy::HybridAutomaton::HybridAutomaton(const Locations&lt; Analyser &gt; &amp;locations, const Transitions&lt; Analyser &gt; &amp;transitions)']]],
-  ['hybridautomatonvisitor',['HybridAutomatonVisitor',['../classirafhy_1_1HybridAutomatonVisitor.html#a7f5be0504819cbd938e8200115e1e76c',1,'irafhy::HybridAutomatonVisitor']]]
+  ['geometry',['geometry',['../classirafhy_1_1Settings.html#a4a742267c45a8d42a7e5c7f12f307a7c',1,'irafhy::Settings']]],
+  ['get',['get',['../structmatplotlibcpp_1_1detail_1_1__interpreter.html#a3ddc4e50c23738307da3dc64c47cdbc0',1,'matplotlibcpp::detail::_interpreter']]],
+  ['get_5f2darray',['get_2darray',['../namespacematplotlibcpp.html#a37693cbddf16b894b82ef3c655536b7c',1,'matplotlibcpp']]],
+  ['get_5farray',['get_array',['../namespacematplotlibcpp.html#a62d86e190f22181acf7ead76bd57497f',1,'matplotlibcpp']]],
+  ['getmodel',['getModel',['../classirafhy_1_1Model.html#a604f79b4d71c6077731b657a755747ad',1,'irafhy::Model']]],
+  ['ginput',['ginput',['../namespacematplotlibcpp.html#a87735abbf7838f42c035013eeb017e31',1,'matplotlibcpp']]],
+  ['glpkwrapper',['GLPKWrapper',['../classirafhy_1_1GLPKWrapper.html#ac6440a8f1ff6d8a27243f787b5e94adc',1,'irafhy::GLPKWrapper']]],
+  ['grid',['grid',['../namespacematplotlibcpp.html#ae0bbf80e73099a91df28e4fb871b166a',1,'matplotlibcpp']]],
+  ['group',['group',['../classirafhy_1_1System.html#aba45a479c5555d579bf2c82083f9d354',1,'irafhy::System']]],
+  ['guardcondition',['guardCondition',['../classirafhy_1_1Jump.html#a18c0eea683f1639093c93187fb5c70bc',1,'irafhy::Jump']]]
 ];

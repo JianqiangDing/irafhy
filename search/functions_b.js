@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['maxjump',['maxJump',['../classirafhy_1_1Settings.html#a0a233a11b38443854c9c61d189ae0255',1,'irafhy::Settings']]],
-  ['model',['Model',['../classirafhy_1_1Model.html#aa3d1dc158b6badd2f71be6a5b1883332',1,'irafhy::Model::Model()=default'],['../classirafhy_1_1Model.html#a5a6d506e103e65a43a73d6e6e6643bf6',1,'irafhy::Model::Model(const std::string &amp;id, const System &amp;flows, const Condition &amp;invariantCondition)']]],
-  ['modelptr',['modelPtr',['../classirafhy_1_1Locations.html#a8bef28eb0a373b78d44e4a9609f8b773',1,'irafhy::Locations::modelPtr()'],['../classirafhy_1_1State.html#a2a9e961bf1cddcd7d26bf652ea6bd083',1,'irafhy::State::modelPtr()']]],
-  ['models',['models',['../classirafhy_1_1Locations.html#a5e54b0f46d90a36dd1004fd59b3aa2f4',1,'irafhy::Locations']]]
+  ['legend',['legend',['../namespacematplotlibcpp.html#a916bb5a9dc5f6a24877cc027bf4ee624',1,'matplotlibcpp']]],
+  ['lhsvalue',['lhsValue',['../classirafhy_1_1Constraint.html#a53fc73dfad5185322a6c88d5cf3e6df7',1,'irafhy::Constraint']]],
+  ['locations',['locations',['../classirafhy_1_1HybridAutomaton.html#aef93eb282b21ea84ce798070ded56fb7',1,'irafhy::HybridAutomaton::locations()'],['../classirafhy_1_1Locations.html#a815315851618547719e285617eb27e14',1,'irafhy::Locations::Locations()=default'],['../classirafhy_1_1Locations.html#a9a023e2681902ad1f41c189b50c3f219',1,'irafhy::Locations::Locations(const std::vector&lt; Model&lt; Analyser &gt;&gt; &amp;models)']]],
+  ['locationsvisitor',['LocationsVisitor',['../classirafhy_1_1LocationsVisitor.html#abcb4ffee56544e0a180e82188195ff1d',1,'irafhy::LocationsVisitor::LocationsVisitor()=default'],['../classirafhy_1_1LocationsVisitor.html#a26735f7ae8c33856c6c1081356320bba',1,'irafhy::LocationsVisitor::LocationsVisitor(const std::vector&lt; std::string &gt; &amp;vars)']]],
+  ['loglog',['loglog',['../namespacematplotlibcpp.html#a6cfa8cba00f52a2c4614fa7a8a0bcd2b',1,'matplotlibcpp']]]
 ];

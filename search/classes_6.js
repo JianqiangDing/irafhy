@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['geoentityvisitor',['geoEntityVisitor',['../structirafhy_1_1geoEntityVisitor.html',1,'irafhy']]],
-  ['geometry',['Geometry',['../classirafhy_1_1Geometry.html',1,'irafhy']]],
-  ['geometry_3c_20intervalhull_20_3e',['Geometry&lt; IntervalHull &gt;',['../classirafhy_1_1Geometry.html',1,'irafhy']]],
-  ['geometry_3c_20polytope_20_3e',['Geometry&lt; Polytope &gt;',['../classirafhy_1_1Geometry.html',1,'irafhy']]],
-  ['glpkwrapper',['GLPKWrapper',['../classirafhy_1_1GLPKWrapper.html',1,'irafhy']]]
+  ['fallback',['Fallback',['../structmatplotlibcpp_1_1detail_1_1is__callable__impl_3_01true_00_01T_01_4_1_1Fallback.html',1,'matplotlibcpp::detail::is_callable_impl&lt; true, T &gt;']]],
+  ['formula',['Formula',['../classirafhy_1_1Formula.html',1,'irafhy']]]
 ];

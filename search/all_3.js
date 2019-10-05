@@ -1,6 +1,10 @@
 var searchData=
 [
   ['centroid',['centroid',['../classirafhy_1_1Condition.html#a07d535bb1f10ccc4a444212b754ab836',1,'irafhy::Condition::centroid()'],['../classirafhy_1_1IntervalHull.html#ab16c8bf3bb65a13e2fd0cf1d1b043090',1,'irafhy::IntervalHull::centroid()'],['../classirafhy_1_1Polytope.html#ac8760a86539a521ee80ff5f55a0068b4',1,'irafhy::Polytope::centroid()']]],
+  ['check',['Check',['../structmatplotlibcpp_1_1detail_1_1is__callable__impl_3_01true_00_01T_01_4_1_1Check.html',1,'matplotlibcpp::detail::is_callable_impl&lt; true, T &gt;']]],
+  ['clear',['clear',['../classmatplotlibcpp_1_1Plot.html#a177f13fea5b50e991a373bdbea36fb59',1,'matplotlibcpp::Plot']]],
+  ['clf',['clf',['../namespacematplotlibcpp.html#adea4113b0ff7f393e18f1a99eb7e1718',1,'matplotlibcpp']]],
+  ['close',['close',['../namespacematplotlibcpp.html#a62aaaf872c41a9d1b71add44c0cc0447',1,'matplotlibcpp']]],
   ['colcnt_5f',['colCnt_',['../classirafhy_1_1GLPKWrapper.html#a7b88e00deb7230ea4c886121f2b18553',1,'irafhy::GLPKWrapper']]],
   ['compute',['compute',['../classirafhy_1_1Analyser.html#a460895095a5c9035c12694ff9dc5899f',1,'irafhy::Analyser::compute()'],['../classirafhy_1_1Model.html#aab678fcdbd50edbb8c56f8e5dbbb117b',1,'irafhy::Model::compute()']]],
   ['computing_20geometry',['Computing Geometry',['../computingGeometry.html',1,'utility']]],

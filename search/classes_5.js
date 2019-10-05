@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['formula',['Formula',['../classirafhy_1_1Formula.html',1,'irafhy']]]
+  ['entityvisitor',['entityVisitor',['../structirafhy_1_1entityVisitor.html',1,'irafhy']]],
+  ['evaluation',['Evaluation',['../classirafhy_1_1Evaluation.html',1,'irafhy']]]
 ];

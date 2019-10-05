@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['halfspace',['HalfSpace',['../classirafhy_1_1HalfSpace.html',1,'irafhy']]],
-  ['hybridautomaton',['HybridAutomaton',['../classirafhy_1_1HybridAutomaton.html',1,'irafhy']]],
-  ['hybridautomatonparser',['HybridAutomatonParser',['../classirafhy_1_1HybridAutomatonParser.html',1,'irafhy']]],
-  ['hybridautomatonvisitor',['HybridAutomatonVisitor',['../classirafhy_1_1HybridAutomatonVisitor.html',1,'irafhy']]]
+  ['geoentityvisitor',['geoEntityVisitor',['../structirafhy_1_1geoEntityVisitor.html',1,'irafhy']]],
+  ['geometry',['Geometry',['../classirafhy_1_1Geometry.html',1,'irafhy']]],
+  ['geometry_3c_20intervalhull_20_3e',['Geometry&lt; IntervalHull &gt;',['../classirafhy_1_1Geometry.html',1,'irafhy']]],
+  ['geometry_3c_20polytope_20_3e',['Geometry&lt; Polytope &gt;',['../classirafhy_1_1Geometry.html',1,'irafhy']]],
+  ['glpkwrapper',['GLPKWrapper',['../classirafhy_1_1GLPKWrapper.html',1,'irafhy']]]
 ];

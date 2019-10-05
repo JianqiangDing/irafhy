@@ -1,7 +1,7 @@
 <map id="/home/jianqiang/CLionProjects/irafhy/include/irafhy/representation/geometric/polytope.h" name="/home/jianqiang/CLionProjects/irafhy/include/irafhy/representation/geometric/polytope.h">
 <area shape="rect" id="node5" href="$geometry_8h.html" title="irafhy/representation\l/geometric/geometry.h" alt="" coords="5,377,157,419"/>
-<area shape="rect" id="node7" href="$point_8h.html" title="irafhy/representation\l/geometric/basic/point.h" alt="" coords="225,377,386,419"/>
-<area shape="rect" id="node9" href="$halfSpace_8h.html" title="irafhy/representation\l/geometric/basic/halfSpace.h" alt="" coords="210,288,401,329"/>
-<area shape="rect" id="node10" href="$convexHull_8hpp.html" title="irafhy/utility/compGeometry\l/convexHull.hpp" alt="" coords="834,109,1017,151"/>
-<area shape="rect" id="node11" href="$extQhull_8hpp.html" title="irafhy/utility/extension\l/extQhull.hpp" alt="" coords="669,199,819,240"/>
+<area shape="rect" id="node7" href="$point_8h.html" title="irafhy/representation\l/geometric/basic/point.h" alt="" coords="250,377,411,419"/>
+<area shape="rect" id="node9" href="$halfSpace_8h.html" title="irafhy/representation\l/geometric/basic/halfSpace.h" alt="" coords="135,288,326,329"/>
+<area shape="rect" id="node10" href="$convexHull_8hpp.html" title="irafhy/utility/compGeometry\l/convexHull.hpp" alt="" coords="913,109,1095,151"/>
+<area shape="rect" id="node11" href="$extQhull_8hpp.html" title="irafhy/utility/extension\l/extQhull.hpp" alt="" coords="452,199,601,240"/>
 </map>
