@@ -6,3 +6,4 @@ This section provides the brief introduction of all the third-party libraies use
 * @subpage parser
 * @subpage solver
 * @subpage viewer
+* @subpage plotter

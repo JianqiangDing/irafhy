@@ -33,21 +33,29 @@ option(LIBIGL_WITH_PNG "Use PNG" ON)
 find_package(LIBIGL REQUIRED QUIET)
 find_package(Eigen3 REQUIRED QUITE)
 find_package(OpenMP REQUIRED QUIET)
+find_package(PythonLibs 2.7 REQUIRED QUIET)
 
 target_compile_options(${LIBRARY_TARGET_NAME}
                        PUBLIC -D__USE_FILIB__ -fPIC ${OpenMP_CXX_FLAGS})
+
+target_compile_definitions(${LIBRARY_TARGET_NAME}
+                           PUBLIC
+                           _USE_MATH_DEFINES)
+
 target_include_directories(
   ${LIBRARY_TARGET_NAME}
   PUBLIC "$<BUILD_INTERFACE:${EIGEN3_INCLUDE_DIRS}>"
          "$<BUILD_INTERFACE:${LIBIGL_INCLUDE_DIR}>"
          "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>"
+         "${PYTHON_INCLUDE_DIRS}"
          "$<INSTALL_INTERFACE:$<INSTALL_PREFIX>/${CMAKE_INSTALL_INCLUDEDIR}>")
 
 add_subdirectory(representation)
 add_subdirectory(utility)
 
 target_link_libraries(${LIBRARY_TARGET_NAME}
-                      PRIVATE $<BUILD_INTERFACE:igl::core>
+                      PRIVATE
+                              $<BUILD_INTERFACE:igl::core>
                               $<BUILD_INTERFACE:igl::opengl_glfw>
                               $<BUILD_INTERFACE:igl::opengl_glfw_imgui>)
 

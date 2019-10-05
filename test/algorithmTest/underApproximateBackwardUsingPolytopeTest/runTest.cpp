@@ -9,6 +9,7 @@
 #include <irafhy/utility/parser/settingsParser.h>
 #include <irafhy/utility/parser/visitor/systemVisitor.h>
 #include <irafhy/utility/viewer.h>
+#include <irafhy/utility/plotter.h>
 #include <underApproximateBackwardUsingPolytope/analyser/analyser.h>
 #include <underApproximateBackwardUsingPolytope/settings/settings.h>
 #include <underApproximateBackwardUsingPolytope/verifier/verifier.h>
@@ -28,7 +29,7 @@ protected:
 		// settingIfstreamVec.resize(examplesCnt);
 		for (std::size_t index = 0; index < examplesCnt; ++index)
 		{
-			std::string thisModelPath	= "/resource/model/example_" + std::to_string(index) + "/model.mdl";
+			std::string thisModelPath   = "/resource/model/example_" + std::to_string(index) + "/model.mdl";
 			std::string thisSettingPath = "/resource/model/example_" + std::to_string(index) + "/setting.cfg";
 			thisModelPath				= rootPath + thisModelPath;
 			thisSettingPath				= rootPath + thisSettingPath;
@@ -50,7 +51,7 @@ protected:
 		settingPathVec.clear();
 	}
 	std::string rootPath	= boost::filesystem::current_path().string();
-	std::string systemPath	= "/resource/script/spikingNeuronModel.expr";
+	std::string systemPath  = "/resource/script/spikingNeuronModel.expr";
 	int			examplesCnt = 8;
 
 	std::vector<std::string> modelPathVec;
@@ -78,7 +79,7 @@ TEST_F(runUABPAnalyserTest, runUABPAnalyser_SpikingNeuronModel_single_step_Test)
 	constraints[1] = capd::interval(-0.2, 0.2);
 	// constraints[0] = capd::interval(-64.956, -60.1555);
 	// constraints[1] = capd::interval(-1.06532, -1.04162);
-	irafhy::Condition	 initCondition(constraints, irafhy::GEOMETRY::INTERVAL_HULL);
+	irafhy::Condition	initCondition(constraints, irafhy::GEOMETRY::INTERVAL_HULL);
 	irafhy::UABPSettings settings;
 	settings.setEpsilon(0.05);
 	settings.setIsExact(false);
@@ -264,6 +265,7 @@ TEST_F(runUABPAnalyserTest, runUABPAnalyserTest_example_5_Test)
 		std::cout << resultIntervalHulls.back() << std::endl;
 	}
 	irafhy::viewer::show(resultIntervalHulls, {}, timeSequence, {0, 1}, irafhy::VIEW_TYPE::PLANE);
+	irafhy::Plotter::plot(timeSequence, resultIntervalHulls, {0});
 }
 
 TEST_F(runUABPAnalyserTest, runUABPAnalyserTest_example_6_Test)

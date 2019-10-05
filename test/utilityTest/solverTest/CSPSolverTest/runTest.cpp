@@ -74,6 +74,7 @@ protected:
 	std::ifstream		 dodecahedronIfstream;
 };
 
+
 TEST_F(runCSPSolverTest, case_0)
 {
 	double							  curEpsilon = 0.5;
@@ -85,14 +86,23 @@ TEST_F(runCSPSolverTest, case_0)
 	irafhy::viewer::show(boundaryIntervalHulls, {}, {}, {0, 1}, irafhy::VIEW_TYPE::LINE);
 }
 
-TEST_F(runCSPSolverTest, case_1)
-{
-	double							  curEpsilon = 0.25;
-	std::vector<irafhy::IntervalHull> boundaryIntervalHulls
-		= irafhy::CSPSolver::exactBoundarySolve(this->_3dIntervalHull, curEpsilon);
-	boundaryIntervalHulls.emplace_back(this->_3dIntervalHull);
-	irafhy::viewer::show(boundaryIntervalHulls, {}, {}, {0, 1, 2}, irafhy::VIEW_TYPE::LINE);
-}
+//commnet out this part cause it will cause a bug of libigl viewer, for testing 2d or 3d exact boundary solving method
+//you can comment out the case_0 and uncomment this part to check the result
+
+// TEST_F(runCSPSolverTest, case_1)
+// {
+// 	double							  curEpsilon = 20;
+// 	std::vector<irafhy::IntervalHull> boundaryIntervalHulls
+// 		= irafhy::CSPSolver::exactBoundarySolve(this->_3dIntervalHull, curEpsilon);
+// 	//DEBUG
+// 	std::cout << "======================================" << std::endl;
+// 	std::cout << boundaryIntervalHulls.size() << std::endl;
+// 	for (const auto& box : boundaryIntervalHulls)
+// 		std::cout << box << std::endl;
+// 	//DBEUG
+// 	// boundaryIntervalHulls.emplace_back(this->_3dIntervalHull);
+// 	irafhy::viewer::show(boundaryIntervalHulls, {}, {}, {0, 1, 2}, irafhy::VIEW_TYPE::LINE);
+// }
 
 TEST_F(runCSPSolverTest, case_2)
 {
