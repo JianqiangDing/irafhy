@@ -17,7 +17,7 @@ int main()
 	if (startPos == std::string::npos)
 		startPos = rootPath.find("irafhy");
 	rootPath					= rootPath.substr(0, startPos + 6);
-	std::string modelFilePath   = rootPath + "/resource/model/example_0/model.mdl";
+	std::string modelFilePath	= rootPath + "/resource/model/example_0/model.mdl";
 	std::string settingFilePath = rootPath + "/resource/model/example_0/setting_overApproximation.cfg";
 	//read the model and settings
 	irafhy::HybridAutomaton<irafhy::OAFAnalyser, irafhy::OAFVerifier> hybridAutomaton

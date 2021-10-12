@@ -39,7 +39,7 @@ namespace irafhy
 		 * @param volume volume of the convex hull
 		 * @param dimension dimension of the space which the polytope in
 		 */
-		Polytope(const std::vector<Point>&	 pointConstraints,
+		Polytope(const std::vector<Point>&	   pointConstraints,
 				 const std::vector<HalfSpace>& halfSpaceConstraints,
 				 double						   volume,
 				 int						   dimension);
